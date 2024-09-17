@@ -1,3 +1,5 @@
-# APIKG
+# Automating API Knowledge Graph Construction through a LLM-Based Explore-Construct-Filter Framework
 
-Our Code and Data：https://drive.google.com/file/d/1zsj9wctnZxj-lrC-MeEoPtgqys3v29I-/view?usp=sharing
+The appendix of this paper can be found in Appendix.pdf.
+
+Our code and data can be accessed via the following link: https://drive.google.com/file/d/1zp1zXHmoJEok9RfgtatxJrup7xmVt3v6/view?usp=sharing
