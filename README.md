@@ -8,7 +8,7 @@
 `pip install openai`
 
 ### 2 Fill in the OpenAI key
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ### 3 Running
 Run `new_code/main.py` to execute the AI chain.
