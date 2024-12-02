@@ -26,8 +26,48 @@ Relation extraction{
         @Rules If there is a semantic relation between entities, then in dependency analysis, either there is a directional relation between them, or they both have directional relations with another element.
         @Rules Only extract relations for the provided entity pairs, and discard any relations involving entities not in the provided pairs.
         @Format{
-            ### relation triples ###
-            (entity_1, relation, entity_2); (...)
+            @Input Format{
+                text: ......
+                entity pairs: (entity1, entity2); ...
+            }
+            @Output Format{
+                ### relation triples ###
+                (entity_1, relation, entity_2); (...)
+            }
+        }
+        @Example{
+            @Input{
+                text: If you need to read and write the date and time to a database, use the java.sql.Date and java.sql.Timestamp classes.
+                entity pairs: (java.sql.Date, java.sql.Timestamp)
+            }
+            @Output{
+                ### relation triples ###
+                (java.sql.Date, works with, java.sql.Timestamp)
+            }
+            @Input{
+                text: There are several overridden versions of both update and doFinal which takes different parameters.
+                entity pairs: (update, doFinal)
+            }
+            @Output{
+                ### relation triples ###
+                (update, is different from, doFinal)
+            }
+            @Input{
+                text: A thread that calls wait() on any object becomes inactive until another thread calls notify() on that object.
+                entity pairs: (wait(), notify())
+            }
+            @Output{
+                ### relation triples ###
+                (wait(), call order,notify())
+            }
+            @Input{
+                text: Once the read operation has completed the data read into the ByteBuffer and then into a String and printed to System.out.
+                entity pairs: (ByteBuffer, String); (String, System.out); (ByteBuffer, System.out)
+            }
+            @Output{
+                ### relation triples ###
+                (ByteBuffer, read into, String); (String, print to, System.out)
+            }
         }
     }
 }
