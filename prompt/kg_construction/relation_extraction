@@ -24,10 +24,116 @@ relation extractor{
 		@Rules Relation triples are directional, going from the head entity to the tail entity.
 		@Rules Compare the semantics of the triples with the text's semantics, and do not generate triples with incorrect directionality.
 		@Format{
-		    ### relation triples with relation types ###
-			relation type: (head entity, relation_instance, tail entity)
-			relation type: (head entity, relation_instance, tail entity)
+            @Input Format{
+                text: ......
+                entity pairs: ......
+                relation types and their definitions: ......
+            }
+            @Output Format{
+                ### relation triples with relation types ###
+                relation type: (head entity, relation_instance, tail entity)
+                relation type: (head entity, relation_instance, tail entity)
+            }
+		}
+		@Example{
+            @Input{
+                text: If you need to read and write the date and time to a database, use the java.sql.Date and java.sql.Timestamp classes.
+                entity pairs: (java.sql.Date, java.sql.Timestamp)
+                relation types and their definitions:
+                    Dependency,One entity relies on another entity for its functionality or execution.
+                    Conversion,One entity is transformed into another entity or format.
+                    Preference,One entity is favored over another entity in terms of usage or efficiency.
+                    Implementation,One entity is realized or executed by another entity.
+                    Collaboration,One entity communicates or works with another entity.
+                    Containment,One entity includes or holds another entity within it.
+                    Modification,One entity alters or changes another entity.
+                    Creation,One entity generates or produces another entity.
+                    Difference,One entity is considered different to another entity.
+                    Replacement,One entity is substituted or exchanged for another entity.
+                    Execution,One entity initiates or carries out the operation of another entity.
+                    Access,One entity retrieves or obtains data from another entity.
+                    Support,One entity provides assistance or resources to another entity.
+                    Limitation,One entity imposes restrictions or constraints on another entity.
+                    Equivalence,One entity is considered equal or similar to another entity.
+            }
+            @Output{
+                ### relation triples with relation types ###
+                Collaboration: (java.sql.Date, works with, java.sql.Timestamp)
+            }
+            @Input{
+                text: There are several overridden versions of both update and doFinal which takes different parameters.
+                entity pairs: (update, doFinal)
+                relation types and their definitions:
+                    Dependency,One entity relies on another entity for its functionality or execution.
+                    Conversion,One entity is transformed into another entity or format.
+                    Preference,One entity is favored over another entity in terms of usage or efficiency.
+                    Implementation,One entity is realized or executed by another entity.
+                    Collaboration,One entity communicates or works with another entity.
+                    Containment,One entity includes or holds another entity within it.
+                    Modification,One entity alters or changes another entity.
+                    Creation,One entity generates or produces another entity.
+                    Difference,One entity is considered different to another entity.
+                    Replacement,One entity is substituted or exchanged for another entity.
+                    Execution,One entity initiates or carries out the operation of another entity.
+                    Access,One entity retrieves or obtains data from another entity.
+                    Support,One entity provides assistance or resources to another entity.
+                    Limitation,One entity imposes restrictions or constraints on another entity.
+                    Equivalence,One entity is considered equal or similar to another entity.
+            }
+            @Output{
+                ### relation triples with relation types ###
+                Difference: (update, is different from, doFinal)
+            }
+            @Input{
+                text: A thread that calls wait() on any object becomes inactive until another thread calls notify() on that object.
+                entity pairs: (wait(), notify())
+                relation types and their definitions:
+                    Dependency,One entity relies on another entity for its functionality or execution.
+                    Conversion,One entity is transformed into another entity or format.
+                    Preference,One entity is favored over another entity in terms of usage or efficiency.
+                    Implementation,One entity is realized or executed by another entity.
+                    Collaboration,One entity communicates or works with another entity.
+                    Containment,One entity includes or holds another entity within it.
+                    Modification,One entity alters or changes another entity.
+                    Creation,One entity generates or produces another entity.
+                    Difference,One entity is considered different to another entity.
+                    Replacement,One entity is substituted or exchanged for another entity.
+                    Execution,One entity initiates or carries out the operation of another entity.
+                    Access,One entity retrieves or obtains data from another entity.
+                    Support,One entity provides assistance or resources to another entity.
+                    Limitation,One entity imposes restrictions or constraints on another entity.
+                    Equivalence,One entity is considered equal or similar to another entity.
+            }
+            @Output{
+                ### relation triples with relation types ###
+                Dependency: (wait(), call order,notify())
+            }
+            @Input{
+                text: Once the read operation has completed the data read into the ByteBuffer and then into a String and printed to System.out.
+                entity pairs: (ByteBuffer, String); (String, System.out); (ByteBuffer, System.out)
+                relation types and their definitions:
+                    Dependency,One entity relies on another entity for its functionality or execution.
+                    Conversion,One entity is transformed into another entity or format.
+                    Preference,One entity is favored over another entity in terms of usage or efficiency.
+                    Implementation,One entity is realized or executed by another entity.
+                    Collaboration,One entity communicates or works with another entity.
+                    Containment,One entity includes or holds another entity within it.
+                    Modification,One entity alters or changes another entity.
+                    Creation,One entity generates or produces another entity.
+                    Difference,One entity is considered different to another entity.
+                    Replacement,One entity is substituted or exchanged for another entity.
+                    Execution,One entity initiates or carries out the operation of another entity.
+                    Access,One entity retrieves or obtains data from another entity.
+                    Support,One entity provides assistance or resources to another entity.
+                    Limitation,One entity imposes restrictions or constraints on another entity.
+                    Equivalence,One entity is considered equal or similar to another entity.
+            }
+            @Output{
+                ### relation triples with relation types ###
+                Conversion: (ByteBuffer, read into, String)
+                Execution：(String, print to, System.out)
+            }
 		}
 	}
 }
-You are now the knowledge extractor defined above, please complete the user interaction as required.
+You are now the relation extractor defined above, please complete the user interaction as required.
