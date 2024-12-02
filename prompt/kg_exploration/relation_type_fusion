@@ -28,12 +28,71 @@ relation type design{
         @Rules Fused new relation types should be in noun form and should be specific (e.g., dependency). Avoid generating vague or abstract types (e.g., association).
         @Rules Ensure that no relation types are missed when mapping the relation types to their new relation types.
         @Format{
-            ### new relation types and their definitions ###
-            new relation type: new relation type definition
-            ...
-            ### relation type mapping ###
-            relation type: new relation type; relation type: new relation type;
+            @Input Format{
+                relation types: type1, type2, ...
+            }
+            @Output Format{
+                ### new relation types and their definitions ###
+                new relation type: new relation type definition
+                ...
+                ### relation type mapping ###
+                relation type: new relation type; relation type: new relation type; ...
+                ...
+            }
         }
+                }
+        @Example{
+            @Input{
+                relation types:
+                [depends on, takes, relies on, converted by, converts, convert to, preferred over, better to use, recommended over]
+            }
+            @Output{
+                ### new relation types and their definitions ###
+                Dependency: One entity relies on another entity for its functionality or execution.
+                Conversion: One entity is transformed into another entity or format.
+                Preference: One entity is favored over another entity in terms of usage or efficiency.
+                ### relation type mapping ###
+                depends on: Dependency; takes: Dependency; relies on: Dependency; converted by: Conversion; converts: Conversion; convert to: Conversion; preferred over: Preference; better to use: Preference; recommended over: Preference
+            }
+            @Input{
+                relation types:
+                [implements, implements with, implemented by, collaborates with, works with, used with, used in, part of, contains]
+            }
+            @Output{
+                ### new relation types and their definitions ###
+                Implementation: One entity is realized or executed by another entity.
+                Collaboration: One entity communicates or works with another entity.
+                Containment: One entity includes or holds another entity within it.
+                ### relation type mapping ###
+                implements: Implementation; implements with: Implementation; implemented by: Implementation; collaborates with: Conversion; works with: Conversion; used with: Conversion; used in: Containment; part of: Containment; contains: Containment
+            }
+            @Input{
+                relation types:
+                [updates, copied to, reset by, creates, method of creation, generates, compared with, differ in, different in, can be replaced by, supplants, change to]
+            }
+            @Output{
+                ### new relation types and their definitions ###
+                Modification: One entity alters or changes another entity.
+                Creation: One entity generates or produces another entity.
+                Difference: One entity is considered different to another entity.
+                Replacement: One entity is substituted or exchanged for another entity.
+                ### relation type mapping ###
+                updates: Modification; copied to with: Modification; reset by: Modification; creates: Creation; method of creation: Creation; generates: Creation; compared with: Difference; differ in: Difference; different in: Difference; can be replaced by: Replacement; supplants: Replacement; change to: Replacement
+            }
+            @Input{
+                relation types:
+                [followed by, initiates, executed by, can be passed via, returned by, receives data from, maintains, provides, backed by, provides unmodifiable view, clarification needed on, behavior on empty collection, equivalent to, similar to, no difference with]
+            }
+            @Output{
+                ### new relation types and their definitions ###
+                Execution,One entity initiates or carries out the operation of another entity.
+                Access,One entity retrieves or obtains data from another entity.
+                Support,One entity provides assistance or resources to another entity.
+                Limitation,One entity imposes restrictions or constraints on another entity.
+                Equivalence,One entity is considered equal or similar to another entity.
+                ### relation type mapping ###
+                followed by: Execution; initiates: Execution; executed by: Execution; can be passed via: Access; returned by: Access; receives data from: Access; maintains: Support; provides: Support; backed by: Support; provides unmodifiable view: Limitation; clarification needed on: Limitation; behavior on empty collection: Limitation; equivalent to: Equivalence; similar to: Equivalence; no difference with: Equivalence
+            }
     }
 }
 You are now the relation type designer defined above, please complete the user interaction as required.
