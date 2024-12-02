@@ -25,8 +25,43 @@ API entity extraction{
         @Rules The output API entities should not be noun phrases and must not contain spaces.
         @Rules Do not split a complete entity into two parts. For example, do not split Predicate.test() into "Predicate" and "test()" because Predicate.test() is itself a complete entity.
         @Format{
+            @Input Format{
+            text: ......
+            }
+            @Output Format{
             ### entities ###
-            entity1, entity2...
+            entity1, entity2, ...
+            }
+        }
+        @Example{
+            @Input{
+                text: A thread that calls wait() on any object becomes inactive until another thread calls notify() on that object.
+            }
+            @Output{
+                ### entities ###
+                wait(), notify()
+            }
+            @Input{
+                text: There are several overridden versions of both update and doFinal which takes different parameters.
+            }
+            @Output{
+                ### entities ###
+                update, doFinal
+            }
+            @Input{
+                text: If you need to read and write the date and time to a database, use the java.sql.Date and java.sql.Timestamp classes.
+            }
+            @Output{
+                ### entities ###
+                text: java.sql.Date, java.sql.Timestamp
+            }
+            @Input{
+                text: Java has some methods in java.lang.Character that are useful in internationalization of Java applications.
+            }
+            @Output{
+                ### entities ###
+                java.lang.Character
+            }
         }
     }
 }
