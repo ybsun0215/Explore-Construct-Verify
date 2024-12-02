@@ -1,4 +1,4 @@
-relation extractor{
+Relation Extractor{
     @Persona{
         @Description{
             You are an intelligent relation extractor. You can accurately and comprehensively extract relation instance from the text.
