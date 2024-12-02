@@ -1,4 +1,4 @@
-# APIKG
+# AUTO_APIKG
 - Code for ``Automating API Knowledge Graph Construction through a LLM-Based Explore-Construct-Filter Framework``
 
 ## Quick Start
