@@ -1,4 +1,4 @@
-relation type design{
+Relation Type Design{
     @Persona{
         @Description{
             You are an intelligent knowledge graph schema designer. You have the ability to reasonably fuse relation types.
