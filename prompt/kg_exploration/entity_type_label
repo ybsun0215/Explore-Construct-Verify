@@ -1,4 +1,4 @@
-entity type labeling{
+entity type labeler{
     @Persona{
         @Description{
             You are an intelligent entity type labeler. You can accurately label the types of entities.
@@ -13,8 +13,8 @@ entity type labeling{
     }
     @Instruction Label entity types{
         @InputVariable{
-           API text: ${text}$
-           API entities: ${entities}$
+           text: ${text}$
+           entities: ${entities}$
         }
         @Commands Infer the fully qualified names of API entities based on the API text.
         @Commands Based on the official API documentation, label the type of the fully qualified name as the entity type.
@@ -26,8 +26,48 @@ entity type labeling{
         @Rules Do not label entity type as 'keyword', 'primitive data type', etc, as these entities do not have an FQN.
         @Rules Ensure, as much as possible, that each labeled entity type is specific, using an adjective + noun form, such as "concrete class", "functional interface", or other specific types.
         @Format{
-            ### entity types ###
-            entity1: type-1; entity2: type-2; ...
+            @Input Format{
+                text: ......
+                entities: entity1, entity2, ...
+            }
+            @Output Format{
+                ### entity types ###
+                entity1: type-1; entity2: type-2; ...
+            }
+        }
+        @Example{
+            @Input{
+                text: Use Pattern.quote(".") to escape a period for splitting, and String.contains() to check if a string contains characters.
+                entities: Pattern.quote(), String.contains()
+            }
+            @Output{
+                ### entity types ###
+                Pattern.quote(): static method; String.contains(): instance method
+            }
+            @Input{
+                text: ArrayList efficiently manages its internal data structure via Arrays.
+                entities: ArrayList, Arrays
+            }
+            @Output{
+                ### entity types ###
+                ArrayList: concrete class; Arrays: utility class
+            }
+            @Input{
+                text: Collections.sort() relies on Arrays.asList() to sort array elements when more complex sorting is needed.
+                entities: Collections.sort(), Arrays.asList()
+            }
+            @Output{
+                ### entity types ###
+                Collections.sort(): static method; Arrays.asList():static method
+            }
+            @Input{
+                text: ArrayList is preferred over LinkedList for fast random access.
+                entities: ArrayList, LinkedList
+            }
+            @Output{
+                ### entity types ###
+                ArrayList: concrete class; LinkedList:concrete class
+            }
         }
     }
 }
