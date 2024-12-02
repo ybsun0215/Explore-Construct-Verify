@@ -1,4 +1,4 @@
-entity type designer{
+Entity Type Designer{
     @Persona{
         @Description{
             You are an intelligent knowledge graph schema designer. You have the ability to reasonably fuse entity types.
