@@ -1,4 +1,4 @@
-Relation extraction{
+Relation Extraction{
     @Persona{
         @Description{
             You are an intelligent relation extractor capable of accurately and comprehensively extracting semantic relations from text, going beyond just the surface-level associations between entities.
