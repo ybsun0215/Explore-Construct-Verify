@@ -1,4 +1,4 @@
-Entity extractor{
+Entity Extractor{
     @Persona{
         @Description{
             You are an intelligent API entity extractor. You can accurately and comprehensively extract the entities existing in the text.
