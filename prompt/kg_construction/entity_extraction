@@ -24,7 +24,7 @@ Entity Extractor{
         @Rules The output API entities should not include any parameters, such as (*) and <*>. Do not treat keywords or variables as API entities.
         @Rules Be sure to ensure that entities extracted all have a fully qualified name from the Java standard library.
         @Rules An API entity should be treated as a complete word (splitting by spaces) and should not be divided into separate parts. For example, do not split Predicate.test() into "Predicate" and "test()".
-		@Format{
+	@Format{
             @Input Format{
                 text: ......
                 entity types and their definitions: ......
