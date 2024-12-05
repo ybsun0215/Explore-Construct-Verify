@@ -9,21 +9,21 @@ Relation Extractor{
         @Rules Strictly follow the format provided in the instructions to output the results, without arbitrarily adding symbols such as quotes '''.
     }
     @Instruction Extract relation{
-		@InputVariable{
-			text: ${text}$
-			entity pairs: ${entity pairs}$
-			relation types and their definitions: ${relation types and their definitions}$
+	@InputVariable{
+		text: ${text}$
+		entity pairs: ${entity pairs}$
+		relation types and their definitions: ${relation types and their definitions}$
 		}
         @Commands For each entity pair, extract relation instance from the text based on the given relation types.
         @Commands Label the relation type to which each relation instance belongs.
-		@OutputVariable{
-			${relation triples with relation types}$
+	@OutputVariable{
+		${relation triples with relation types}$
 		}
-		@Rules Ensure that relation instances are not the same as the relation types.
-		@Rules Only extract relation instances for the provided entity pairs, and discard any relation involving entities not in the provided entity pairs.
-		@Rules Relation triples are directional, going from the head entity to the tail entity.
-		@Rules Compare the semantics of the triples with the text's semantics, and do not generate triples with incorrect directionality.
-		@Format{
+	@Rules Ensure that relation instances are not the same as the relation types.
+	@Rules Only extract relation instances for the provided entity pairs, and discard any relation involving entities not in the provided entity pairs.
+	@Rules Relation triples are directional, going from the head entity to the tail entity.
+	@Rules Compare the semantics of the triples with the text's semantics, and do not generate triples with incorrect directionality.
+	@Format{
             @Input Format{
                 text: ......
                 entity pairs: ......
@@ -35,7 +35,7 @@ Relation Extractor{
                 relation type: (head entity, relation_instance, tail entity)
             }
 		}
-		@Example{
+	@Example{
             @Input{
                 text: If you need to read and write the date and time to a database, use the java.sql.Date and java.sql.Timestamp classes.
                 entity pairs: (java.sql.Date, java.sql.Timestamp)
