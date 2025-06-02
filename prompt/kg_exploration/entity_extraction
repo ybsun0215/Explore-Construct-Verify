@@ -5,6 +5,7 @@ API Entity Extraction{
         }
         @Terminology {
             @Terms API entity: An Application Programming Interface, or its abbreviation, possesses a fully qualified name (fqn) in the standard library.
+                               It typically appears with invocation symbols such as dots ".", "#" or parentheses "()", and often starts with a capital letter.
         }
     }
     @ContextControl{
@@ -20,9 +21,8 @@ API Entity Extraction{
             ${entities}$
         }
         @Rules The part of speech for API entities in the text should be nouns.
-        @Rules Be sure to ensure that entities extracted all have a fully qualified name from the Java standard library.
-        @Rules Do not treat variable names or instance references as API entities.
-        @Rules The output API entities should not be noun phrases and must not contain spaces.
+        @Rules Be sure to ensure that entities extracted all have a fully qualified name from the standard library.
+        @Rules If there are no API entities in the text, output "None" without any explanatory information.
         @Rules Do not split a complete entity into two parts. For example, do not split Predicate.test() into "Predicate" and "test()" because Predicate.test() is itself a complete entity.
         @Format{
             @Input Format{
@@ -35,32 +35,32 @@ API Entity Extraction{
         }
         @Example{
             @Input{
-                text: A thread that calls wait() on any object becomes inactive until another thread calls notify() on that object.
+                text: Inside bufio.ReadWriter, the struct anonymously includes both bufio.Reader and bufio.Writer.
             }
             @Output{
                 ### entities ###
-                wait(), notify()
+                bufio.ReadWriter, bufio.Reader, bufio.Writer
             }
             @Input{
-                text: There are several overridden versions of both update and doFinal which takes different parameters.
+                text: The encoding/json package uses reflection (reflect package) to access fields of structs
             }
             @Output{
                 ### entities ###
-                update, doFinal
+                encoding/json, reflection
             }
             @Input{
-                text: If you need to read and write the date and time to a database, use the java.sql.Date and java.sql.Timestamp classes.
+                text: helper functions like filterNotNull() which remove nulls from collections, or listOfNotNull() for returning a zero or single item list from a possibly null value.
             }
             @Output{
                 ### entities ###
-                text: java.sql.Date, java.sql.Timestamp
+                text: filterNotNull(), listOfNotNull()
             }
             @Input{
-                text: Java has some methods in java.lang.Character that are useful in internationalization of Java applications.
+                text: Then what happens here is that we assigned a new template.Template value to t, which was the result of parsing t2src, so that will be the default, but still both templates can be "reached" from it as they are associated
             }
             @Output{
                 ### entities ###
-                java.lang.Character
+                template.Template
             }
         }
     }
