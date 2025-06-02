@@ -48,28 +48,33 @@ Entity Extractor{
                 wait(): method; notify(): method
             }
             @Input{
-                text: There are several overridden versions of both update and doFinal which takes different parameters.
+                text: helper functions like filternotnull() which remove nulls from collections, or listofnotnull() for returning a zero or single item list from a possibly null value.
                 entity types and their definitions:
-                    class: A class defines the structure and behavior of objects, including fields, methods, and constructors, serving as a template for object instantiation.
-                    method: A method is a block of code that performs a specific task, defined within a class or interface, and can be invoked on objects or directly via the class (if static).
-                    interface: An interface defines a contract of methods that a class must implement. It can be functional or annotation-based.
-                    package: A package is a namespace that groups related classes and interfaces for better organization.
+                    class: A class defines the structure and behavior of objects, including fields, methods, and constructors, serving as a template for object instantiation. Special variants include exception and generic classes, with object singletons and library or package-based classes for specific usages.
+                    interface: An interface defines a contract of methods that a class must implement. It can represent standard, functional, or mapped variations for interoperability.
+                    property: Represents data members, which can include standard and instance properties, along with delegated properties that provide additional utility.
+                    package: A package is a namespace that groups related classes and interfaces for better organization and modularization. Libraries or packages can represent broader collections.
+                    function: A function defines a reusable block of code for a specific action, supporting forms such as suspending, lifecycle, intermediate, terminal, and higher-order functions alongside standard and built-script implementations.
+
             }
             @Output{
                 ### entities ###
-                update: method; doFinal: method
+                filterNotNull(): function; listOfNotNull(): function
             }
             @Input{
-                text: If you need to read and write the date and time to a database, use the java.sql.Date and java.sql.Timestamp classes.
+                text: When converting a string to and from a []byte or a []rune, Go does O(n) work even though conversions are "syntax".
                 entity types and their definitions:
-                    class: A class defines the structure and behavior of objects, including fields, methods, and constructors, serving as a template for object instantiation.
-                    method: A method is a block of code that performs a specific task, defined within a class or interface, and can be invoked on objects or directly via the class (if static).
-                    interface: An interface defines a contract of methods that a class must implement. It can be functional or annotation-based.
-                    package: A package is a namespace that groups related classes and interfaces for better organization.
+                    type: A named specification that defines the structure, behavior, and operations for values, including basic types, composite types, and custom type definitions."
+                    const: A named identifier that represents an immutable value determined at compile time, declared at package level or within a function scope."
+                    var: A named identifier that represents a mutable storage location for a value of a specific type, declared at package level or within a function scope."
+                    package: A collection of related Go source files that are compiled together as a unit, providing a namespace for constants, variables, functions, and types."
+                    method: A function associated with a specific type through a receiver, providing behavior that operates on instances of that type."
+                    func: A named block of code that performs a specific task, can accept parameters and return values, and may be declared at package level or as a method."
+
             }
             @Output{
                 ### entities ###
-                text: java.sql.Date: class; java.sql.Timestamp: calss
+                string: type; []byte: type; []rune: type
             }
             @Input{
                 text: Java has some methods in java.lang.Character that are useful in internationalization of Java applications.
