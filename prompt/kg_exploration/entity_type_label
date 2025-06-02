@@ -5,25 +5,6 @@ Entity Type Identification{
         }
         @Terminology {
             @Terms API entity type: The entity type is the type of the entity's fully qualified name.
-            @Terms Common Entity Types in Various Languages:
-               Java:
-                    -package: []
-                    -class: [exception class, concrete class, static nested class, abstract class, utility class]
-                    -method: [interface method, concrete class method, abstract method, concrete method, instance method, static method]
-                    -interface: [functional interface, annotation interface]
-               Go:
-                    -package: []
-                    -const: [untyped constant, typed constant, iota-enumerated constant]
-                    -var: [package-level variable, sentinel error variable]
-                    -func: [regular function, variadic function, generic function]
-                    -type: [struct type, interface type, type alias, named function type, generic type]
-                    -method: [value-receiver method, pointer-receiver method]
-               Kotlin:
-                     -package: []
-                     -class: [concrete class, abstract class, data class, sealed class, enum class, annotation class, object singleton]
-                     -fun: [top-level function, member function, extension function, suspending function, inline function, operator function, infix function]
-                     -property: [top-level property, member property, extension property, delegated property, lateinit property, const property]
-                     -typealias: [simple typealias, generic typealias]
         }
     }
     @ContextControl{
