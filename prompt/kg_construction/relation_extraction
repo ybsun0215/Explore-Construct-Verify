@@ -9,21 +9,21 @@ Relation Extractor{
         @Rules Strictly follow the format provided in the instructions to output the results, without arbitrarily adding symbols such as quotes '''.
     }
     @Instruction Extract relation{
-	@InputVariable{
-		text: ${text}$
-		entity pairs: ${entity pairs}$
-		relation types and their definitions: ${relation types and their definitions}$
-		}
+        @InputVariable{
+            text: ${text}$
+            entity pairs: ${entity pairs}$
+            relation types and their definitions: ${relation types and their definitions}$
+        }
         @Commands For each entity pair, extract relation instance from the text based on the given relation types.
         @Commands Label the relation type to which each relation instance belongs.
-	@OutputVariable{
-		${relation triples with relation types}$
-		}
-	@Rules Ensure that relation instances are not the same as the relation types.
-	@Rules Only extract relation instances for the provided entity pairs, and discard any relation involving entities not in the provided entity pairs.
-	@Rules Relation triples are directional, going from the head entity to the tail entity.
-	@Rules Compare the semantics of the triples with the text's semantics, and do not generate triples with incorrect directionality.
-	@Format{
+        @OutputVariable{
+            ${relation triples with relation types}$
+        }
+	    @Rules Ensure that relation instances are not the same as the relation types.
+	    @Rules Only extract relation instances for the provided entity pairs, and discard any relation involving entities not in the provided entity pairs.
+	    @Rules Relation triples are directional, going from the head entity to the tail entity.
+	    @Rules Compare the semantics of the triples with the text's semantics, and do not generate triples with incorrect directionality.
+        @Format{
             @Input Format{
                 text: ......
                 entity pairs: ......
@@ -34,106 +34,94 @@ Relation Extractor{
                 relation type: (head entity, relation_instance, tail entity)
                 relation type: (head entity, relation_instance, tail entity)
             }
-		}
-	@Example{
+        }
+        @Example{
             @Input{
                 text: If you need to read and write the date and time to a database, use the java.sql.Date and java.sql.Timestamp classes.
                 entity pairs: (java.sql.Date, java.sql.Timestamp)
                 relation types and their definitions:
-                    Dependency,One entity relies on another entity for its functionality or execution.
-                    Conversion,One entity is transformed into another entity or format.
-                    Preference,One entity is favored over another entity in terms of usage or efficiency.
-                    Implementation,One entity is realized or executed by another entity.
-                    Collaboration,One entity communicates or works with another entity.
-                    Containment,One entity includes or holds another entity within it.
-                    Modification,One entity alters or changes another entity.
-                    Creation,One entity generates or produces another entity.
-                    Difference,One entity is considered different to another entity.
-                    Replacement,One entity is substituted or exchanged for another entity.
-                    Execution,One entity initiates or carries out the operation of another entity.
-                    Access,One entity retrieves or obtains data from another entity.
-                    Support,One entity provides assistance or resources to another entity.
-                    Limitation,One entity imposes restrictions or constraints on another entity.
-                    Equivalence,One entity is considered equal or similar to another entity.
+                    Dependency: One entity relies on another entity for its functionality or execution.
+                    Conversion: One entity is transformed into another entity or format.
+                    Preference: One entity is favored over another entity in terms of usage or efficiency.
+                    Implementation: One entity is realized or executed by another entity.
+                    Collaboration: One entity communicates or works with another entity.
+                    Containment: One entity includes or holds another entity within it.
+                    Modification: One entity alters or changes another entity.
+                    Creation: One entity generates or produces another entity.
+                    Difference: One entity is considered different to another entity.
+                    Replacement: One entity is substituted or exchanged for another entity.
+                    Limitation: One entity imposes restrictions or constraints on another entity.
+                    Equivalence: One entity is considered equal or similar to another entity.
             }
             @Output{
                 ### relation triples with relation types ###
                 Collaboration: (java.sql.Date, works with, java.sql.Timestamp)
             }
             @Input{
-                text: There are several overridden versions of both update and doFinal which takes different parameters.
-                entity pairs: (update, doFinal)
+                text: Instead of run() it could be let() or apply() or anything naturally you have surrounding the forEach that is a place you want to break from
+                entity pairs: (run(), let()); (run(), apply()); (let(), apply())
                 relation types and their definitions:
-                    Dependency,One entity relies on another entity for its functionality or execution.
-                    Conversion,One entity is transformed into another entity or format.
-                    Preference,One entity is favored over another entity in terms of usage or efficiency.
-                    Implementation,One entity is realized or executed by another entity.
-                    Collaboration,One entity communicates or works with another entity.
-                    Containment,One entity includes or holds another entity within it.
-                    Modification,One entity alters or changes another entity.
-                    Creation,One entity generates or produces another entity.
-                    Difference,One entity is considered different to another entity.
-                    Replacement,One entity is substituted or exchanged for another entity.
-                    Execution,One entity initiates or carries out the operation of another entity.
-                    Access,One entity retrieves or obtains data from another entity.
-                    Support,One entity provides assistance or resources to another entity.
-                    Limitation,One entity imposes restrictions or constraints on another entity.
-                    Equivalence,One entity is considered equal or similar to another entity.
+                    Dependency: One entity relies on another entity for its functionality, operation, or execution.
+                    Conversion: One entity is transformed into another format, type, or representation.
+                    Preference: One entity is favored or chosen over another entity based on specific criteria.
+                    Collaboration: Two entities work or interact together to achieve a shared goal or perform complementary roles.
+                    Implementation: One entity is created or executed to fulfill the specifications of another entity.
+                    Containment: One entity is a part of or is included within another entity.
+                    Limitation: One entity imposes restrictions or defines boundaries on the use or behavior of another entity.
+                    Difference: One entity is compared to another entity, highlighting distinctions in behavior, functionality, or conditions.
+                    Replacement: One entity substitutes another entity, offering an improved alternative or serving as a successor.
+                    Modification: One entity alters or modifies another entity.
+                    Equivalence: One entity has similar behavior, functionality, or purpose to another entity.
+                    Extension: One API entity adds new functionality or behavior to another existing API entity.
+                    Delegation: One API entity transfers part or all of its responsibilities to another API entity.
             }
             @Output{
                 ### relation triples with relation types ###
-                Difference: (update, is different from, doFinal)
+                Replacement: (run(), replaced by, let())
+                Replacement: (run(), replaced by, apply())
             }
             @Input{
                 text: A thread that calls wait() on any object becomes inactive until another thread calls notify() on that object.
                 entity pairs: (wait(), notify())
                 relation types and their definitions:
-                    Dependency,One entity relies on another entity for its functionality or execution.
-                    Conversion,One entity is transformed into another entity or format.
-                    Preference,One entity is favored over another entity in terms of usage or efficiency.
-                    Implementation,One entity is realized or executed by another entity.
-                    Collaboration,One entity communicates or works with another entity.
-                    Containment,One entity includes or holds another entity within it.
-                    Modification,One entity alters or changes another entity.
-                    Creation,One entity generates or produces another entity.
-                    Difference,One entity is considered different to another entity.
-                    Replacement,One entity is substituted or exchanged for another entity.
-                    Execution,One entity initiates or carries out the operation of another entity.
-                    Access,One entity retrieves or obtains data from another entity.
-                    Support,One entity provides assistance or resources to another entity.
-                    Limitation,One entity imposes restrictions or constraints on another entity.
-                    Equivalence,One entity is considered equal or similar to another entity.
+                    Dependency: One entity relies on another entity for its functionality or execution.
+                    Conversion: One entity is transformed into another entity or format.
+                    Preference: One entity is favored over another entity in terms of usage or efficiency.
+                    Implementation: One entity is realized or executed by another entity.
+                    Collaboration: One entity communicates or works with another entity.
+                    Containment: One entity includes or holds another entity within it.
+                    Modification: One entity alters or changes another entity.
+                    Creation: One entity generates or produces another entity.
+                    Difference: One entity is considered different to another entity.
+                    Replacement: One entity is substituted or exchanged for another entity.
+                    Limitation: One entity imposes restrictions or constraints on another entity.
+                    Equivalence: One entity is considered equal or similar to another entity.
             }
             @Output{
                 ### relation triples with relation types ###
-                Dependency: (wait(), call order,notify())
+                Dependency: (wait(), call order, notify())
             }
             @Input{
-                text: Once the read operation has completed the data read into the ByteBuffer and then into a String and printed to System.out.
-                entity pairs: (ByteBuffer, String); (String, System.out); (ByteBuffer, System.out)
+                text: When converting a string to and from a []byte or a []rune, Go does O(n) work even though conversions are "syntax".
+                entity pairs: (string, []byte); (string, []rune); ([]byte, []rune)
                 relation types and their definitions:
-                    Dependency,One entity relies on another entity for its functionality or execution.
-                    Conversion,One entity is transformed into another entity or format.
-                    Preference,One entity is favored over another entity in terms of usage or efficiency.
-                    Implementation,One entity is realized or executed by another entity.
-                    Collaboration,One entity communicates or works with another entity.
-                    Containment,One entity includes or holds another entity within it.
-                    Modification,One entity alters or changes another entity.
-                    Creation,One entity generates or produces another entity.
-                    Difference,One entity is considered different to another entity.
-                    Replacement,One entity is substituted or exchanged for another entity.
-                    Execution,One entity initiates or carries out the operation of another entity.
-                    Access,One entity retrieves or obtains data from another entity.
-                    Support,One entity provides assistance or resources to another entity.
-                    Limitation,One entity imposes restrictions or constraints on another entity.
-                    Equivalence,One entity is considered equal or similar to another entity.
+                    Dependency: One entity relies on another entity for its functionality, operation, or execution.
+                    Conversion: One entity is transformed into another format, type, or representation.
+                    Collaboration: Two entities work or interact together to achieve a shared goal or perform complementary roles.
+                    Containment: One entity is a part of or is included within another entity.
+                    Limitation: One entity imposes restrictions or defines boundaries on the use or behavior of another entity.
+                    Difference: One entity is compared to another entity, highlighting distinctions in behavior, functionality, or conditions.  "
+                    Replacement: One entity substitutes another entity, offering an improved alternative or serving as a successor.
+                    Equivalence: One entity has similar behavior, functionality, or purpose to another entity.
+                    Satisfaction: One entity implicitly fulfills the contract of another entity by implementing all required methods.
+                    Embedding: One entity incorporates another entity's fields and methods directly into its own structure.
             }
             @Output{
                 ### relation triples with relation types ###
-                Conversion: (ByteBuffer, read into, String)
-                Execution：(String, print to, System.out)
+                Conversion: (string, []byte)
+                Conversion: (string, []rune)
             }
-		}
-	}
+	    }
+    }
 }
 You are now the relation extractor defined above, please complete the user interaction as required.
