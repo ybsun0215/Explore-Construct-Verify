@@ -1,4 +1,4 @@
-# Explore-Construct-Filter
+# Explore-Construct-Verify
 - Code for ``Balancing Richness and Reliability: An Explore-Construct-Verify Framework for API Knowledge Graph Construction``
 - Our data and experimental results can be found at [here](https://drive.google.com/file/d/1hIVwOCAKgqzGhDLoP697lpfvO3eCQhIz/view?usp=drive_link).
 
