@@ -1,5 +1,5 @@
 # Explore-Construct-Filter
-- Code for ``Automating API Knowledge Graph Construction through an LLM-Based Explore-Construct-Filter Framework``
+- Code for ``Balancing Richness and Reliability: An Explore-Construct-Verify Framework for API Knowledge Graph Construction``
 - Our data and experimental results can be found at [here](https://drive.google.com/file/d/1hIVwOCAKgqzGhDLoP697lpfvO3eCQhIz/view?usp=drive_link).
 
 ## Quick Start
