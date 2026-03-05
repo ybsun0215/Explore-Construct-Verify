@@ -261,7 +261,7 @@ The verified KG is output as a CSV file (`output/kg_filtering/refine_kg.csv`) wi
 | `entity_instance_2` | Object entity instance |
 | `source_text` | Original document source |
 
-For RDF/OWL or triple store ingestion, the CSV can be converted using standard tools such as [RDF4J](https://rdf4j.org/) or [Jena](https://jena.apache.org/). An example conversion script is provided in `support4apirecom/import2neo4j.py` which demonstrates how to parse this format and load it into a graph database.
+The KG is stored in a structured CSV format that can be directly imported into Neo4j using the provided support4apirecom/import2neo4j.py script. For users requiring RDF/OWL format or triple store ingestion, the support4apirecom/exportrdf.py script exports the KG as an OWL file, which can be ingested by standard triple stores such as RDF4J or Jena.
 
 ---
 
