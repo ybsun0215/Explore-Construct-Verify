@@ -1,0 +1,415 @@
+﻿text,triplet
+"If you use testVariants, make sure you don't call testedVariant in the class","(testVariants, conflicts with, testedVariant)"
+So the reason why keyboard hides view even with SOFT_INPUT_ADJUST_RESIZE is that the windowIsFloating is set for Dialogs.,"(Dialogs, hasAttribute, windowIsFloating); (windowIsFloating, causes, keyboardHidesView); (SOFT_INPUT_ADJUST_RESIZE, ineffectiveWhen, windowIsFloating);"
+" Since drag, scroll or transform gestures check if PointeInputChange.isConsumed is true they will never get any event if you consume them in previous pointerInput.","(PointerInputChange.isConsumed, consumes, pointerInput)"
+"} delegate can only be used for val properties, whereas lateinit can only be applied to vars, because it can't be compiled to a final field, thus no immutability can be guaranteed;",""
+"We have made the strategy for generating pure fields (as opposed to get/set pairs) more predictable: from now on only properties annotated as @JvmField, lateinit or const are exposed as fields to Java clients",""
+"Sadly, as far as I know there is no way of changing the delegate by changing the original property content, but you might still be able to do something similar by working in an immutable way and copying the object:",""
+"I am finding that if debug { testCoverageEnabled true } is set, jacoco produces no output for unit tests (eg testDebugUnitTest)","(debug, imposes restriction on, testCoverageEnabled)"
+Your app receives a Bluetooth broadcast that requires the BLUETOOTH_CONNECT or BLUETOOTH_SCAN permissions.,"(Bluetooth broadcast, requires, BLUETOOTH_CONNECT); (Bluetooth broadcast, requires, BLUETOOTH_SCAN)"
+"So avoid using var variables with data classes, always declare them as val to prevent such errors.","(data, contains, var);
+(val, prevents, errors);"
+"The last parameter is maxConcurrency, specifying the maximum number of active subscriptions to the SingleSources:","(maxConcurrency, specifies maximum for, SingleSource)"
+You need to use Annotation use-site targets since the default for a property declared in the constructor is to target the annotation on the constructor parameter instead of the getter (which will be seen by JavaBeans compliant hosts) when there are multiple options available,"(Annotation, imposes restrictions, JavaBeans)"
+Alternatively just add content to Box so it will stretch and .size modifier won't be needed anymore,""
+"If there is a setter, a var-property is seen from Kotlin, otherwise it's an unmodifiable val.",""
+"Also note that in the sample above MyClass::class.java gets the instance of type Class<MyClass> for the logger, whereas this.javaClass would get the instance of type Class<MyClass.Companion>.",""
+"Will return minWidth = 0px, and maxWidth 1080px(width of my device in px) instead of 525px which is 200.dp in my device.","(minWidth, is different from, maxWidth)"
+"To adjust the font size based on height, play around with the Text composable's attributes and use didOverflowHeight instead of didOverflowWidth:","(didOverflowHeight, compared to, didOverflowWidth)"
+"After the device reboots and receives the ACTION_BOOT_COMPLETED, ACTION_LOCKED_BOOT_COMPLETED, or ACTION_MY_PACKAGE_REPLACED intent action in a broadcast receiver.","(ACTION_BOOT_COMPLETED, compared with, ACTION_LOCKED_BOOT_COMPLETED); (property, Difference, property): (ACTION_BOOT_COMPLETED, compared with, ACTION_MY_PACKAGE_REPLACED); (property, Difference, property): (ACTION_LOCKED_BOOT_COMPLETED, compared with, ACTION_MY_PACKAGE_REPLACED)"
+This wires any output from the subprocess to regular stdout and stderr:,"(stdout, includes, stderr)"
+"in some cases, it warrants different return types that include the status of the method call and the result if successful","(status, includes, result)"
+"Assuming your projector using the jar in build/libs/hello.jar assuming that in your settings.gradle.kts you have set rootProject.name = ""hello""","(settings.gradle.kts, contains, rootProject.name)"
+"As a result, the view will store the measured values BASED on the constraints in designated members (MeasuredHeight/Width)","(MeasuredHeight, is part of, MeasuredWidth)"
+"You should use an object that contains both properties, lang and years.","(lang, is part of, years)"
+I have attached the image successfully in email i will give you a code,""
+"The issue appears because Glassfish embeds native sun.* classes into [glassfish5_home]/glassfish/modules/endorsed/grizzly-npn-bootstrap.jar, so it conflicts with others classes included into [JDK_HOME]/jre/lib/jsse.jar",""
+"If you are using kotlin version 1.4.21 or newer, kotlin-android-extension is deprecated.
+So if you removing the plugin you also have to remove the android experimental extension block.
+In my case, I had to remove these pieces of code.",""
+here in the Run test using: dropdown selected option was: Gradle(default) changed it to IntelliJ IDEA,""
+"The fix was to replace dagger implementation dependencies with api, that makes them available to dependant modules as well.",""
+"Note; if you're using the classes from the Java runtime instead of jaxws-rt, use com.sun.xml.internal.ws as the package for everything in this post that references com.sun.xml.ws.",""
+"OK, problem is with JDK, I was using Open JDK 8 and it was missing tools.jar for some reason, I switched to Oracle JDK and now it works like a charm! ",""
+Unfortunately this approach has great disadvantage: you can't use Kotlin code from Java in this case,""
+"Those being very handy features in the pure Kotlin world, tend to turn into a disaster when you have to use them too often in the Kotlin/Java setting.",""
+The only workaround for now is to define strict compilation order: Java first and after that kotlin,""
+"In this scenario the problem boils down to the question:
+Is kapt supported in maven?","(kapt, unsupported in, maven)"
+"And as a suggestion , if you're using Kotlin, i really recommend using Kotlin extensions in your activity such as : import kotlinx.android.synthetic.main.activity_page.* or if you're using a custom view : kotlinx.android.synthetic.main.view_layout.view.*
+after that, in onCreat() method of an activity , you'll only have to call the id, for example : my_edit_text_ID.text = ""Kotlin Dbest!"", or from a custom view : mCostumView.my_edit_text_ID.text = ""Kotlin Dbest!""","(kotlinx.android.synthetic.main.activity_page, is used in, onCreate()); (kotlinx.android.synthetic.main.view_layout.view, is used in, onCreate())"
+Learn more about the modern date-time API from Trail: Date Time.,"(Trail, is part of, Date); (Trail, is part of, Time); (Date, works with, Time)"
+"This command adds the stdlib to the classpath provided, then runs the class",""
+If file has name other.kt with package my.tutorial than the Main Class should contain my.tutorial.HelloKt,""
+Starting from Google Maps SDK version 16.1.0 you can skip adding the solution above as the tag has been added to the AndroidManifest of the maps library.,""
+"Everything related to this change can be found here -> Android 12 Behavior Changes, specifically within the Foreground Service launch restrictions.",""
+"This means that with src/main/java, add source files from src/main/kotlin also while compiling.",""
+"However I suggest you to understand how to use OkHttp/Volley by passing callbacks(with onSuccess and onFail or something) into that.
+Or Retrofit2 with RxJavato handle many of these issues.","(OkHttp, uses, callbacks); (Volley, uses, callbacks); (callbacks, contains, onSuccess); (callbacks, contains, onFail); (Retrofit2, works_with, RxJava);"
+"Classes and methods marked with internal access modifier will work from within current versions of Kotlin, Gradle and also Intellij for accessing those methods from test classes",""
+"But with Compose, it's much easier to do all the navigation within a single activity using Compose Navigation",""
+"So you can keep
+  your existing code, continue to use the various Android libraries, and
+  incrementally add Kotlin code to your project",""
+"[EDIT]
+It seems that recent release of Android Gradle Plugin has fixed the issue and
+AGP version 7.0.0-beta05 works with Hilt version 2.37.",""
+"For future reference, a good place to find the supported combinations of the Android Gradle plugin and Gradle is here: https://developer.android.com/studio/releases/gradle-plugin",""
+"EDIT:
+Also note that using withType<T> { } will immediately create and configure the task, and must be avoided using withType<T>().configureEach {} instead (source).","(withType<T>(), must be avoided using, configureEach())"
+Effective task configuration avoidance requires build authors to change instances of TaskContainer.create(java.lang.String) to TaskContainer.register(java.lang.String).,"(TaskContainer.create(java.lang.String), substitute with, TaskContainer.register(java.lang.String))"
+"If you want to update a document using an object of your User class, please use the set() method instead of update(), like in the following line of code:","(set(), substitutes, update()); (function, Dependency, class): (set(), relies on, User); (function, Dependency, class): (update(), relies on, User)"
+Instead of run() it could be let() or apply() or anything naturally you have surrounding the forEach that is a place you want to break from,"(run(), could be substituted with, let()); (run(), could be substituted with, apply()); (let(), could be substituted with, apply())"
+"If you need or want to eagerly configure or register container elements, simply replace named() with getByName() and register() with create().","(named(), replace with, getByName()); (register(), replace with, create())"
+"Change which Log.d call? The ones in onCreate? (They actually mean the Log.v call in division, I assume)","(Log.d, substitute, Log.v)"
+"Use kotlin collection types List<T>, Set<T> and corresponding listOf, setOf instead of Java's counterparts whenever possible.","(listOf, is favored over, setOf)"
+"let - mostly used to avoid null checks, but can also be used as a replacement for run","(let(), used as a replacement for, run())"
+Kotlinlang recommends using kapt incase you used annotationProcessor from the Android Support before.,"(kapt, used instead of, annotationProcessor)"
+"If it doesn't, select Invalidate and Restart, and you should be good to go.","(Invalidate(), substitute action with, Restart())"
+" But you can have two variants of the function, one that receives a class parameter which is not inline and accesses private internals, and another inline helper function that does the reification from the inferred type parameter:",""
+"Using flatMapSingle instead of concatMapSingle does the trick, as suggested by akarnokd on GitHub:","(flatMapSingle, replaces, concatMapSingle)"
+"In order to use the ExampleClass, you need to create an instance of it: ExampleClass().example(), but with an object, Kotlin creates a single instance of it for you, and you don't ever call it's constructor, instead you just access it's static instance by using the name: ExampleObject.example().","(ExampleClass(), access static instance instead of, ExampleObject.example()); (example(), similar functionality as, ExampleObject.example())"
+"Also, because coroutineScope will wait until all child-coroutines are done, you can drop the jobs.joinAll() call.","(coroutineScope(), replaces, joinAll())"
+"Cleaning the project from time to time may save you some time, on Android Studio it would be something like this : Build -> Clean Project / Rebuild Project - Cleaning IDE cash also helps with performance and memory, on Android Studio it would look like this : File-> Invalidate Chases/ Restart -> Invalidate Cashes and Restart","(Clean Project(), substitute with, Rebuild Project()); (Clean Project(), substitute with, Invalidate Caches and Restart()); (Rebuild Project(), substitute with, Invalidate Caches and Restart())"
+As mentioned in documentation strings.Title is deprecated and you should use cases.Title instead.,"(cases.Title, instead of, strings.Title)"
+"Note: Use job.await() instead of job.join() because await() rethrows exceptions, but join() does not","(await(), use instead of, join()); (await(), rethrows exceptions while, join())"
+"Any blocking code in a suspend function should be wrapped in something that backgrounds it, like withContext or suspendCancellableCoroutine (which is lower level because it works directly with the coroutine continuation).","(withContext(), is favored over, suspendCancellableCoroutine()); (suspendCancellableCoroutine(), is lower level compared to, withContext())"
+And when you need to perform some operations on an object and return some other object you can use either with or run,"(with(), can use, run())"
+"To create a copy of a collection, use the toList() or toSet() methods, depending on the collection type you need","(toList(), chosen based on, toSet())"
+"Somewhere where you implement bluetooth scanning put a function like startScanning() as in the code example below, instead of using the BleScanner.scan() API directly","(startScanning(), is favored over, BleScanner.scan())"
+"For the example given in the question, a remember(key1, key2) {} is the correct API to use there, not derivedStateOf {} because you want your UI to update any time the key changes, there isn't any change to buffer out.","(remember(), preferred over, derivedStateOf())"
+"or you can use named local function, if you do not need hasRepeat to be function reference:","(named, favored over, hasRepeat)"
+"Instead of using Kotlin generic lambda types, use interfaces with a single method that matches both return type and parameters of your method reference (itemClick) or your listener (avatarClick).
+You can also use abstract classes with a single abstract method, also with matching parameters and return type.","(itemClick, chosen over, avatarClick)"
+I first tried with invalidate cache/ restart option but it doesn't help me,"(invalidateCache(), tried first with, restart())"
+When generating a synthetic property for a Java getter/setter pair Kotlin first looks for a getter,"(getter(), prioritized over, setter())"
+ In the case of a Map use the getOrElse() which allows a default value to be generated instead of Map method get() which returns a nullable value,"(getOrElse(), favored over, get()); (getOrElse(), substitutes, get())"
+Use Kotlin Coroutines there is delay(millis:Long) function that is cheaper than Thread.sleep(),"(delay, cheaper than, thread.sleep)"
+"And in this example, you could decide between bufferedReader() or just reader()","(bufferedReader(), decide between, reader())"
+"ArrayList), or it is idiomatic Kotlin to use the helper functions arrayListOf or linkedListOf to create a MutableList<T> reference","(arrayListOf(), is favored over, linkedListOf())"
+"So for the foreseeable future, there will be more mentions of addListenerForSingleValueEvent than of the new get() method.","(addListenerForSingleValueEvent(), is preferred over, get())"
+Arrays.toString() is used to convert the contents of an array into a readable string.,"(Arrays.toString, convert the contents of, array)"
+Or you can filter by creating a new list with filtered items as suggested by Johann Kexel,"(ArrayList, filter by, filter)"
+"Your toJson adapter method will return null when the qualified string value is null, and the JsonWriter will not write the null value.","(toJson(), null handling, JsonWriter)"
+"However, suspending functions can only be invoked by another suspending function or within a coroutine.","(suspending function, can only be invoked within, coroutine)"
+"Since this is a Kotin interface, you cannot use the SAM conversion to a Lambda so that is why the other answer previously provided does not work",""
+The platform() function used to import the Firebase Bill of Materials is not available in Kotlin Multiplatform plugin閳ユ獨 KotlinDependencyHandler but only in Gradle閳ユ獨 standard DependencyHandler,"(platform(), is not available in, KotlinDependencyHandler); (platform(), is available in, DependencyHandler); (class, Difference, class): (KotlinDependencyHandler, differs in availability from, DependencyHandler)"
+It mentions that the onNewToken method in the overridden FirebaseMessagingService (eg: MyFirebaseMessagingService) will only be called for the default project.,"(onNewToken(), is restricted to default project in, FirebaseMessagingService)"
+ Using myStream.iterator() is another way but may not have as much functionality as a Sequence.,"(iterator(), may not have as much functionality as, Sequence)"
+"The getItem(position) method is only called if the Fragment is not found by the fragment tag that the FragmentPagerAdapter sets for the fragment, which IS automatically recreated after low memory condition kills your app.","(getItem(), called only if fragment tag not found, FragmentPagerAdapter)"
+"Second issue is even if you set keys, detectDragGestures or detectTransformGestures will consume events so PointerInputChange above won't get it if first one has already consumed event.","(detectDragGestures(), consume events, PointerInputChange); (detectTransformGestures(), consume events, PointerInputChange)"
+Note that withLock is a Kotlin-provided extension function that takes care of calling Lock.lock()/Lock.unlock() before/after invoking the supplied lambda.,"(withLock(), adds functionality to, Lock.lock()); (withLock(), adds functionality to, Lock.unlock()); (function, Collaboration, function): (Lock.lock(), interacts with, Lock.unlock())"
+ You can add an iterator() extension method that follows the rules described in the for loops documentation -- even the returned iterator-like object can use extensions to satisfy the rules of providing next() and hasNext().,"(iterator(), add functionality for, next()); (iterator(), add functionality for, hasNext()); (function, Collaboration, function): (next(), work with, hasNext())"
+"In your case, it would be with(o) { ""hello world"".extension('l') }","(extension(), adds new functionality, with())"
+" You can optionally add default methods for the interface to help, or use extension functions to add the non-expected-to-be-implemented parts of the interface",""
+"EDIT 2017-08-11: Chunked/windowed collection operations were added in Kotlin 1.2 M2, see https://blog.jetbrains.com/kotlin/2017/08/kotlin-1-2-m2-is-out/","(chunked(), adds functionality to, windowed())"
+"If performance/memory impact was the only criterion to decide between withContext and async-await, the conclusion would have to be that there's no relevant difference between them in 99% of real use cases.","(withContext, no relevant difference, async-await)"
+To map enum name to enum value use valueOf/enumValueOf like so:,"(valueOf(), similar purpose to, enumValueOf())"
+" Then you can use toList(), toSet(), toMap() or some other function to materialize the Sequence at the end.","(toList(), has similar functionality as, toSet()); (toList(), has similar functionality as, toMap()); (toSet(), has similar functionality as, toMap())"
+It appears the only way to start this process is by calling setValue() or postValue(),"(setValue(), is similar to, postValue())"
+Other option could be method remove to remove given element or removeAt to remove element at given index.,"(remove, like, removeAt)"
+rememberUpdatedState function is the same as using remember with mutableState to trigger recomposition when value changes.,"(rememberUpdatedState(), is the same as, remember); (function, Dependency, function): (rememberUpdatedState(), uses, mutableState)"
+"Like readInt, readLong, etc global and Reader extension functions.
+This would be very userful not only for competitive programming but also for learning Kotlin as first language.
+A concept of reading a number shouldn't require first explaining collections, lambdas and monads.","(readInt, has similar functionality to, readLong)"
+"Kotlin sees only one method push(Int) in interface IntStack, or, more precisely, kotlin wrongly supposes that push(int i) is an override of method push(T t).","(push(Int), is wrongly supposed as override of, push(T))"
+"This question is essentially the same as ""What's the purpose of lambdas when we have functions?""",""
+"The last statement semantics is also true for if (that's why there's no ternary operator), when and try-catch blocks, and these statements are expressions themselves:","(if(), is similar in semantics to, when()); (if(), is similar in semantics to, try-catch()); (when(), is similar in semantics to, try-catch())"
+Please remember to always override hashCode if you override equals (and vice versa) manually and stick to the very strict contracts of both methods,"(hashCode(), similar behavior or contract with, equals())"
+For more understanding of getters/setters in Kotlin: the two code samples below are equal:,"(getters, is equal to, setters)"
+It does not matter which one of the two functions to use (it only affects the initial phase aka position of the wave),""
+"To access individual files in this directory use either File.list() or File.listFiles().
+Seems that reporting download progress is only possible in notification, see here.","(File.list(), has similar use to, File.listFiles())"
+"For your 2nd case in your question in the question with Map, if you as a developer are sure of the result never being null, use !! sure operator as an assertion:",
+It wakes CPU every 10 minutes until the phone turns off.,
+"Depending on your connection speed and the state, it may take from a few hundred milliseconds to a few seconds before that data is available.",
+"This is probably not what you expected, but it explains precisely why your places list is empty when returning it.",
+"In Android Studio 4.0, after you use Run from Android Studio instead of starting the app from launcher, the Terminate button SOMETIMES works a bit differently and MIGHT force-stop your app making it forget your task state on your attempt",
+Pretty simple right? You can simplify it little more if you are using Java 8 in your project.,
+"Next, try to find the stack trace, which is shown in red",
+Use the Elvis operator with return to return early from the enclosing function:,
+A quick solve for this problem would be to use the places list only inside the onComplete function:,
+"You did not receive a file path, you received a Uri",
+"Google explained the reasons for deprecating it in this blog post, with these key reasons:",
+ We can change this sample to use the safe call operator along with the let function to solve this:,
+"As long as you are going to use a year of the era, AD (which is mostly the case), both, y and u will give you the same number",
+"The part that is ""donut hole skipping"" is the fact that a new lambda
+being passed into a composable (ie Button) can recompose without
+recompiling the rest of it",
+ Libraries like Result give you a success or failure result type that can also branch your code,
+"Tutorials written between 2017 and 2020 often make use of this feature, and if they haven't been updated, they probably don't even mention it by name, because it was taken for granted to be an included plugin in new projects.",
+"Google and JetBrains decided to deprecate Kotlin Android Extensions, meaning they no longer support it, and discourage you from using it.",
+"But if found entry's specification is written in the manifest of a third-party library (which's real-source you can't alter),
+override the specification of said library by adding it to our root-project's manifest, for example like:",
+"then, where you would have previously called your method called foo, you now do this :",
+There is no question that the future of parsing in Kotlin will be with kotlinx.serialization,
+Set target SDK back to 31 (or whatever it was before changing to 30).,
+"You can also trigger the ""Terminate Application"" behavior from the terminal, as per https://codelabs.developers.google.com/codelabs/android-lifecycles/#6, it looks like this:",
+Because apparently I am calling the submitList(...) function for a reason,
+these solutions show how you can create a method/function to return values from async operations you've performed through the use of callbacks.,
+My point is that it at least needs to give a warning or call the notifyDataSetChanged() function,
+"For your 1st case in your question you have options depending on the intent of the code you would use one of these, and all are idiomatic but have different results:",
+So if you pass the same list to the adapter it does not even call the DiffUtil,
+Or if you do a is check for a non-nullable type:,
+I also searched about it and I found a solution in this Android Async API is Deprecated post.,
+ Think of it as an assert followed by a smart cast.,
+" In this case, the compiler has no visibility into what mutates the value and therefore you will get an error message:",
+"If you want to use the list outside, there is another approach",
+You might consider switching to a tutorial that teaches that instead of traditional XML view layouts,
+" Same for implementing Java interfaces in Kotlin, change the nullability to be what you know is valid.",
+"But not only Cloud Firestore loads data asynchronously, almost all of modern other web APIs do, since it may take some time to get the data",
+Note that break and continue can be used similarly for checks within loops.,
+"However, the difference occurs when you use a year of the era, BC e.g",
+"the year-of-era, 1 BC is specified as year, 0; the year-of-era, 2 BC is specified as year, -1 and so on",
+"To achieve this, first you need to create an interface like this:",
+"But Android doesn't work like that, you can easily end up crashing because after low memory condition happens, only the current Activity gets recreated at first, previous Activity is recreated on back navigation, and all static variables are nulled out (because the process is technically restarted).",
+The Elvis operator allows you to provide an alternative value when an expression to the left of the operator is null:,
+I had this issue and one of the libraries I used wasn't setting it correctly.,
+ And the Promises library for Kotlin called Kovenant does the same in the form of promises.,
+One thing to consider is that Jetpack Compose is becoming the default and recommended way to do UI on Android,
+"With other words, you cannot simply return the places list as a result of a method because it will always be empty due the asynchronous behavior of the onComplete function",
+"It has some creative uses as well, for example throw an exception when something is null:",
+"As an alternative solution, you can download an up-to-date google-services.json from the Firebase Console and add it to your app",
+"First, you should read all about Null Safety in Kotlin which covers the cases thoroughly.",
+If you want to set alarm repeating at phone boot time:,
+"Enabling placeholders and having a static count would also give your view a list size to bind, but since you pass COUNT_UNDEFINED, Paging is not able to pad the list with null placeholders properly since it has no idea how many to add.",
+"Search if there's any entry of type activity, service, receiver, or provider which does not have an exported attribute, and for each entry follow below ""Fix found entries"" section (or see once for how to set exported attribute).",
+"I noticed you filed a bug here: https://issuetracker.google.com/204328119, but I also wanted to update this answer for other future people reading this issue on SO.",
+With a recent version (1.2+) of the Kotlin plugin you also can directly do Menu > Tools > Kotlin -> Decompile Kotlin to Java.,
+Go to the individual manifest file of all the libraries (You can skip this step if the merged manifest is created and you can just look into the merged manifest),
+"In that case, just try again, launching the app from launcher",
+" With type inference, normally the types can be omitted for local variables and private members.",
+Between execution of left != null and queue.add(left) another thread could have changed the value of left to null.,
+"If we run this code will, the output in your logcat will be:",
+findViewById is probably the best option for now if you just want to complete your tutorial that was written before Kotlin Android Extensions was deprecated.,
+"How do you do this for Kotlin ?
+(as a basic example where you only care for a single result)",
+Kotlin stdlib has a series of functions that work really nicely with the operators mentioned above,
+"For the ""Why does it work when null checked"" read the background information below on smart casts.",
+"The fact that the lambda are recompose
+scopes are necessary for you to be able to do this,  but not
+sufficient",
+"In Kotlin, you cannot access a nullable value without being sure it is not null (Checking for null in conditions), or asserting that it is surely not null using the !! sure operator, accessing it with a ?",
+"There are a few steps to get started with view binding, but once you set it up, it is a cleaner option than findViewById",
+"The lifecycle of the variable nullableInt is not completely visible and may be assigned from other threads, the null check cannot be smart cast into a non-nullable value",
+"If you've found your Exception and the line where it occurred, and still cannot figure out how to fix it, don't hesitate to ask a question on StackOverflow",
+"You input string, 2006-03-25T10:30:00+12:00 is already in the default format used by OffsetDateTime#parse and therefore, you do not need to use a formatter explicitly in order to parse your input date-time string.",
+Hibernate disables insert batching at the JDBC level transparently if you use an IDENTITY identifier generator.,
+"Now, the exact location is hidden in the logs,
+hence search in the created my-logs.txt file,
+for these keywords:",
+And a scope is a function that is not marked with inline and returns Unit,
+"If you don't know the main activity, then the package name can be used to launch the application.",
+"For ""us-central1"" there is no need for doing that, you can simply call the ""getInstance()"" method without passing any arguments.",
+"However, many of the critical Jetpack libraries for Android development use newer versions of Kotlin, making this impossible.",
+"In the bottom bar of the window, click on the Logcat button",
+Note: I've used Java to demonstrate the solution but it will also work in Kotlin.,
+"when overriding methods from Java where Kotlin isn't sure about the nullability of the Java code, you can always drop the ? nullability from your override if you are sure what the signature and functionality should be",
+" The example above uses a local variable that in no way could have mutated in the flow of the application, whether val or var this variable had no opportunity to mutate into a null",
+"Safe Call, or lastly giving something that is possibly null a default value using the ?: Elvis Operator.",
+Then you need to create a function that is actually getting the data from the database,
+"However, it is important to understand that, should you not be interested in creating a method/function for these:",
+"Try to be as concise as possible: post the stack trace, and the relevant code (e.g",
+"In Kotlin, most applications try to avoid null values, but it isn't always possible",
+"However, using findViewById can be tedious, and it is also error prone, because it won't warn you if you are searching for a view that isn't in the current layout",
+Which will automatically make any non text file unable to be selected.,
+The quick and easy way to get your view reference is to use findViewById,
+"First of all, we need to find the exact location and/or cause for the error,
+which can be done with different approaches (see below).",
+a few lines up to the line which threw the Exception).,
+"If the correct URL of the location is in there, the SDK will read it from there when you call FirebaseDatabase.getInstance() without passing any arguments.",
+You have to use Uri based APIs such as ContentResolver.openInputStream() to access the contents at that Uri as Android does not grant your app direct File access to the underlying file (it could also be streamed from Google Drive or downloaded directly from the internet without your app being aware that this is happening):,
+"Normally, we do not use + sign to write a positive number but we always specify a negative number with a - sign",
+"The other issue I noticed (which would also workaround this), is that you have placeholders enabled, but aren't passing in itemsBefore or itemsAfter in LoadResult.Page",
+"Open application's manifest (AndroidManifest.xml) and click on聽""Merged Manifest""聽tab on bottom of your edit pane:
+",
+You need to create your own callback to wait for Firestore to return you the data,
+You can check Vinay Gaba's What is 閳ユ竸onut-hole skipping閳?in Jetpack Compose? article.,
+I really don't understand the whole point of this ListAdapter if it can't handle changes on the same list,
+The !! operator asserts that the value is not null or throws an NPE,
+"To get a reference to a Firebase Realtime Database other than the (default) ""us-central1"", for instance ""europe-west1"", you must pass the database URL to the getInstance() method.",
+The easy way to implement this is to use this attribute to your AndroidManifest.xml where you allow all http for all requests:,
+"For more info, please check the official documentation regarding Realtime Database locations:",
+"The initial response for most developers is to try and ""fix"" this asynchronous behavior, which I personally recommend against it",
+" In fact, you can add your own extensions to fill in any gaps in the standard library.",
+" There are some complicated flows where this cannot happen, but for common cases works fine.",
+Another case that cannot be trusted by a smart cast to not mutate is a val property on an object that has a custom getter,
+"If your project uses a Kotlin version less than 1.8, you can enable it by adding it to the plugins block of your app module's build.gradle file:",
+"In the new Logcat (Android Studio Electric Eel and above), the ""terminate process"" button is removed, and was moved into the Device Monitor tab (""Kill Process"").",
+"for collections as return types always return an empty collection instead of a null, unless you need a third state of ""not present""",
+start off by changing your method signature to something like this:,
+ This should be used in cases where the developer is guaranteeing that the value will never be null,
+"when using methods which return a nullable value for which you have a default or alternative, use the Elvis operator to provide a default value",
+"Then press the ""Sync project with Gradle files"" button in the toolbar to enable it.",
+"Another example where you want to iterate a list but only if not null and not empty, again the safe call operator comes in handy:",
+"(If you need to access it elsewhere in the Fragment, use requireView() instead of view.",
+"or in another case, when the map COULD return a null but you can provide a default value, then Map itself has a getOrElse method:",
+I am pretty sure people are trying to figure out what went wrong for hours until they figure out the submitList() ignores silently the call.,
+"But let's take an quick example, by placing a few log statements in the code, to see more clearly what I'm talking about.",
+"Yay! You're halfway to solving your problem.
+You only need to find out what exactly made your application crash, by analyzing the stack trace.",
+"You're getting crashes because you initialize those variables in one Activity, and expect it to be set always, in the other Activity.",
+When a State is read it triggers recomposition in nearest scope,
+But I do not have a valid use case for this that isn't solved by the other methods mentioned above.,
+"But in case you want some more configurations for different links for instance, allowing http for some domains but not other domains you must provide res/xml/networkSecurityConfig.xml file.",
+In one of the examples above we had a case where we did an if check but have the chance another thread mutated the value and therefore no smart cast,
+"If you protect access to a nullable type with a null check, the compiler will smart cast the value within the body of the statement to be non-nullable",
+there is a Safe (nullable) cast operator as well that allows a cast to non-nullable type return null if not possible,
+"If the real (not build-generated) source of found entry is in root-project's manifest (or somewhere you can alter),
+set exported attribute to corresponding need (which is normally false) therein directly, like:",
+"Every time an Android application crashes (or any Java application for that matter), a Stack trace is written to the console (in this case, logcat)",
+You have wrongly used m for the month for which the symbol is M,
+"Already have the stack trace? Read up on stack traces in ""What is a stack trace, and how can I use it to debug my application errors?""",
+Then in your xml folder you now have to create a file named network_security_config just like the way you have named it in the Manifest and from there the content of your file should be like this to enable all requests without encryptions:,
+y specifies the year-of-era (era is specified as AD or BC) and is always a positive number whereas u specifies the year which is a signed (+/-) number,
+Or whatever the latest version of Kotlin available and make sure to update Kotlin version on Android Studio as well.,
+Make sure your emulator or device is selected in the Devices panel,
+It's not recommended but you can access to database on main thread with allowMainThreadQueries(),
+Some things do not allow the null check to smart cast for the later use of the variable,
+Asynchronous completes a task in the background and can notify you when it is complete.,
+" But, in other cases where the compiler cannot guarantee the flow analysis, this would be an error:",
+"Open my-logs.txt file (which previous step created, in your preferred text-editor).",
+"The safe call operator returns null if the value to the left is null, otherwise continues to evaluate the expression to the right.",
+"Read up on stack traces in ""What is a stack trace, and how can I use it to debug my application errors?""",
+Regarding the transformation of the insert statement into something like this:,
+Note: in the examples below I am using explicit types to make the behavior clear,
+use saveAll() method of your repo with the list of entities prepared for inserting.,
+"next up, wherever you previously wanted to use those values, add this line :",
+"If you want to return the values from an async operation through a  method/function, you can define your own callbacks in your method/function to use these values as they are returned from these operations.",
+set the option spring.jpa.properties.hibernate.jdbc.batch_size to appropriate value you need (for example: 20).,
+"Still, it cannot defeat kotlin terms of conciseness of the code, but better than the previous java version.",
+"An easy way to find the stack trace is to clear the logcat (using the recycle bin on the right), and let the app crash again.",
+Note that (at time of writting) passing --stacktrace alone did not include location info ;-),
+To do this in Android 9 Pie you will have to set a networkSecurityConfig in your Manifest application tag like this:,
+"Unfortunately, the post is using Kotlin, but after a little effort I have converted it into Java",
+Now your app will make requests for all types of connections,
+Here is an excelent article written by Doug Stevenson that I'll highly recommend you to read.,
+"If you were using Foreground service to do work that is time sensitive, start Foreground services within an exact alarm","(ForegroundService, relies on, exact alarm)"
+In my answer https://stackoverflow.com/a/60961499/2373819 to your other question it links to the source code of the other constructor of viewpager2 for a Fragment uses the getChildFragmentManager,"(ViewPager2, relies on, getChildFragmentManager()); (Fragment, uses, getChildFragmentManager()"
+"Here we have a transaction that when created, requires a lambda that does the processing within the transaction, if no exception is thrown it auto commits the transaction","(transaction, requires, lambda)"
+"when the SyntheticSample class accesses the nested.syntheticString field, it is indeed calling a static synthetic method generated by the compiler (named something like access$100).","(SyntheticSample, accesses, access$100())"
+"But sometimes you need a Regex instance as a parameter, so the fromLiteral method can be used in those cases","(Regex, used as parameter by, fromLiteral())"
+"You have to call the inject(mainActivity: MainActivity) method you've defined in AppComponent when you're initializing your MainActivity, that's how Dagger actually injects the dependencies you need.",""
+"Use Live Data, declare following field in your viewmodel, if you are not using viewmodel then declare it in the class which has searchColorFromApi function.","(LiveData, rely on, searchColorFromApi)"
+"If you hold a reference to an instance of Lazy, isInitialized() allows you to check whether it has already been initialized (and you can obtain such instance with reflection from a delegated property)","(Lazy, check initialization status with, isInitialized())"
+In the function body you can see how it is used: an instance of HTML is created and the init is called on it,"(HTML, called on, init())"
+"For example, you can get the value of the ""userId"" property using DocumentSnapshot's getString(String field) method:","(DocumentSnapshot, relies on, getString())"
+You can simply use a Canvas with the method drawLine applying as pathEffect a PathEffect.dashPathEffect:,""
+Only thing that is required is passing Size/IntSize/DpSize from one Composable to another.,"(Size, passing to, IntSize); (Size, passing to, DpSize); (IntSize, passing to, DpSize)"
+"Your ShopMenuEntity, ShopSectionEntity and ShopMenuDB have been used asis bar the removal of the companion functions and are:-","(ShopMenuEntity, used asis, ShopSectionEntity); (ShopMenuEntity, used asis, ShopMenuDB); (ShopSectionEntity, used asis, ShopMenuDB)"
+" You can stay lazy, and convert the Stream to a Kotlin Sequence or Iterator, here is an extension function for making a Sequence:","(Stream, convert to, Sequence); (Stream, convert to, Iterator)"
+In you case convert login and pass from SpannableStringBuilder to String.,"(SpannableStringBuilder, convert to, String)"
+Since we have a full-control what will be in POJO in business logic the only missing piece will be to convert POJO to Map and Map to POJO,"(POJO, convert to, Map); (Map, convert to, POJO)"
+"First, the Int will be mapped to java int/Integer depending on its context",""
+"There's no special case for String, because String is an ordinary referential type on JVM, in contrast with Java primitives (int, double, ...) -- storing them in a reference Array<T> requires boxing them into objects like Integer and Double","(Integer, boxing into, String); (Double, boxing into, String)"
+"Actually the Databinding docs never mention that the Kotlin lambda types work as Databinding listeners or method references, probably because under the hood these lambda types translate to Kotlin's Function1, Function2..","(Function1, translate to, Function2)"
+"To make your life a little bit easier, you can write a helper method that wraps a Consumer<T> in a Function1<T, Unit>:","(Consumer, wraps into, Function1)"
+"And from a Java Class<T>, use the kotlin extension property to get the Kotlin KClass<T> from which you can proceed:","(Class<T>, get, KClass<T>)"
+"That's because someFooProperty represents a property of Bar, not Foo, but since it was obtained from someFoo.javaClass (Class<Foo> then converted to KClass<Foo>) the compiler allows us to use it with the in Foo projection.","(Class, converted to, KClass); (function, Conversion, class): (javaClass, converted to, Class); (function, Conversion, class): (javaClass, converted to, KClass)"
+You can change the return type of exportPdf to Call<ResponseBody> and then check the response code,"(Call, converted to, ResponseBody)"
+" It's not an exact science to shrink an image to 1.5mb, but what it does is if the image is larger than required, it compresses the bitmap using jpeg and reduces the quality by 80%",""
+"This will replicate BehaviourSubject, to expose the channel as a Flow:","(BehaviourSubject, replicate to, Flow)"
+Since 1.2.0-alpha04 it's much easier to make your BasicTextField look like TextField or OutlinedTextField,"(BasicTextField, make look like, TextField); (BasicTextField, make look like, OutlinedTextField)"
+"which are mapped to Java primitive arrays (int, double, char), not boxed ones (Array<Int> is mapped to Java's Integer)","(Array<Int>, is mapped to, Integer)"
+"Clicking on one of the XHR requests, and then selecting the Response tab shows that the response contains exactly what we are looking for",""
+"In production, the ViewModel is created with a null coroutineScopeProvider, as the ViewModel's viewModelScope is used","(ViewModel, includes, viewModelScope)"
+"You have in your MessageAdapter class three fields named userName, userMessage and msgTime while in the database I see that the names are different, name, message and time and this is not correct","(MessageAdapter, contains, userName); (MessageAdapter, contains, userMessage); (MessageAdapter, contains, msgTime); (property, Difference, property): (userName, differs from, userMessage); (property, Difference, property): (userName, differs from, msgTime); (property, Difference, property): (userMessage, differs from, msgTime)"
+"Instead, all init blocks together with member property initializers are compiled into the code of the constructor, so they should rather be considered a part of the constructor.","(constructor, includes, property)"
+"Also, as @AdrianK pointer out, with regular scrollable you can wrap your view with BoxWithConstraints, and use maxHeight to set height of your view.","(BoxWithConstraints, wraps, maxHeight); (property, Limitation, class): (maxHeight, sets height for, BoxWithConstraints)"
+"In Kotlin, clear() is a method of MutableList that is used to remove all elements from the list.","(class, Containment, method): (MutableList, contains, clear)"
+It is just Kotlin compiler magic that it allows you to use it as if it was a part of the View class (notice that because of that you cannot access private/protected values from extension funtions),"(View, is part of, extension functions); (extension functions, impose restrictions, View)"
+In your case the TextView class contains a getter CharSequence getText() and a setter void setText(CharSequence),"(TextView, contains, getText()); (TextView, contains, setText())"
+This will internally create the TestKt(name of file) class with PSVM method(and required structure) to execute the code.,"(TestKt, contains, PSVM())"
+In your question when you add a new item to SnapshotStateList whole Column is composed because Column doesn't create a composition scope due to inline keyword,"(SnapshotStateList, adds to, Column); (Column, composed because of inline keyword, SnapshotStateList)"
+And you can set it to the RecyclerView in onCreate() immediately.,"(RecyclerView, set in, onCreate())"
+"Note that this will mock the whole pkg.FileKt class, and not just extensionFunc.","(pkg.FileKt, mocks whole, extensionFunc)"
+" For example, in Java 7 you have the Path class and it is difficult to find the Files.exist(path) method because it is name spaced oddly","(Path, part of, Files.exists())"
+Consider switching to LazyColumn(which has fillParentMaxHeight() for this exact purpose) or to Pager(which is made explicitly for such cases).,"(LazyColumn, has, fillParentMaxHeight())"
+The compiler will make it a FunsKt.class with a static method 'setPosition' inside.,"(FunsKt.class, includes, setPosition())"
+"And the EditText class contains an overridden getter Editable getText(), which means that you can get an Editable for an EditText and set an Editable to an EditText","(EditText, contains, getText()); (EditText, implements the getter, getText())"
+A StringBuilder is used as the receiver and apply is invoked on it,"(StringBuilder, used as the receiver, apply())"
+"The block, passed as an argument in {}(lambda expression), does not need to use additional qualifiers and simply calls append, a visible method of StringBuilder multiple times.","(StringBuilder, calls, append())"
+If you want the class to cooperate with the inline method on the generics (meaning that class Storage only stores objects of type T):,"(Storage, cooperate with, inline)"
+You can keep jobs from running at the same time with a Mutex and withLock call,"(Mutex, interacts with, withLock())"
+This can be done by re-using parent/caller coroutine scope inside child/callee coroutine,"(CoroutineScope, is re-used by, coroutine)"
+We can pass a fun to adapter and get data from it like this :,"(adapter, work with, fun)"
+The M2 (starting from the version 1.1.0-alpha06) and M3 have the implementation of ExposedDropdownMenu based on ExposedDropdownMenuBox with TextField and DropdownMenu inside.,"(TextField, works with, DropdownMenu)"
+Spring will subscribe to that Mono / Flux and will return the request,""
+"However, since Kotlin uses the standard Java collection classes, you can use the Java 8 stream API to perform parallel operations on Kotlin collections as well.",""
+"As @Vadzim said, in IntelliJ or Android Studio, you just have to do the following to get java code from kotlin:",""
+Loading images and doing background work with Glance/Widgets is tricky for now but we are improving this soon by supporting recomposition.,""
+"My thoughts are that you are using the wrong fragmentManager the tutorial you linked creates the viewpager2 in an Activity where as you are creating it in a Fragment and possibly using the fragmentManager that already has a fragment ""MyFragment"" associated with it.","(FragmentManager, interact with, ViewPager2)"
+"For Java delopers, this is a recommended way in which you can retrieve data from a Cloud Firestore database and display it in a RecyclerView using FirestoreRecyclerAdapter.","(FirestoreRecyclerAdapter, display in, RecyclerView)"
+You need to put DropdownMenu together with the caller view in a Box,"(DropdownMenu, work together in, Box)"
+"In Spring MVC, you can use a AbstractRequestLoggingFilter filter and  ContentCachingRequestWrapper and/or ContentCachingResponseWrapper","(ContentCachingRequestWrapper, use with, ContentCachingResponseWrapper)"
+"You can use layout in similar way Box, Row, Column does with a scope to pass information from inside to content using an interface, implementation and changing properties of this implementation",""
+"As a ref how to implement it, check out compose source code: AndroidTextToolbar and TextActionModeCallback",
+You can fix this by simply qualifying the function call with the implicit single parameter it,
+Such function types have their parameter list prefixed with the receiver type.,
+"By assigning this block of code to a function type that has Int as a receiver (not as a parameter!), the code suddenly compiles:",
+"This topic assumes familiarity with function types, but a little side note for receivers is needed.",
+It is actually incredibly easy to understand how blocks of code with receivers are handled:,
+"Doesn't make much sense, right? In fact, assigning this to a function type of (Int) -> Long - where Int is the (only) parameter, and the return type is Long - would rightfully result in a compilation error",
+The core issue is that you are starting collection on Paging before ViewPager is ready to start binding this items,
+"Do note that if this feature of the Kotlin language seems inappropriate for your DSL, @DslMarker is your friend!",
+Here's a different example using handcrafted types that showcases this better:,
+"effectively becomes (in the mind, not code wise - you cannot actually extend classes on the JVM):",
+"If you create an inline function with a reified T, the type of T can be accessed even at runtime, and thus you do not need to pass the Class<T> additionally",
+"All these topics have documentation, but nothing goes in-depth on receivers.",
+"Notice how inside of a class, we don't need to use this to access transformToBar - the same thing happens in a block with a receiver.",
+"you might want to check whether a variable is an instance of T, which you can easily do then: myVar is T.",
+The only way to achieve this is via multiple higher-order functions that take a single receiver function type,
+"Therefore, if you want to use the generic type as a normal class in the function body you need to explicitly pass the class as a parameter as shown in myGenericFun.",
+"It just so happens that the documentation on this also explains how to use an outermost receiver if the current block of code has two receivers, via a qualified this.",
+"A block of code can have multiple receivers, but this currently has no  expression in the type system",
+You can work with T as if it was a normal class - e.g,
+Such an inline function with reified type T looks as follows:,
+"In the body of a generic function like myGenericFun, you can't access the type T because it's only available at compile time but erased at runtime",
+"By doing so, you instruct the compiler to copy the function's bytecode to every spot the function is invoked from (the compiler ""inlines"" the function)",
+"When you call an inline function with reified type, the compiler has to be able to know the actual type passed as a type argument so that it can modify the generated bytecode to use the corresponding class directly",
+Therefore a call like myVar is T becomes myVar is String in the bytecode (if the type argument is String).,
+"Imagine that, similar to extension functions, the block of code is evaluated inside the class of the receiver type",
+"Let's have a look at an example that shows how helpful reified can be.
+We want to create an extension function for String called toKotlinObject that tries to convert a JSON string to a plain Kotlin object with a type specified by the function's generic type T",
+"If we try to get the Class of the type parameter T, the compiler complains: ""Cannot use 'T' as reified type parameter",
+"As a workaround, the Class of T can be made a method parameter, which then  used as an argument to readValue",
+This works and is a common pattern in generic Java code,
+You can only use reified in combination with an inline function,
+We can use com.fasterxml.jackson.module.kotlin for this and the first approach is the following:,
+Also available through Ctrl / 閳?Shift+A as Show Kotlin Bytecode action.,
+"There閳ユ獨 no need to take the Class of T additionally, T can be used as if it was an ordinary class",
+"look at functions that can help already, such as for String?.isNullOrEmpty() and String?.isNullOrBlank() which can operate on a nullable value safely and do what you expect","(String?.isNullOrEmpty(), like, String?.isNullOrBlank())"
+"Only the parameterless constructor is deprecated, it is now preferred that you specify the Looper in the constructor via the Looper.getMainLooper() method.","(Looper, is used in, constructor); (parameterless constructor, is deprecated, Looper); (Looper.getMainLooper, is preferred, constructor);"
+It's a great tool that can jump to the corresponding bytecode when you move around in the source file,
+And it updates the bytecode on the fly whenever the source changes.,
+"The ability to refer to a view directly by it's ID/name in Kotlin is called ""synthetic properties"" and it is a feature of a project plugin called Kotlin Android Extensions, which is no longer supported or included in new projects",
+"As to the lists, MutableList<T> has add and remove functions, so that it can increase and reduce its size.","(MutableList<T>, has, add); (MutableList<T>, has, remove)"
+In example below we set size of Box with green border based on Box with red background,
+This can be complicated for a beginner but that's how you get dimensions without recomposing a Composable,
+SubcomposeLayout question and answers in the link provided above might help,
+I made an image that passes drawing area based on ContentScale as you can see here using scope.,
+For demonstration we will change dimensions of second Composable to firs one's,
+On next recompositions since we remember DimensionScopeImpl we get the correct size and Text size is correctly set and we see Text with border.,"(DimensionScopeImpl, is remembered during, recompositions)"
+"We are not able to get correct size because we needed to invoke dimensionScope.content() before measuring but in some cases you might be able to get Constraints, size or parameters from parent or your calculation","(dimensionScope.content(), relatesTo, parent)"
+Now use doSomethingAsync from Java in the same way as you are using other asynchronous APIs in the Java world.,
+They can execute a long running operation and wait for it to complete without blocking.,
+"So, all I can offer: don't use inheritance with data classes.",
+"Suspending functions are at the center of everything coroutines.
+ A suspending function is simply a function that can be paused and resumed at a later time",
+We are considering prohibiting or severely restricting inheritance of data classes,
+Continuation<T> is an interface that contains two functions that are invoked to resume the coroutine with a return value or with an exception if an error had occurred while the function was suspended.,
+"The function above for example, will be converted by the compiler to this:",
+So you need to implement some sort of logic to prevent multiple quick clicks..,
+"Under the hood, suspend functions are converted by the compiler to another function without the suspend keyword, that takes an addition parameter of type Continuation<T>",
+"For someone who is still looking for answer to this, here is the working solution for this problem",
+"In your project level open build.gradle file, increase the
+ext.kotlin_version from whatever current version that you have like 1.5.0, to the latest stable version 1.6.0 (Whatever is latest at that time)",
+"Wait until the inspection is over and then correct errors in ""General"" section and possible ones in other sections.",
+"In my case, if the user clicks the same view twice very very quickly, this crash will occur",
+This is especially easy to do when you have a list of items,
+You can read up more on preventing this here: Android Preventing Double Click On A Button,
+"Alternatively, you can just use two fingers and click two (or more) views at the same time, where each view has their own navigation that they would perform",
+"Edit 4/16/2020: Just in case you're not terribly interested in reading through that Stack Overflow post above, I'm including my own (Kotlin) solution that I've been using for a long time now.",
+The above info on multiple click prevention will handle this case.,
+You can find out more information about WindowInsets by watching this YouTube video,
+"If you still have issues, with some older plugins you need to clear the caches in Intellij IDEA (file menu, Clear Caches and Restart, select option to restart).",

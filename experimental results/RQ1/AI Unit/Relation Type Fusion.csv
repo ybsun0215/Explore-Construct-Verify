@@ -1,0 +1,183 @@
+Relation Type,SubType,Label1,Label1,Final Label
+Dependency,depends on,T,T,T
+Dependency,takes,T,T,T
+Dependency,takes as input,F,F,F
+Dependency,uses,T,T,T
+Dependency,requires cleanup with,T,T,T
+Dependency,requires,T,T,T
+Dependency,prerequisite for use,T,T,T
+Dependency,relies on framework of,T,T,T
+Dependency,can use,T,T,T
+Dependency,prepares input for,T,T,T
+Dependency,caused by,F,T,F
+Conversion,converts,T,T,T
+Conversion,conversion required for query,T,T,T
+Conversion,converted by,T,F,T
+Conversion,conversion to,T,T,T
+Conversion,converted to,T,T,T
+Conversion,convert to,T,T,T
+Conversion,convert method,T,T,T
+Conversion,conversion target,T,F,T
+Conversion,conversion method,T,F,T
+Preference,preferred over,T,F,T
+Preference,provides flexibility over,T,F,T
+Preference,better to use,T,T,T
+Preference,recommended over,T,T,T
+Preference,preferred for date-only values,T,T,T
+Preference,more efficient than,T,T,T
+Preference,slightly faster than,T,T,T
+Preference,discouraged use compared to,T,T,T
+Preference,legacy compared to,T,T,T
+Preference,awkward to use compared to,T,T,T
+Preference,preferred for animation,T,T,T
+Preference,more flexible than,T,T,T
+Implementation,implements,T,T,T
+Implementation,implements with,T,T,T
+Implementation,implemented by,T,T,T
+Implementation,can be implemented as,T,F,T
+Implementation,method override,T,T,T
+Implementation,related to implementation,T,T,T
+Implementation,relies on implementation of,T,F,T
+Implementation,implemented in,T,F,T
+Implementation,has entrySet with peculiar implementation,T,F,T
+Implementation,requires implementation of,T,F,T
+Collaboration,collaborates with,T,F,T
+Collaboration,calls internally,F,F,F
+Collaboration,related to,T,T,T
+Collaboration,used with,T,T,T
+Collaboration,associated with,T,T,T
+Collaboration,sends data to,T,T,T
+Collaboration,interacts with,T,T,T
+Containment,used in,F,F,F
+Containment,wraps,F,F,F
+Containment,part of,T,T,T
+Containment,should be wrapped with,F,F,F
+Containment,occurs in,F,F,F
+Containment,contains private nested class,T,T,T
+Containment,contains,T,T,T
+Modification,updates,T,T,T
+Modification,copied to,T,T,T
+Modification,reset by,T,T,T
+Modification,overwrite file,T,T,T
+Modification,copies from,T,T,T
+Modification,method of modification,T,T,T
+Modification,updated by,T,T,T
+Creation,always create a new String object unlike,T,T,T
+Creation,initialization type,F,F,F
+Creation,creates,T,T,T
+Creation,object creation method,T,T,T
+Creation,method of creation,T,T,T
+Creation,generates,T,T,T
+Difference,different in implementation,T,T,T
+Difference,different in content type support,T,T,T
+Difference,different in execution context,T,T,T
+Difference,compared with,T,T,T
+Difference,different in approach,T,T,T
+Difference,different in HTML generation,T,T,T
+Difference,different in null key support,T,T,T
+Difference,difference in exception handling,T,T,T
+Difference,different in execution behavior,T,T,T
+Difference,difference in implementation,T,T,T
+Difference,different in code type,T,T,T
+Difference,different in time resolution,T,T,T
+Difference,different in append option,T,T,T
+Difference,different in method execution,T,T,T
+Difference,different in method functionality,T,T,T
+Difference,different in URL attachment,T,T,T
+Difference,different in auto-flushing option,T,T,T
+Difference,different in access method,T,T,T
+Difference,different in meaning,T,T,T
+Difference,different in implementation location,T,T,T
+Difference,different in ordering,T,T,T
+Difference,different in functionality,T,T,T
+Difference,compared to,T,T,T
+Replacement,replacement for,T,T,T
+Replacement,alternative to,T,T,T
+Replacement,can be switched to,T,T,T
+Replacement,deprecated and replaced by,T,T,T
+Replacement,alternative method to obtain header value,T,T,T
+Replacement,supplanted by,T,T,T
+Replacement,can use instead of,T,T,T
+Replacement,alternative for specific implementation,T,T,T
+Replacement,can be replaced by,T,T,T
+Replacement,supplants,T,T,T
+Replacement,change to,T,T,T
+Replacement,alternative method for obtaining header value,T,T,T
+Execution,followed by,F,F,F
+Execution,initiates execution of,F,F,F
+Execution,initiates,F,F,F
+Execution,executed by,T,T,T
+Execution,cancellation mechanism involves,F,F,F
+Execution,continues until check,F,F,F
+Execution,exits from,F,F,F
+Execution,calls asynchronously,F,F,F
+Execution,renders complete web pages,F,F,F
+Execution,completes background work with,F,F,F
+Access,can be passed via,T,T,T
+Access,retrieves header value,T,T,T
+Access,returned by,T,T,T
+Access,receives data from,T,T,T
+Access,returns same instance for every item,T,T,T
+Access,obtained as,T,T,T
+Access,returns,T,T,T
+Access,accessed via,T,T,T
+Support,maintains,T,T,T
+Support,provides,T,T,T
+Support,caching behavior,T,T,T
+Support,provides mechanism for,T,T,T
+Support,backed by,T,T,T
+Support,provides resource as,T,T,T
+Support,formatted by,T,T,T
+ ,type selection,T,T,T
+Support,uses for testing,T,T,T
+Support,checks,F,F,F
+Support,related to hashCode,F,F,F
+Support,provides method,T,F,T
+Support,has method,F,F,F
+Support,method,F,F,F
+Support,usage,T,F,T
+Support,uses for escaping,T,F,T
+Support,have method toPattern,F,F,F
+Support,hasMethod,F,F,F
+Support,used for larger integers,T,T,T
+Support,contains method,F,F,F
+Support,checks for network connection,T,T,T
+Support,facilitates traversal of,T,T,T
+Support,used for data manipulation,T,T,T
+Support,defines ordering for,T,T,T
+Support,elements sorted,T,T,T
+Support,use API,F,F,F
+Support,uses work-stealing approach,F,F,F
+Support,uses divide and conquer approach,F,F,F
+Limitation,provides unmodifiable view,T,T,T
+Limitation,clarification needed on,T,T,T
+Limitation,behavior on empty collection,T,T,T
+Limitation,provides immutable list,T,T,T
+Limitation,does not override methods,T,T,T
+Limitation,has time complexity of O(n),T,T,T
+Limitation,avoid O(N) for Linked data structures,T,T,T
+Limitation,mutability,T,T,T
+Limitation,supports limited add/remove,T,T,T
+Limitation,does not catch all,T,T,T
+Limitation,immutable list,T,T,T
+Limitation,throws when adding list,T,T,T
+Limitation,avoids creating,T,T,T
+Limitation,requires newline consumption,T,T,T
+Limitation,fixed size,T,T,T
+Limitation,lacks method,T,T,T
+Limitation,consumes rest of line,T,T,T
+Limitation,structurally unmodifiable,T,T,T
+Limitation,immutability,T,T,T
+Limitation,loss of time components,T,F,T
+Limitation,not best practice,T,F,T
+Limitation,requires integer input,T,F,T
+Limitation,check size before using,T,F,T
+Limitation,not creates,T,F,T
+Limitation,not interruptable,T,F,T
+Limitation,not safe to compare instead of,T,T,T
+Limitation,interruptible blocking call,T,T,T
+Equivalence,equivalent to,T,T,T
+Equivalence,similar in interruption detection,T,T,T
+Equivalence,similar to,T,T,T
+Equivalence,no difference with,T,T,T
+Equivalence,similar in meaning,T,T,T

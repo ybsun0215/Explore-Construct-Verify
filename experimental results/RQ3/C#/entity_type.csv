@@ -1,0 +1,5 @@
+class,"A class defines the structure and behavior of objects, including fields, methods, and constructors, serving as a template for object instantiation. It can be concrete, abstract, utility, or generic.","abstract class, concrete class, generic class, exception class, utility class, enum constant, delegate type, generic type"
+method,"A method is a block of code that performs a specific task, defined within a class or interface, and can be invoked on objects or directly via the class (if static). It includes instance, static, extension methods, constructors, and helper functions.","instance method, helper function, extension method, static method, constructor"
+interface,"An interface defines a contract of methods that a class must implement. It can be generic or specialized, such as graphics interfaces.","graphics interface, interface type, generic interface"
+struct,"A struct is a value type that defines a structure, often used to represent lightweight data structures.","struct type, generic struct"
+namespace,A package is a namespace that groups related classes and interfaces for better organization.,"assembly, package"

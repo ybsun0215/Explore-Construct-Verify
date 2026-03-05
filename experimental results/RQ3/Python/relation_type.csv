@@ -1,0 +1,16 @@
+Collaboration,One entity is utilized or employed in conjunction with another entity.,"['used in', 'used with', 'check process success with', 'use', 'use check=True with', 'uses', 'used by', 'plugs into', 'interacts with', 'works with']"
+Similarity,One entity is considered similar or equivalent to another entity.,"['returns output like', 'similar in usage to', 'behave similarly to', 'is similar to', 'usage similarity', 'similar to']"
+Containment,One entity includes or holds another entity within it.,"['added to', 'belongs to', 'listed in', 'includes', 'includes items not in', 'includes wrappers for', 'contains', 'section of', 'is part of', 'lists']"
+Modification,One entity alters or changes another entity.,"['modifies', 'reduces redundant columns in', 'set by']"
+Performance,One entity is compared to another entity in terms of speed or efficiency.,"['less efficient than', 'runs on different platform than', 'faster than', 'is slower than', 'more expressive than']"
+Difference,One entity is considered different from another entity.,"['different in loop syntax', 'different from', 'signature mismatch with', 'distinguish from', 'is different from', 'different in parameter type', 'allocation method differs from']"
+Dependency,One entity necessitates or demands another entity for its operation.,"['requires permission from', 'requires for guaranteed insertion ordering', 'does not require', 'enforce license check', 'provides command', 'support', 'supports', 'thrown by', 'raises', 'is checked by', 'return if key not in', 'is invoked by', 'called when', 'iterates over', 'calls', 'precedes', 'checks', 'create default item using', 'process involving', 'performed on']"
+Replacement,One entity is substituted or exchanged for another entity.,"['used instead of', 'use instead of', 'alternative to', 'replaces', 'replaced by', 'can be replaced with']"
+Implementation,One entity is realized or executed by another entity.,['implemented by']
+Translation,One entity is converted or transformed into another entity.,"['convert to', 'translated to', 'compiles to bytecode for', 'convert columns of', 'interpreted by', 'interprets']"
+Limitation,One entity imposes restrictions or constraints on another entity.,"['not available in', 'has limitations like', 'discover limits of', 'shares duplicate key limitation with']"
+Extension,One entity adds to or enhances another entity.,"['has additional methods compared to', 'extends']"
+Delegation,One entity assigns tasks or responsibilities to another entity.,['delegates to']
+Retrieval,One entity obtains or fetches data from another entity.,"['is returned by', 'retrieves from', 'returns', 'returns to']"
+Reference,One entity points to or indicates another entity.,"['based on', 'refers to', 'recognized by']"
+Opposition,One entity is contrary or opposite to another entity.,['is opposite of']

@@ -1,0 +1,385 @@
+Text,Result
+"second, if the lock is locked, the threads are blocked in the wait() call inside the while(islocked) loop in the lock() method.","[('lock', 'contains method', 'lock()'), ('lock()', 'contains call', 'wait()')]"
+"the method compareandset() allows you to compare the current value of the atomicboolean to an expected value, and if current value is equal to the expected value, a new value can be set on the atomicboolean.","[('AtomicBoolean', 'has method', 'AtomicBoolean.compareAndSet()')]"
+the executequery() method is used if the stored procedure returns a resultset.,"[('executeQuery()', 'returns', 'ResultSet')]"
+here is an example of flushing data written to a java bufferedwriter by calling its flush() method:,"[('BufferedWriter', 'has method', 'BufferedWriter.flush()')]"
+"a class can have more than one constructor, although this example just shows one.",
+here is an example of removing the first element from a java deque using the pollfirst() method:,"[('Deque', 'method', 'Deque.pollFirst()')]"
+the anonymous class subclasses (extends) superclass and overrides the doit() method.,"[('anonymous class', 'overrides', 'SuperClass.doIt()'), ('anonymous class', 'subclasses', 'SuperClass')]"
+"to obtain the result, you call one of the two get() methods on the future.","[('Future', 'has method', 'Future.get()')]"
+java nio has more classes and components than these but the channel buffer and selector forms the core of the api in my opinion,"[('Java NIO', 'has class', 'Selector'), ('Java NIO', 'has class', 'Buffer'), ('Java NIO', 'has class', 'Channel')]"
+the java atomiclongarray class (java.util.concurrent.atomic.atomiclongarray) represents an array of long .,"[('AtomicLongArray', 'is a class in', 'java.util.concurrent.atomic')]"
+"the java integer class implements the comparable interface, so you can call compareto() here is an example:","[('Integer', 'method', 'compareTo()'), ('Integer', 'implements', 'Comparable')]"
+"there is no package and class name to disturb you when reading the script, and whenever you need the default function all you need to write is ""default(a, b)"", instead of ""com.myapp.util.util.default(a, b)"".",
+"the java sortedset interface has a method named setset() which returns another sortedset with all elements that are greater than or equal to (tailing) a given parameter value, according to the sort order used by the sortedset.","[('SortedSet', 'has method', 'SortedSet.setSet()'), ('SortedSet.setSet()', 'returns', 'SortedSet')]"
+deque.polllast() is different than removelast() which throws an exception if the deque is empty,"[('Deque', 'has method', 'removeLast()'), ('Deque', 'has method', 'pollLast()')]"
+to decrypt data you would have passed cipher text (encrypted data) into the dofinal() or doupdate() method instead.,"[('doFinal()', 'method of', 'decryption'), ('doUpdate()', 'method of', 'decryption')]"
+as you saw in the previous section when you register a channel with a selector the register() method returns a selectionkey objects,"[('Channel', 'method', 'register()'), ('register()', 'returns', 'SelectionKey')]"
+you can use addbatch() and executebatch() methods to execute batch updates.,"[('executeBatch()', 'used to', 'execute batch updates'), ('addBatch()', 'used to', 'execute batch updates')]"
+to add an element at the beginning (head) instead of the end of a java deque you call the addfirst() method instead.,"[('Deque', 'method', 'Deque.addFirst()')]"
+here are two examples of taking an element from a java queue using its poll() and remove() methods:,"[('Queue', 'has method', 'Queue.remove()'), ('Queue', 'has method', 'Queue.poll()')]"
+a stop() or pause() method too) then you can no longer create your runnable implementation with a java lambda expression,"[('Runnable', 'has method', 'stop()'), ('Runnable', 'has method', 'pause()')]"
+please keep in mind that if your runnable implementation needs more than just the run() method (e.g.,
+"once the try block is exited, the close() method of the bufferedoutputstream is called automatically, because the bufferedoutputstream was declared inside the parentheses of the try block.","[('BufferedOutputStream', 'has method', 'BufferedOutputStream.close()')]"
+"if the deque is empty, pollfirst() returns null. this is different than removefirst() which throws an exception if the deque is empty.","[('pollFirst()', 'returns', 'null'), ('Deque', 'method', 'pollFirst()'), ('removeFirst()', 'throws', 'exception'), ('Deque', 'method', 'removeFirst()')]"
+in this example a java.util.arraylist() instance is created inside the call to setsomelist().,"[('java.util.ArrayList', 'created inside', 'setSomeList()')]"
+"if the deque is empty, polllast() returns null. this is different than removelast() which throws an exception if the deque is empty.","[('Deque', 'method', 'pollLast()'), ('Deque', 'method', 'removeLast()'), ('pollLast()', 'returns', 'nan'), ('removeLast()', 'throws', 'exception')]"
+"if the class is marked with the default access modifier, then no other class outside the same java package can access that class, including its constructors, fields and methods.",
+"here is the car class from before with a single, simple method named getbrand added:","[('Car', 'has method', 'Car.getBrand()')]"
+java.awt.list is the last line of this example that calls the list stream() method to obtain the stream representing the elements in the list,"[('List.stream()', 'returns', 'Stream'), ('java.awt.List', 'calls method', 'List.stream()')]"
+"when you divide classes into multiple java packages, it becomes easier to figure out where a certain class you are looking for is.",
+here is an example of writing a cyclic object graph to rion using the rionobjectwriter writecyclic() method.,"[('RionObjectWriter', 'method', 'RionObjectWriter.writeCyclic()')]"
+"it is now up to the caller of the readmydata() method to decide if an existing mydata instance should be reused, or if a new instance should be created.","[('readMyData()', 'method of', 'MyData')]"
+nested classes and inheritance the same java inheritance rules apply to nested classes.,
+"the formatted() method is only a preview feature that was added together with java text blocks in java 13, so we do not yet know if it will stay in.","[('formatted()', 'added together with', 'Java Text Blocks')]"
+the missed signals problems is the reason that the fairlock implementation shown in the text starvation and fairness has turned the queueobject class into a semaphore with two methods: dowait() and donotify().,"[('FairLock', 'contains', 'QueueObject'), ('QueueObject', 'has method', 'doWait()'), ('QueueObject', 'is a', 'class'), ('QueueObject', 'has method', 'doNotify()')]"
+"then the example calls files.copy(), passing the two path instances as parameters.","[('Files', 'has method', 'Files.copy()')]"
+"after running this java code the isempty variable will contain the value true, because the set size() method returns 0 - because the set in the example contains no elements.","[('Set', 'method', 'Set.size()')]"
+"the comparison follows the rules for the comparable interface, meaning the compareto() method returns:",
+"the lookingat() method only matches the regular expression against the beginning of the text, whereas matches() matches the regular expression against the whole text.","[('matches()', 'method of', 'regular expression'), ('lookingAt()', 'method of', 'regular expression')]"
+the collection interface has two methods to check if a collection contains one or more certain elements. these are the contains() and containsall() methods.,"[('Collection', 'has method', 'Collection.containsAll()'), ('Collection', 'has method', 'Collection.contains()')]"
+"if there is no more data to read from the underlying reader, then the bufferedreader's readline() method will return null .","[('BufferedReader', 'has method', 'BufferedReader.readLine()'), ('BufferedReader.readLine()', 'returns', 'nan')]"
+"as you can see, an anonymous class implementing an interface is pretty similar to an anonymous class extending another class.",
+the collections reverse() method can reverse the elements in a java list.,"[('Collections.reverse()', 'operates on', 'List'), ('Collections', 'has method', 'Collections.reverse()')]"
+this also means that threads calling dowait() on the first mywaitnotify instance risk being awakened by donotify() calls on the second mywaitnotify instance.,"[('MyWaitNotify', 'has method', 'MyWaitNotify.doWait()'), ('MyWaitNotify', 'has method', 'MyWaitNotify.doNotify()')]"
+"truck truck = new truck(); // upcast to vehicle vehicle vehicle = truck; // downcast to car again car car = (car) vehicle; the truck object can be upcast to a vehicle object, but it cannot be downcast to a car object later.",
+you can read a java float from the datainputstream using its readfloat() method.,"[('DataInputStream', 'has method', 'DataInputStream.readFloat()')]"
+the instanceof instruction can determine whether a given object is an instance of some class.,
+the first example of a higher order function is the collections.sort() method which takes a comparator as parameter.,"[('Collections.sort()', 'takes parameter', 'Comparator'), ('Collections', 'has method', 'Collections.sort()')]"
+"the java simpledateformat class is also capable of formatting a date object into a stringbuffer, instead of returning an individual string with the date formatted.","[('SimpleDateFormat', 'returns', 'String'), ('SimpleDateFormat', 'formats', 'Date'), ('SimpleDateFormat', 'formats into', 'StringBuffer')]"
+the string class has several other useful methods than the ones described in this tutorial.,"[('String', 'has method', 'String.method()')]"
+here is an example of peeking at the first element of a java deque using the peek() method:,"[('Deque', 'method', 'Deque.peek()')]"
+here is a java method override example: public class vehicle { string licenseplate = null; public void setlicenseplate(string licenseplate) { this.licenseplate = licenseplate; } } public class car extends vehicle { public void setlicenseplate(string license) { this.licenseplate = license.tolowercase(); } } notice how both the vehicle class and the car class defines a method called setlicenseplate().,"[('Vehicle', 'defines method', 'Vehicle.setLicensePlate()'), ('Car', 'extends', 'Vehicle'), ('Car', 'defines method', 'Car.setLicensePlate()')]"
+"treeset also guarantees the order of the elements when iterated, but the order is the sorting order of the elements. in other words, the order in which the elements whould be sorted if you used a collections.sort() on a list or array containing these elements. this order is determined either by their natural order (if they implement comparable), or by a specific comparator implementation","[('elements', 'determined by', 'natural order'), ('Collections.sort()', 'used on', 'List'), ('elements', 'determined by', 'Comparator implementation'), ('TreeSet', 'guarantees', 'order of the elements'), ('Collections.sort()', 'used on', 'array')]"
+the java outputstreamwriter is a subclass of the java writer class.,"[('OutputStreamWriter', 'subclass of', 'Writer')]"
+"you can obtain both reference and stamp from an atomicstampedreference in a single, atomic operation using the get() method.","[('AtomicStampedReference', 'has method', 'AtomicStampedReference.get()')]"
+the printwriter class has all the same methods as the printstream except for the methods to write raw bytes.,"[('PrintStream', 'has method', 'PrintStream.methodName()'), ('PrintWriter', 'has method', 'PrintWriter.methodName()')]"
+the compareandset() method can compare the reference stored in the atomicstampedreference instance with an expected reference and the stored stamp with an expected stamp and if they two references and stamps are the same (not equal as in equals() but same as in ==) then a new reference can be set on the atomicstampedreference instance,"[('AtomicStampedReference', 'has method', 'equals()'), ('AtomicStampedReference', 'has method', 'compareAndSet()')]"
+"by calling flush() you can assure that any buffered data will be flushed (written) to disk (or network, or whatever else the destination of your outputstream has).",
+calling addandget() is also an atomic operation (like all operations on the atomicintegerarray).,"[('AtomicIntegerArray', 'has method', 'AtomicIntegerArray.addAndGet()')]"
+"here is diagram illustrating a class called vehicle, which has two subclasses called car and truck.","[('Vehicle', 'has subclass', 'Car'), ('Vehicle', 'has subclass', 'Truck')]"
+jca is structured around some central general purpose classes and interfaces.,
+the static method matches() creates a new matcher and returns it.,"[('matches()', 'creates', 'matcher'), ('matches()', 'returns', 'matcher')]"
+"the servicemock instance passed to the getmock() method should be the mock object obtained from the mockservice factory, using the container.instance(""mockservice"") method call.",
+"however, the cache class may choose to make the cacheentry class visible to the outside world, so they can access more than just the cached value (for instance information about when the value was last refreshed etc.","[('Cache', 'contains', 'CacheEntry')]"
+it is also possible to create other types of keystore instance by passing a different parameter to the getinstance() method.,"[('KeyStore', 'method', 'getInstance()')]"
+"it will explain the basics of java reflection including how to work with arrays, annotations, generics and dynamic proxies, and do dynamic class loading and reloading.",
+the java map interface has a getordefault() method which can return a default value supplied by you - in case no value is stored in the map by the given key.,"[('Map', 'has method', 'Map.getOrDefault()')]"
+"notice too, that the compareto() method should throw a nullpointerexception if the parameter object is null.","[('compareTo()', 'throws', 'NullPointerException')]"
+finally you can access the localized values in the resourcebundle via its different getstring() and getobject() etc.,"[('ResourceBundle', 'has method', 'ResourceBundle.getString()'), ('ResourceBundle', 'has method', 'ResourceBundle.getObject()')]"
+using java reflection you can inspect the constructors of classes and instantiate objects at runtime.,"[('Java Reflection', 'inspects', 'constructors'), ('Java Reflection', 'instantiates', 'objects')]"
+"the reentrantlock hasqueuedthreads() method returns true if any threads are queued up waiting to lock this lock, and false if not.","[('ReentrantLock', 'has method', 'ReentrantLock.hasQueuedThreads()')]"
+"if you have multiple blocks of data to include in the same message digest, call the update() method and finish off with a call to digest().","[('update()', 'called in', 'message digest'), ('digest()', 'called after', 'update()')]"
+reading a byte from a java randomaccessfile is done using its read() method.,"[('RandomAccessFile', 'has method', 'RandomAccessFile.read()')]"
+"non-static nested classes (inner classes) have access to the fields of the enclosing class, even if they are declared private.",
+here is an example of removing the first element a java deque using the remove() method:,"[('Deque', 'method', 'remove()')]"
+here is an example that shows how to create a localdatetime object via the now() method:,"[('LocalDateTime', 'created via method', 'LocalDateTime.now()')]"
+the sortedmap interface has a method named headmap() which returns a new map which contains the first elements of the sortedmap according to the sort order used.,"[('SortedMap.headMap()', 'returns', 'Map'), ('SortedMap', 'has method', 'SortedMap.headMap()')]"
+the atomicboolean class is located in the java.util.concurrent.atomic package so the full class name is java.util.concurrent.atomic.atomicboolean,"[('java.util.concurrent.atomic.AtomicBoolean', 'full class name', 'AtomicBoolean'), ('AtomicBoolean', 'located in', 'java.util.concurrent.atomic')]"
+only the full java sdk contains the java compiler which turns your .java source files into byte code .class files.,
+the rionwriter contains a method named writebytes() which can be used to write a rion bytes field to the destination byte array.,"[('RionWriter', 'contains method', 'RionWriter.writeBytes()')]"
+here is an example of obtaining the current position of a randomaccessfile using its getfilepointer() method:,"[('RandomAccessFile', 'has method', 'RandomAccessFile.getFilePointer()')]"
+"notice that the get() method returns a java object, so we have to cast it to a string (because we know the value is a string).",
+here is an example of obtaining the comparator used by a sortedset via the comparator() method:,"[('SortedSet', 'uses method', 'SortedSet.comparator()')]"
+the queueobject.dowait() call is placed outside the synchronized(this) block to avoid nested monitor lockout so another thread can actually call unlock() when no thread is executing inside the synchronized(this) block in lock() method,"[('lock', 'has method', 'unlock()'), ('queueObject', 'has method', 'queueObject.doWait()'), ('lock', 'has method', 'lock()')]"
+if a thread calls lock() twice without calling unlock() in between the second call to lock() will block,"[('thread', 'calls', 'unlock()'), ('thread', 'calls', 'lock()'), ('lock()', 'blocks', 'thread')]"
+it is worth noting that both unlockread() and unlockwrite() calls notifyall() rather than notify().,"[('unlockRead()', 'calls', 'notifyAll()'), ('unlockWrite()', 'calls', 'notifyAll()')]"
+"in other words, the calling thread must call wait() or notify() from inside a synchronized block.","[('Thread', 'calls', 'wait()'), ('Thread', 'calls', 'notify()')]"
+the files.exists() method checks if a given path exists in the file system.,"[('Files', 'has method', 'Files.exists()'), ('Files.exists()', 'checks', 'Path')]"
+"you don't have to define a constructor for a class, but if you don't define any constructor, the java compiler will insert a default, no-argument constructor for you.",
+"use integer.valueof(1) multiple times as monitor object), then you risk that those synchronized blocks all get synchronized on the same object.",
+after running this code the size variable should contain the value 3 - because the queue contains 3 elements at the time size() is called.,"[('Queue', 'contains method', 'Queue.size()')]"
+java.io.inputstreamreader example creates a fileinputstream and wraps it in a inputstreamreader,"[('java.io.InputStreamReader', 'creates', 'FileInputStream'), ('FileInputStream', 'wrapped in', 'InputStreamReader')]"
+"this speeds up object mapping cache lookups because the hashcode() method returns this int id, and because equals() also only compares int id's, instead of class objects, table names etc.","[('hashCode()', 'returns', 'int id'), ('equals()', 'compares', 'int id')]"
+if your java sortedmap was created using a comparator you can obtain the comparator used via the sortedmap comparator() method,"[('SortedMap', 'created using', 'Comparator'), ('SortedMap', 'method', 'comparator()')]"
+the atomicreferencearray in the java.util.concurrent.atomic package is an array of object references which can be updated atomically.,"[('AtomicReferenceArray', 'contained in package', 'java.util.concurrent.atomic')]"
+"as parameter to the arrays.sort() method we pass the employee array, and a comparator implementation which can determine the order of employee objects.","[('Arrays.sort()', 'takes parameter', 'employee array'), ('Comparator implementation', 'determines order of', 'Employee'), ('Arrays', 'has method', 'Arrays.sort()'), ('Arrays.sort()', 'takes parameter', 'Comparator implementation')]"
+" if the deque is empty, poll() returns null. this is different than remove() which throws an exception if the deque is empty. ",
+if you look at the example in the previous section imagine what happens if an exception is thrown between the call to lock.lock() and lock.unlock(),"[('lock', 'has method', 'lock.lock()'), ('lock', 'has method', 'lock.unlock()')]"
+after running this java example the removedelement variable will point to the string object element 2 - since that element was the last element of the deque when removelast() was called.,"[('Deque', 'method', 'removeLast()')]"
+"the channel returned by the selectionkey.channel() method should be cast to the channel you need to work with, e.g a serversocketchannel or socketchannel etc.","[('SelectionKey', 'has method', 'SelectionKey.channel()')]"
+java allows this because the class myinterfaceimpl implements the myinterface interface.,"[('MyInterfaceImpl', 'implements', 'MyInterface')]"
+"once allocated, no other allocate() call can allocate the same block until it has been freed.",
+"but, since the thread waiting in lock() has not yet called queueobject.wait(), the call to queueobject.notify() passes into oblivion.",
+"if you need to insert another row, explicitly call movetoinsertrow() to signal this to the resultset.","[('ResultSet', 'has method', 'ResultSet.moveToInsertRow()')]"
+inside the inner() method the thread will again try to lock the lock instance.,"[('inner()', 'calls', 'Lock')]"
+you can convert a java list to a java array using the list toarray() method.,"[('List', 'method', 'Array')]"
+"more precisely, a java enum type is a special kind of java class.",
+the read() and write() calls on the streams are blocking meaning if you try to use the same thread to both read and write this may result in the thread deadlocking itself,
+as you can see the readnumberfromurl() needs to declare throwing both the badurlexception and the badnumberexception that are thrown from the readdatafromurl() and converdata() methods.,"[('readNumberFromUrl()', 'throws', 'BadUrlException'), ('converData()', 'throws', 'BadNumberException'), ('readNumberFromUrl()', 'throws', 'BadNumberException'), ('readDataFromUrl()', 'throws', 'BadUrlException')]"
+"in fact, a subclass constructor is required to call one of the constructors in the superclass as the very first action inside the constructor body.",
+"the waiting thread would call dowait(), and the notifying thread would call donotify().","[('waiting thread', 'calls', 'doWait()'), ('notifying thread', 'calls', 'doNotify()')]"
+you may also be able to use the stringreader and stringwriter classes in your unit tests.,"[('StringWriter', 'used in', 'unit tests'), ('StringReader', 'used in', 'unit tests')]"
+here is an example of adding an element to the beginning of a java deque using the push() method:,"[('Deque', 'method', 'Deque.push()')]"
+java.io.chararrayreader is also possible to write data to an bytearrayoutputstream or chararraywriter,"[('java.io.CharArrayReader', 'related to', 'ByteArrayOutputStream'), ('java.io.CharArrayReader', 'related to', 'CharArrayWriter')]"
+the removelast() method removes the last element of a deque - meaning the element at the tail of the deque.,"[('Deque', 'has method', 'Deque.removeLast()')]"
+"the httpservlet class has methods you can override for each http method (get, post etc.).","[('HttpServlet', 'has method', 'HttpServlet.doPost()'), ('HttpServlet', 'has method', 'HttpServlet.doGet()')]"
+the walkfiletree() method takes a path instance and a filevisitor as parameters.,"[('walkFileTree()', 'takes parameter', 'FileVisitor'), ('walkFileTree()', 'takes parameter', 'Path')]"
+here is an example of writing a java calendar as a rion utc field to the destination byte array using the rionwriter writeutc() method:,"[('RionWriter', 'method', 'writeUtc()')]"
+"if not, it processes that char and continues reading until -1 is returned from the bufferedreader read() method.","[('BufferedReader', 'has method', 'BufferedReader.read()')]"
+"you may be tempted then to always call notifyall() instead notify(), but this is a bad idea performance wise.","[('notifyAll()', 'alternative to', 'notify()')]"
+here is an example of obtaining the certpath type via gettype():,
+the java inputstreamreader class java.io.inputstreamreader wraps a java inputstream thereby turning the byte based inputstream into a character based reader,"[('java.io.InputStreamReader', 'wraps', 'InputStream'), ('InputStream', 'turned into', 'Reader')]"
+the assertnull() and assertnotnull() methods test a single variable to see if it is null or not null.,"[('assertNotNull()', 'tests', 'variable'), ('assertNull()', 'tests', 'variable')]"
+"what matters is, that once the while loop ends, and you are done writing data to the outputstream, its close() method is called, which closes the outputstream .","[('OutputStream', 'has method', 'OutputStream.close()')]"
+the package structure (directory structure) from the source directory will be preserved under the class directory.,
+the second method of reading data from an asynchronousfilechannel is to call the read() method version that takes a completionhandler as a parameter.,"[('AsynchronousFileChannel', 'has method', 'AsynchronousFileChannel.read()'), ('AsynchronousFileChannel.read()', 'takes parameter', 'CompletionHandler')]"
+"assuming that the myservice class implements an interface called iservice, you can create a mock implementation of the iservice interface using this code:","[('MyService', 'implements', 'IService'), ('IService', 'interface of', 'MyService')]"
+"you will typically also get more help from your ide's code completion when writing it, because the ide will recognize both the doprocess() and process() methods.","[('IDE', 'recognize', 'doProcess()'), ('IDE', 'recognize', 'process()')]"
+"you have to implement the filevisitor interface yourself, and pass an instance of your implementation to the walkfiletree() method.","[('FileVisitor', 'implemented by', 'your implementation'), ('your implementation', 'passed to', 'walkFileTree()')]"
+the blockingqueue put() method inserts the element into the blockingqueue if it has space for it internally.,"[('BlockingQueue', 'has method', 'BlockingQueue.put()'), ('BlockingQueue.put()', 'inserts element into', 'BlockingQueue')]"
+"the compareandset() method can compare the reference stored in the atomicstampedreference instance with an expected reference, and the stored stamp with an expected stamp, and if they two references and stamps are the same (not equal as in equals() but same as in ==), then a new reference can be set on the atomicstampedreference instance.","[('AtomicStampedReference', 'has method', 'equals()'), ('AtomicStampedReference', 'has method', 'compareAndSet()')]"
+"the objects.equals(o, element) statement is used to check if the parameter object o matches a given element in the blockingqueue.","[('BlockingQueue', 'contains element', 'element'), ('Objects', 'has method', 'Objects.equals()')]"
+"notice how the calculate() method both locks the calculator instance's lock before performing any calculations, and also call the add() and subtract() methods which also locks the lock.","[('Calculator.calculate()', 'calls method', 'Calculator.subtract()'), ('Calculator', 'has method', 'Calculator.calculate()'), ('Calculator.calculate()', 'calls method', 'Calculator.add()')]"
+"this little script defines the ""max"" factory as a call to the static max() method with input parameter 0 and 1 passed to the max() method.",
+the second way you can iterate the elements of a java iterable is by obtaining a java iterator from it by calling the iterable iterator() method.,"[('Iterable.iterator()', 'returns', 'Iterator'), ('Iterable', 'has method', 'Iterable.iterator()')]"
+the calls to myunit.getthesameobject() are inlined into the assertsame() and assertnotsame() method calls.,"[('myUnit', 'method', 'getTheSameObject()'), ('assertNotSame()', 'contains', 'myUnit.getTheSameObject()'), ('assertSame()', 'contains', 'myUnit.getTheSameObject()')]"
+"the java.util.concurrent.concurrentnavigablemap class is a java.util.navigablemap with support for concurrent access, and which has concurrent access enabled for its submaps.","[('java.util.concurrent.ConcurrentNavigableMap', 'is a', 'java.util.NavigableMap')]"
+you add elements to the beginning end of a deque using the add() method.,"[('Deque', 'has method', 'Deque.add()')]"
+when the thread calling lock() right after calls queueobject.wait() it will remain blocked until some other thread calls unlock() which may never happen,
+"one way to solve this problem would be to create a common superclass for the vehicle and driver class, which has the storage and serialization methods.","[('common superclass', 'has method', 'serialization()'), ('Vehicle', 'is a subclass of', 'common superclass'), ('common superclass', 'has method', 'storage()'), ('Driver', 'is a subclass of', 'common superclass')]"
+"the java stream findfirst() method finds the first element in the stream, if any elements are present in the stream.","[('Stream', 'has method', 'Stream.findFirst()')]"
+you can set the value of an atomicboolean using the set() method.,"[('AtomicBoolean', 'has method', 'AtomicBoolean.set()')]"
+the only difference is that you call begintransactionscope() and endtransactionscope() instead.,"[('beginTransactionScope()', 'is called before', 'endTransactionScope()')]"
+the number of entries in a java map is also referred to as the map size - hence the method name size() .,"[('Map', 'has method', 'Map.size()')]"
+"the compareandset() method can compare the reference stored in the atomicreference instance with an expected reference, and if they two references are the same (not equal as in equals() but same as in ==), then a new reference can be set on the atomicreference instance.","[('AtomicReference', 'has method', 'compareAndSet()'), ('AtomicReference', 'has method', 'equals()')]"
+here is an example of obtaining the last key of a sortedmap via its lastkey() method:,"[('SortedMap', 'has method', 'SortedMap.lastKey()')]"
+you can obtain the log level of a logger using the getlevel() method:,"[('Logger', 'has method', 'Logger.getLevel()')]"
+by calling iterator() you can obtain an iterator from the given collection.,"[('Collection', 'has method', 'Collection.iterator()')]"
+"if multiple threads are awakened using notifyall() only one awakened thread at a time can exit the wait() method, since each thread must obtain the lock on the monitor object in turn before exiting wait().","[('thread', 'must obtain', 'lock'), ('multiple threads', 'exit', 'wait()'), ('notifyAll()', 'awakens', 'multiple threads'), ('lock', 'on', 'monitor object')]"
+"the atomicboolean class is located in the java.util.concurrent.atomic package, so the full class name is java.util.concurrent.atomic.atomicboolean .","[('AtomicBoolean', 'located in', 'java.util.concurrent.atomic'), ('java.util.concurrent.atomic', 'contains class', 'AtomicBoolean')]"
+the atomicstampedreference also contains a getstamp() method which can be used to obtain the internally stored stamp.,"[('AtomicStampedReference', 'contains method', 'AtomicStampedReference.getStamp()')]"
+you can read a java long from the datainputstream using its readlong() method.,"[('DataInputStream', 'has method', 'DataInputStream.readLong()')]"
+"though the error may seem the same to method1() no matter which of method2() and method3() that called it, this may important to know for the developer investigating the error.","[('method2()', 'calls', 'method1()'), ('method3()', 'calls', 'method1()')]"
+you can write data to the tcp connection via the netsocket write() method.,"[('NetSocket', 'has method', 'NetSocket.write()')]"
+this is true even if the subclass is not located in the same package as the superclass.,
+"the java stream allmatch() method is a terminal operation that takes a single predicate as parameter, starts the internal iteration of elements in the stream, and applies the predicate parameter to each element.","[('Stream', 'method', 'Stream.allMatch()')]"
+"again, here the first() and next() methods return the unicode index of the found word boundary.","[('next()', 'returns', 'unicode index'), ('first()', 'returns', 'unicode index')]"
+"this class has a compareandset() function which will compare the value of the atomicboolean instance to an expected value, and if has the expected value, it swaps the value with a new value.","[('AtomicBoolean', 'has method', 'AtomicBoolean.compareAndSet()')]"
+notice how the readdatafromurl() method no longer declares that it throws badurlexception.,"[('readDataFromUrl()', 'throws', 'BadUrlException')]"
+"as mentioned earlier, the datainputstream class is often used together with a dataoutputstream.","[('DataInputStream', 'used together with', 'DataOutputStream')]"
+fairlock creates a new instance of queueobject and enqueue it for each thread calling lock().,"[('QueueObject', 'used by', 'FairLock.lock()'), ('FairLock', 'creates', 'QueueObject')]"
+by walking through all directories and deleting all files (inside visitfile()) in each directory and afterwards delete the directory itself (inside postvisitdirectory()) you can delete a directory with all subdirectories and files,"[('visitFile()', 'is used in', 'deleting all files'), ('postVisitDirectory()', 'is used in', 'delete the directory itself')]"
+the getresourcebundle() method returns the resourcebundle (if any) used to localize the message of this logrecord.,"[('LogRecord', 'uses', 'ResourceBundle'), ('getResourceBundle()', 'returns', 'ResourceBundle')]"
+"but remember, a connection has been opened already when the daomanager is instantiated, which happens before the dopersistenceaction() method is called.","[('DaoManager', 'has method', 'doPersistenceAction()')]"
+the exception thrown when attempting to close the resource would be available inside the throwable array returned by e.getsuppressed().,"[('Throwable', 'method', 'getSuppressed()')]"
+"the rion ops rionwriter class, com.nanosai.rionops.rion.write.rionwriter, enables you to write rion fields easily and efficiently.","[('com.nanosai.rionops.rion.write', 'contains class', 'RionWriter'), ('RionWriter', 'located in package', 'com.nanosai.rionops.rion.write'), ('RION Ops', 'contains class', 'RionWriter')]"
+"the compareandset() method of the atomicreferencearray can compare the current reference stored in a given element with an expected reference, and if the references are the same, swap the current reference with a new reference.","[('AtomicReferenceArray', 'has method', 'AtomicReferenceArray.compareAndSet()')]"
+"you don't need to know exactly what class a given object is of, as long as you know what interface it implements.",
+"if the read() method returns -1, there is no more data to read in the filereader, and it can be closed.","[('FileReader', 'has method', 'FileReader.read()')]"
+the java nio files class also contains a function for moving files from one path to another.,"[('Java NIO', 'contains', 'Files'), ('Files', 'contains method', 'Files.move()')]"
+creating a duration object is done using one of the duration class factory methods.,"[('Duration', 'has method', 'Duration.classFactoryMethods()')]"
+the getthrown() method returns the throwable that was marked thrown when logging the message represented by this logrecord.,"[('LogRecord', 'has method', 'LogRecord.getThrown()')]"
+"the java filewriter class is a subclass of the java writer class, by the way.","[('Java FileWriter', 'is a subclass of', 'Java Writer')]"
+exactly how to handle the calls to commit() and / or rollback() is covered in the jdbc transactions tutorial.,
+here is an example of reading a double from a java datainputstream using readdouble():,"[('DataInputStream', 'method', 'readDouble()')]"
+if thread a is executing add() then thread b cannot execute neither add() nor subtract() until thread a has exited add().,"[('Thread B', 'cannot execute', 'add()'), ('Thread A', 'exits', 'add()'), ('Thread B', 'cannot execute', 'subtract()'), ('Thread A', 'executes', 'add()')]"
+"a class can override the implementation of a default method simply by implementing that method explicitly, as is done normally when implementing a java interface.",
+you can access the publickey of a keypair by calling its getpublic() method.,"[('KeyPair', 'contains', 'PublicKey'), ('KeyPair', 'has method', 'KeyPair.getPublic()')]"
+"if a thread (1) calls the parent.addchild(child) method at the same time as another thread (2) calls the child.setparent(parent) method, on the same parent and child instances, a deadlock can occur.","[('parent', 'has method', 'parent.addChild()'), ('child', 'has method', 'child.setParent()')]"
+the add() and offer() methods differ in how the behave if the queue is full so no more elements can be added,"[('Queue', 'has method', 'add()'), ('Queue', 'has method', 'offer()')]"
+"neither is the last reader.close() or the system.out.println(""--- file end ---""); statements.",
+you can create a java keystore instance by calling its getinstance() method.,"[('Java KeyStore', 'method', 'Java KeyStore.getInstance()')]"
+the filterwriter is a base class for implementing your own filtering writer's.,"[('FilterWriter', 'is a', 'class')]"
+third the characters written to the stringwriter are obtained via the two methods tostring() and getbuffer().,"[('StringWriter', 'method', 'toString()'), ('StringWriter', 'method', 'getBuffer()')]"
+"remember, a java class can only have 1 superclass, but it can implement multiple interfaces.",
+here is how the lockwrite() and unlockwrite() methods look after that change:,
+here is an example of obtaining the root directory path of a streamstoragerootfs via its getrootdirpath() method:,"[('StreamStorageRootFS', 'method', 'StreamStorageRootFS.getRootDirPath()')]"
+deque.removelast() is different from polllast() which returns null if the deque is empty,"[('Deque', 'has method', 'removeLast()'), ('Deque', 'has method', 'pollLast()')]"
+the resolve() method will not allow any given classloader instance to link the same class twice.,
+"the java pushbackinputstream is a subclass of the java inputstream so it inherits its public methods - read(), close() etc.","[('PushbackInputStream', 'inherits method', 'InputStream.read()'), ('PushbackInputStream', 'subclass of', 'InputStream'), ('PushbackInputStream', 'inherits method', 'InputStream.close()')]"
+also notice how it is not necessary to cast the string instance returned by the get() method.,
+you can check if a java module is an open module or not via the moduledescriptor isopen() method.,"[('ModuleDescriptor', 'has method', 'ModuleDescriptor.isOpen()')]"
+"thus, each java class belongs to a package, and the package belongs to a module.","[('package', 'belongs to', 'module'), ('Java class', 'belongs to', 'package')]"
+an abstract class can have a mixture of abstract and non-abstract methods.,
+"then the thread executing the main() method (the main thread) sleeps for 10 seconds, and then calls the dostop() method of the myrunnable instance.","[('thread', 'calls', 'MyRunnable.doStop()'), ('main()', 'executes', 'thread'), ('thread', 'sleeps for', '10 seconds')]"
+here is an example of how to create a duration object using the between() method:,"[('Duration', 'method', 'Duration.between()')]"
+the java stream interface contains a static method called concat() which can concatenate two streams into one.,"[('Stream', 'contains method', 'Stream.concat()')]"
+just like with the read() method the write() method advances the file pointer after being called.,
+as you can see both the waiting and notifying thread calls wait() and notify() from within a synchronized block.,"[('Thread', 'calls', 'wait()'), ('Thread', 'calls', 'notify()')]"
+the java.util.concurrent.cyclicbarrier class is a synchronization mechanism that can synchronize threads progressing through some algorithm.,"[('java.util.concurrent', 'contains class', 'CyclicBarrier'), ('CyclicBarrier', 'is a', 'synchronization mechanism')]"
+you open a jdbc connection by call the java.sql.drivermanager class method getconnection().,"[('java.sql.DriverManager', 'method', 'getConnection()')]"
+it is possible to get a character at a certain index in a string using the charat() method.,"[('String', 'has method', 'String.charAt()')]"
+here is an example of pausing a java thread for 3 seconds (3.000 millliseconds) by calling the thread sleep() method:,"[('Thread', 'has method', 'Thread.sleep()')]"
+object.wait(long timeout) allows other threads to call wait() or notify() too since these methods must be called from inside a synchronized block,"[('Object', 'has method', 'Object.wait(long timeout)'), ('Object', 'has method', 'Object.notify()'), ('Object', 'has method', 'Object.wait()')]"
+"this example creates a breakiterator targeted at the british language, and sets the text to find character breaks in using the settext() method.","[('BreakIterator', 'method', 'BreakIterator.setText()')]"
+the java chararraywriter class (java.io.chararraywriter) makes it possible to write characters via the writer methods (chararraywriter is a subclass of writer) and convert the written characters into a char array.,"[('java.io.CharArrayWriter', 'provides method', 'Writer methods'), ('CharArrayWriter', 'subclass of', 'Writer')]"
+"you create a java mac instance by calling the mac.getinstance() method, passing as parameter the name of the algorithm to use.","[('Mac', 'has method', 'Mac.getInstance()')]"
+"notice however, that since the myrunnable class is not a subclass of thread, it does not have access to the getname() method of the thread executing it.","[('Thread', 'has method', 'getName()'), ('MyRunnable', 'is not a subclass of', 'Thread')]"
+you do so by calling the cipher update() or dofinal() methods.,"[('Cipher', 'has method', 'Cipher.update()'), ('Cipher', 'has method', 'Cipher.doFinal()')]"
+"if a method declares that it throws an exception a, then it is also legal to throw subclasses of a.",
+here is an example of how to use a iresultsetprocessor with the read() methods:,
+fileinputstream is a subclass of inputstream so it is safe to assign an instance of fileinputstream to an inputstream variable (the inputstream variable).,"[('FileInputStream', 'can be assigned to', 'InputStream'), ('FileInputStream', 'is a subclass of', 'InputStream')]"
+"if you need an integer value, use the round(), floor() or ceil() method.","[('round()', 'is a method of', 'integer value'), ('ceil()', 'is a method of', 'integer value'), ('floor()', 'is a method of', 'integer value')]"
+you can still call the other main() methods from inside the main() method the java virtual machine executes (you haven't seen how yet) and you can also start up multiple virtual machines which each execute a single main() method.,"[('Java Virtual Machine', 'executes', 'main() method'), ('virtual machines', 'execute', 'main() method'), ('main() method', 'calls', 'other main() methods')]"
+deque.removefirst() is different from pollfirst() which returns null if the deque is empty,"[('Deque', 'has method', 'pollFirst()'), ('Deque', 'has method', 'removeFirst()')]"
+"each of the methods ceilingentry(), floorentry(), higherentry() and lowerentry() will be covered in the following sections.","[('methods', 'includes', 'higherEntry()'), ('methods', 'includes', 'floorEntry()'), ('methods', 'includes', 'ceilingEntry()'), ('methods', 'includes', 'lowerEntry()')]"
+"the pollfirst() method removes an element from the beginning of the deque, just like poll().","[('Deque', 'has method', 'poll()'), ('Deque', 'has method', 'pollFirst()')]"
+"you can access the annotations of a class, method or field at runtime.",
+working with arrays via java reflection is done using the java.lang.reflect.array class.,"[('java.lang.reflect.Array', 'used for', 'Working with arrays via Java Reflection')]"
+"note: even if the class is called rollingbufferinputstream, it is not an inputstream subclass.","[('RollingBufferInputStream', 'is not a subclass of', 'InputStream')]"
+if the marksupported() method returns false then mark() and reset() are not supported.,"[('markSupported()', 'not supported', 'reset()'), ('markSupported()', 'not supported', 'mark()'), ('markSupported()', 'returns', 'false')]"
+"if no field exists with the name given as parameter to the getfield() method, a nosuchfieldexception is thrown.","[('getField()', 'throws', 'NoSuchFieldException')]"
+"the headmap() method returns a view of the original navigablemap which only contains elements that are ""less than"" the given element.",
+"thus, some constructors may be available to all classes in your application, while other constructors are only available to classes in the same package, subclasses, or even only to the class itself (private constructors).",
+"the bigger the result string grows, the longer it takes to copy the characters from it into a new stringbuilder, and again copy the characters from the stringbuilder into the temporary string created by the tostring() method.","[('StringBuilder', 'method', 'toString()')]"
+spin locks and the methods wait() and notify() are covered in more detail in the text thread signaling.,"[('Spin locks', 'covered in', 'Thread Signaling'), ('wait()', 'covered in', 'Thread Signaling'), ('notify()', 'covered in', 'Thread Signaling')]"
+these two parameters are intended to tell from what class and method the log message originated.,
+"inside the while loop the example calls the method getmoredata() to get the next data to write to the outputstream, and then writes that data to the outputstream.","[('getMoreData()', 'provides data to', 'OutputStream'), ('example', 'calls method', 'getMoreData()'), ('example', 'writes data to', 'OutputStream')]"
+when the thread is done with the code in the critical section (the code between lock() and unlock()) the thread calls unlock(),"[('thread', 'calls', 'unlock()'), ('code', 'between', 'lock() and unlock()')]"
+"the reentrantlock isheldbycurrentthread() method returns true if the lock is held (locked) by the thread calling isheldbycurrentthread(), and false if not.","[('ReentrantLock.isHeldByCurrentThread()', 'returns', 'false'), ('ReentrantLock.isHeldByCurrentThread()', 'returns', 'true'), ('ReentrantLock', 'has method', 'ReentrantLock.isHeldByCurrentThread()')]"
+in an untyped atomicstampedreference instance the set() method takes an object reference as first parameter.,"[('AtomicStampedReference', 'method', 'AtomicStampedReference.set()')]"
+a constructor is a special method that is called when an object of the given class is created (explained later).,
+collection.add(e e) is different from the offer() method which will return false if it cannot insert the element,"[('Collection', 'has method', 'Collection.add()'), ('Collection', 'has method', 'offer()')]"
+"you receive data from a datagramchannel by calling its receive() method, like this:","[('DatagramChannel', 'has method', 'DatagramChannel.receive()')]"
+"the arraylist again iterates all its elements and execute ""123"".equals(element) to determine if the element is equal to the parameter object ""123"".",
+"when you have specified a generic type for a java collection, that generic type also works for the iterator returned by the iterator() method.",
+"to remove elements from a java queue, you call the remove() method.","[('Queue', 'method', 'Queue.remove()')]"
+here is an example of setting a mark in a bytearrayinputstream via its mark() method:,"[('ByteArrayInputStream', 'has method', 'ByteArrayInputStream.mark()')]"
+the boundedsemaphore class shown below has two testandset methods take() and release(),"[('BoundedSemaphore', 'has method', 'BoundedSemaphore.take()'), ('BoundedSemaphore', 'has method', 'BoundedSemaphore.release()')]"
+the lock() method locks the lock instance so that all threads calling lock() are blocked until unlock() is executed.,"[('Lock', 'has method', 'lock()'), ('Lock', 'has method', 'unlock()'), ('threads', 'are blocked until', 'unlock()'), ('lock()', 'blocks', 'threads'), ('threads', 'call', 'lock()')]"
+the boundedsemaphore class shown below has two test-and-set methods: take() and release().,"[('BoundedSemaphore', 'has method', 'BoundedSemaphore.take()'), ('BoundedSemaphore', 'has method', 'BoundedSemaphore.release()')]"
+"here are the two classes used in the example above, counter and counterthread.","[('Counter', 'used in', 'example'), ('CounterThread', 'used in', 'example')]"
+"the java iterator foreachremaining() method can iterate over all of the elements remaining in the iterator internally, and for each element call a java lambda expression passed as parameter to foreachremaining() .","[('Iterator.forEachRemaining()', 'parameter', 'Lambda Expression'), ('Iterator', 'method', 'Iterator.forEachRemaining()')]"
+"the readbytes() method reads bytes from the file represented by the given streamstorageblockfs instance, into the byte[] array passed as parameter.","[('StreamStorageBlockFS', 'has method', 'StreamStorageBlockFS.readBytes()')]"
+you can obtain the length of a string using the length() method.,"[('String', 'has method', 'String.length()')]"
+the factory method locale.forlanguagetag() can also be used to create a locale instance.,"[('Locale.forLanguageTag()', 'creates', 'Locale'), ('Locale', 'has method', 'Locale.forLanguageTag()')]"
+here is an example of flushing data written to a java outputstreamwriter by calling its flush() method:,"[('OutputStreamWriter', 'has method', 'OutputStreamWriter.flush()')]"
+"but, no thread can actually execute unlock() until the thread waiting in lock() leaves the outer synchronized block.",
+"you can also obtain an iterator from many of the java collection data structures, e.g. a list, set, map, queue, deque or map.","[('Java Collection', 'contains', 'List'), ('Java Collection', 'contains', 'Deque'), ('Java Collection', 'contains', 'Queue'), ('Java Collection', 'contains', 'Iterator'), ('Java Collection', 'contains', 'Map'), ('Java Collection', 'contains', 'Set')]"
+in a typed atomicreference the set() method takes whatever type as parameter you declared as its type when you declared the atomicreference.,"[('AtomicReference', 'has method', 'AtomicReference.set()')]"
+if you need an integer value use the round() floor() or ceil() method,"[('round()', 'is a method of', 'integer value'), ('ceil()', 'is a method of', 'integer value'), ('floor()', 'is a method of', 'integer value')]"
+"that you would not call wait() and notify() on an internal monitor object, but rather on the this is probably true.",
+"thus, at most n threads can pass the acquire() method without any release() calls, where n is the number of permits the semaphore was initialized with.",
+you can remove all entries in a java map using the clear() method.,"[('Map', 'method', 'Map.clear()')]"
+"the superclasses contain methods with the same names and parameters, multiple inheritance was left out in java.",
+"mutiple blocks from a large file, you call the update() once for each block of data, and finish with a call to dofinal() with the last data loce",
+this causes the myobject class to be loaded by the same class loader that loaded the class this code is residing in.,
+creating a matcher is done via the matcher() method in the pattern class.,"[('Pattern', 'has method', 'Pattern.matcher()')]"
+it is possible to use a class from another package without importing it with an import statement.,
+"as parameters to the completed() method are passed an integer telling how many bytes were read, and the ""attachment"" which was passed to the read() method.",
+the java bufferedwriter's flush() method flushes all data written to the bufferedwriter to the underlying data destination.,"[('BufferedWriter', 'has method', 'BufferedWriter.flush()')]"
+here is an example of removing the first element of a java deque using the removefirst() method:,"[('Deque', 'method', 'removeFirst()')]"
+the poll() and remove() both removes the first element in the queue. they differ in how they behave if the queue is empty. the poll() method returns null if the queue is empty. the remove() method throws an exception if the queue is empty.,"[('Queue', 'has method', 'poll()'), ('poll()', 'returns', 'nan'), ('Queue', 'has method', 'remove()'), ('remove()', 'throws', 'exception')]"
+"since count() returns a long, the stream chain of non-terminal operations (the map() calls) is ended.","[('count()', 'returns', 'long'), ('Stream', 'contains', 'map()')]"
+"you can declare a static initializer for the anonymous class instead, though.",
+obviously if the input parameter to contains() is null the contains() method will not use the equals() method to compare against each element but rather use the == operator,"[('contains()', 'uses', 'equals()')]"
+"if you need to match a text against a regular expression pattern more than one time, you need to create a pattern instance using the pattern.compile() method.","[('Pattern', 'method', 'Pattern.compile()')]"
+"the trylock(long timeout, timeunit timeunit) works like the trylock() method, except it waits up the given timeout before giving up trying to lock the lock.","[('tryLock(long timeout, TimeUnit timeUnit)', 'works like', 'tryLock()')]"
+"in other words, as a call to the get() method on the httprequestcache singleton.","[('HttpRequestCache', 'has method', 'HttpRequestCache.get()')]"
+you can read a java boolean from the datainputstream using its readboolean() method.,"[('DataInputStream', 'has method', 'DataInputStream.readBoolean()')]"
+"then they are executed already when the class is loaded, and only once because the class is only loaded in the java virtual machine once.",
+a java class may contain a mix of data (variables) and actions (methods).,
+"in case a class contains more than one static synchronized method, only one thread can execute inside any of these methods at the same time.",
+the class myfilterimpl should be your own implementation of the filter interface.,"[('MyFilterImpl', 'implements', 'Filter')]"
+a java callable is different from a runnable in that the runnable interface run() method does not return a value and it cannot throw checked exceptions (only runtimeexceptions),"[('Runnable', 'has method', 'run()'), ('Callable', 'different from', 'Runnable')]"
+the statement executequery() method returns a java jdbc resultset which can be used to navigate the response of the query.,"[('Statement', 'method', 'executeQuery()'), ('executeQuery()', 'returns', 'ResultSet'), ('ResultSet', 'used to navigate', 'response of the query')]"
+"since a java string object can never be an instance of the java integer class, the java compiler will catch this an give you an error.","[('String', 'can never be an instance of', 'Integer')]"
+"notice how method1() adds the code ""error1"" to the thrown enrichableexception to uniquely identify that error cause.",
+"the thread calling unlock() will take the top queueobject in the queue and call donotify() on it, to awaken the thread waiting on that object.","[('thread', 'calls', 'unlock()'), ('QueueObject', 'calls', 'doNotify()'), ('QueueObject', 'is in', 'queue')]"
+"atomicreference even has an advanced compareandset() method which lets you compare the reference to an expected value (reference) and if they are equal, set a new reference inside the atomicreference object.","[('AtomicReference', 'has method', 'AtomicReference.compareAndSet()')]"
+the second getbytes() call return a utf-8 byte representation of the string.,"[('String', 'method', 'getBytes()')]"
+"the java inputstream class, java.io.inputstream, represents an ordered stream of bytes.","[('InputStream', 'is a class of', 'java.io.InputStream')]"
+you will normally use a writer subclass rather than a writer directly.,
+"in the example above, the autoclosableresource is configured to throw an exception both when doop() is called, and when it is attempted closed (via close()).","[('AutoClosableResource', 'method', 'doOp()'), ('AutoClosableResource', 'method', 'close()')]"
+"the reentrantlock islocked() method returns true if the lock is currently locked, and false if not.","[('ReentrantLock', 'has method', 'ReentrantLock.isLocked()')]"
+unfortunately if an exception is thrown during the write() call in the example above that exception will cause the program flow to break before the close() method is called,"[('program flow', 'breaks before', 'close()'), ('exception', 'causes', 'program flow to break'), ('write()', 'throws exception', 'exception')]"
+the getresourcebundlename() method returns the name of the resourcebundle (if any) used to localize the message of this logrecord.,"[('LogRecord', 'uses', 'ResourceBundle'), ('getResourceBundleName()', 'returns', 'ResourceBundle')]"
+here is an example of removing the first element from a java deque using the poll() method:,"[('Deque', 'method', 'Deque.poll()')]"
+"notice how appendreplacement() is called inside the while(matcher.find()) loop, and appendtail() is called just after the loop.","[('appendReplacement()', 'called inside', 'matcher.find()'), ('matcher', 'has method', 'matcher.find()'), ('appendTail()', 'called after', 'matcher.find()')]"
+you close a fileinputstream by calling the close() method inherited from inputstream.,"[('FileInputStream', 'inherits method', 'InputStream.close()')]"
+"then the example creates a path instance from this path string, and prints that path instance out (actually it prints path.tostring()).","[('Path', 'prints', 'Path.toString()'), ('Path', 'instance from', 'path string'), ('example', 'creates', 'Path')]"
+sometimes you need a classpath which contains more than one directory or jar file.,
+"since the java fileoutputstream is a subclass of outputstream, you can write arrays of bytes to the fileoutputstream too, instead of just a single byte at a time.","[('FileOutputStream', 'subclass of', 'OutputStream'), ('FileOutputStream', 'method', 'write()')]"
+"the bufferfull() method scans through the buffer, but must leave the buffer in the same state as before the bufferfull() method was called.","[('bufferFull()', 'method of', 'buffer')]"
+the java chararrayreader class (java.io.chararrayreader) enables you to read the contents of a char array as a character stream.,"[('CharArrayReader', 'enables', 'read contents of char array as character stream'), ('CharArrayReader', 'belongs to package', 'java.io')]"
+"the java outputstreamwriter class, java.io.outputstreamwriter, is intended to wrap an java outputstream and thereby turning the byte based output stream into a character based writer.","[('java.io.OutputStreamWriter', 'is a', 'OutputStreamWriter'), ('OutputStreamWriter', 'wraps', 'OutputStream')]"
+"inside the for loop the example accesses the elements in the list via its get() method, passing the incrementing variable i as parameter.","[('List', 'has method', 'List.get()')]"
+the problem with calling wait() and notify() on the empty string or any other constant string is that the jvmcompiler internally translates constant strings into the same object,"[('constant string', 'calls', 'wait()'), ('constant string', 'calls', 'notify()'), ('empty string', 'calls', 'wait()'), ('empty string', 'calls', 'notify()'), ('JVMCompiler', 'translates', 'constant strings')]"
+"the biggest difference between java.sql.date and java.util.date is that the java.sql.date only keeps the date, not the time, of the date it represents.","[('java.sql.Date', 'does not keep', 'time'), ('java.sql.Date', 'keeps', 'date'), ('java.sql.Date', 'difference with', 'java.util.Date')]"
+here is an example of peeking at the first element of a java queue using the element() method:,"[('Queue', 'method', 'Queue.element()')]"
+the jdbc connection getmetadata() method returns a jdbc databasemetadata object which can be used to introspect the database the jdbc connection is connected to.,"[('JDBC Connection', 'method', 'getMetaData()'), ('getMetaData()', 'returns', 'JDBC DatabaseMetaData')]"
+the java.util.logger class is the main access point to the java logging api.,"[('java.util', 'contains class', 'Logger'), ('Logger', 'part of', 'Java logging API')]"
+"if the read() method returns -1, the end of stream has been reached, meaning there is no more data to read in the inputstream.","[('InputStream', 'has method', 'InputStream.read()')]"
+the java collections api only has one implementation of the java sortedset interface - the java.util.treeset class.,"[('java.util.TreeSet', 'implements', 'Java SortedSet'), ('Java Collections API', 'contains', 'java.util.TreeSet')]"
+this method in turn calls the processurldata() in the urlprocessorimpl class.,"[('URLProcessorImpl', 'contains method', 'processURLData()')]"
+"the java navigableset interface, java.util.navigableset, is a subtype of the java sortedset interface.","[('java.util.NavigableSet', 'subtype of', 'SortedSet')]"
+"similarly, when next() is called and returns false, the resultset is actually pointing after the last record.",
+"you must always create an instance of some class that implements the interface, and reference that instance as an instance of the interface.",
+then an anonymous implementation of the callable interface is created and passed to the schedule() method.,"[('Callable', 'implemented by', 'anonymous implementation'), ('anonymous implementation', 'passed to', 'schedule()')]"
+methods are operations that the class or instances of that class can perform.,
+"the contains() method will return true if the queue contains the given element, and false if not.","[('Queue', 'has method', 'Queue.contains()')]"
+"if the deque is empty, peekfirst() returns null. this is similar to how peek() works, but the method name peekfirst() is a bit more saying about which end of the deque you peek at.","[('Deque', 'method', 'peek()'), ('Deque', 'method', 'peekFirst()')]"
+the methods start() and end() will give the indexes into the text where the found match starts and ends.,"[('end()', 'gives index', 'text'), ('start()', 'gives index', 'text')]"
+"for instance, to create an instant which represents this exact moment of now, call instant.now(), like this:","[('Instant', 'method', 'Instant.now()')]"
+the math.log10 method works like the math.log() method except is uses 10 as is base for calculating the logarithm instead of e (euler's number).,"[('Math', 'contains method', 'Math.log10()'), ('Math', 'contains method', 'Math.log()')]"
+the reentrantlock getqueuelength() method returns the number of threads waiting to lock the lock.,"[('ReentrantLock', 'has method', 'ReentrantLock.getQueueLength()')]"
+fields are class member variables - either static or instance variables.,
+"both threads execute the run() method, and thus sets different values on the threadlocal instance.","[('Thread', 'executes', 'Thread.run()'), ('Thread', 'sets values on', 'ThreadLocal')]"
+"please note, that the method trylock() (covered later in this java lock tutorial) with no parameters does not respect the fairness mode of the reentrantlock.","[('ReentrantLock', 'contains method', 'ReentrantLock.tryLock()')]"
+"to remove an element from a sortedset you call its remove() method, passing the element to remove as parameter.","[('SortedSet', 'has method', 'SortedSet.remove()')]"
+the submit() method returns a java future object which can be used to check when the runnable has completed.,"[('submit()', 'returns', 'Future')]"
+not all methods in an abstract class have to be abstract methods.,
+notice how the execute() method will throw an illegalstateexception if execute() is called after stop() has been called.,"[('execute()', 'throws', 'IllegalStateException'), ('stop()', 'precedes', 'execute()')]"
+"in the example above, the iterator next() method returns an object - and so does the get() method.","[('Iterator.next()', 'returns', 'Object'), ('Iterator', 'has method', 'Iterator.next()'), ('get()', 'returns', 'Object')]"
+instances of this class are used together with udp datagramsockets and normal socket's and serversocket's.,"[('UDP', 'used with', 'Socket'), ('UDP', 'used with', 'DatagramSockets'), ('UDP', 'used with', 'ServerSocket')]"
+"by walking through all directories and deleting all files (inside visitfile()) in each directory, and afterwards delete the directory itself (inside postvisitdirectory()) you can delete a directory with all subdirectories and files.","[('visitFile()', 'is used in', 'deleting all files'), ('postVisitDirectory()', 'is used in', 'delete the directory itself')]"
+here is how providing a supplier implementation as a lambda expression to withinitial() looks:,
+you typically read data from an inputstream by calling the read() method.,"[('InputStream', 'method', 'InputStream.read()')]"
+the bufferedwriter adds one extra method though: the newline() method which can write a new-line character to the underlying writer.,"[('BufferedWriter', 'adds method', 'BufferedWriter.newLine()'), ('BufferedWriter.newLine()', 'writes to', 'Writer')]"
+but calling the close() method has no effect on the bytearrayoutputstream.,"[('ByteArrayOutputStream', 'method', 'close()')]"
+the java matcher class (java.util.regex.matcher) is used to search through a text for multiple occurrences of a regular expression.,"[('Matcher', 'belongs to package', 'java.util.regex')]"
+"using the inputstream you can load the file into a java properties instance, using either the load() or loadfromxml() methods explained earlier in this java properties tutorial.","[('Properties', 'has method', 'load()'), ('Properties', 'has method', 'loadFromXML()'), ('InputStream', 'used to load file into', 'Properties')]"
+the format() and printf() methods allow you to mix text and data in very advanced ways using a formatting string,"[('format()', 'allows', 'mix text and data'), ('printf()', 'allows', 'mix text and data')]"
+each thread executing the somemethod() method will create its own localobject instance and assign it to the localobject reference.,"[('someMethod()', 'creates', 'LocalObject'), ('someMethod()', 'assigns', 'localObject')]"
+"in mr. persister we could add a connectionopenexception, queryexception, updateexception, commitexception, and connectioncloseexception as subclasses of persistenceexception.","[('UpdateException', 'subclass of', 'PersistenceException'), ('QueryException', 'subclass of', 'PersistenceException'), ('ConnectionOpenException', 'subclass of', 'PersistenceException'), ('CommitException', 'subclass of', 'PersistenceException'), ('ConnectionCloseException', 'subclass of', 'PersistenceException')]"
+a thread that calls wait() on any object becomes inactive until another thread calls notify() on that object.,"[('thread', 'calls', 'wait()'), ('thread', 'calls', 'notify()')]"
+here is an example of skipping over a number of bytes using the bytearrayinputstream skip() method:,"[('ByteArrayInputStream', 'has method', 'ByteArrayInputStream.skip()')]"
+in order to calculate a message digest of some data you call the update() or digest() method.,"[('update()', 'method of', 'MessageDigest'), ('digest()', 'method of', 'MessageDigest')]"
+"the map merge() method takes a key, a value, and a lambda expression implementing the bifunction interface as parameters.","[('merge()', 'takes parameter', 'value'), ('Map', 'has method', 'Map.merge()'), ('merge()', 'takes parameter', 'key'), ('lambda expression', 'implements interface', 'BiFunction'), ('merge()', 'takes parameter', 'lambda expression')]"
+the methods class.getfield(string name) and class.getfields() methods only return public fields so they wont work,"[('Class', 'has method', 'Class.getFields()'), ('Class', 'has method', 'Class.getField(String name)')]"
+to configure the maven surefire plugin to enable java preview features you need the following configuration in your maven pom file - in the <build><plugins>...</plugins></build> section:,
+personally i prefer to locate the square brackets [] after the data type (e.g.,
+"in the example above, the anymatch() method call will return true, because the first string element in the stream starts with ""one"".",
+imagine that the fairlock instance is locked when a thread calls lock().,"[('FairLock', 'method', 'lock()')]"
+when checking for tables with similar names to the class to map only the class name itself is used.,
+you can read about them in the javadoc for the datetimeformatter class.,"[('DateTimeFormatter', 'documented in', 'JavaDoc')]"
+in order to use a java.nio.file.path instance you must create a path instance.,
+"second, the example calls the apply() method on the addthree instance.","[('AddThree', 'method', 'AddThree.apply()')]"
+here is an example of reading a java boolean object using the rionreader readbooleanobj() method:,"[('RionReader', 'has method', 'RionReader.readBooleanObj()')]"
+"the batch size can thus vary from 1 to a maximum upper limit set by the system, e.g.",
+"the reason a call to dofinal() is needed for the last block of data is, that some encryption algorithms need to pad the the data to fit a certain cipher block size (e.g.",
+the java stream flatmap() methods maps a single element into multiple elements.,"[('Java Stream', 'has method', 'flatMap()')]"
+"but if some implementing classes are located in client code of the api (the code that uses the api), then that code breaks.",
+the logger class has a few more methods that i haven't covered here.,"[('Logger', 'has method', 'Logger.methodName()')]"
+"the objectmapper mapper breaks the class name into words, based on the uppercase letters and numbers in the class name.",
+"creating an object of a certain class is also called ""instantiating"" an object.",
+the incrementandget() method increments (adds 1) to the value of a given element and returns the new value of that element.,"[('incrementAndGet()', 'method of', 'element')]"
+"this function implementation implements the apply() method so it takes a long as parameter, and returns a long.","[('Function', 'implements method', 'Function.apply()')]"
+calling addandget() is also an atomic operation (like all operations on the atomiclongarray).,"[('AtomicLongArray', 'has method', 'AtomicLongArray.addAndGet()')]"
+when the process() method of the subclass is called the full process is executed including the stepbefore() and stepafter() of the abstract superclass and the action() method of the subclass,"[('subclass', 'calls method', 'subclass.process()'), ('abstract superclass', 'contains method', 'abstract superclass.stepBefore()'), ('abstract superclass', 'contains method', 'abstract superclass.stepAfter()'), ('subclass', 'contains method', 'subclass.action()')]"
+"the purpose of this tutorial is to try to give you an overview of how all these classes are grouped, and the purpose behind them, so you don't have to wonder whether you chose the right class, or whether a class already exists for your purpose.",
+"if the factory produced cars, then the blueprint / design manual of the cars to produce corresponds to a java class, and the physical cars produced corresponds to java objects.",
+"in java, all instructions (code) have to be located inside a java class.",
+an entry in the zipfile has the relative path ../../../../etc/hosts .,
+here is how you read the init parameters from inside your servlet - in the servlets init() method:,"[('servlet', 'contains method', 'init()'), ('servlets', 'contains method', 'init()')]"
+here is an example of creating a jdbc databasemetadata object via the jdbc connection getmetadata() method:,"[('JDBC Connection.getMetaData()', 'creates', 'JDBC DatabaseMetaData'), ('JDBC Connection', 'has method', 'getMetaData()')]"
+"since path instances may or may not point to paths that exist in the file system, you can use the files.exists() method to determine if they do (in case you need to check that).","[('Files.exists()', 'determine if', 'Path'), ('Path', 'may point to', 'paths')]"
+"but now you can check via the mock if the dao uses the connection properly, for instance if the connection.close() is called (or not called), if you expected that.","[('DAO', 'uses', 'connection'), ('connection', 'has method', 'connection.close()')]"
+"you can set the column widths using the setwidths() method, like this:",
+"had the numberformat instance been created using a uk locale instance, the number had been parsed to 10000, because the comma would have been interpreted as a integer separator (e.g.",
+to use the streamstoragefs class you must first create a streamstoragefs instance.,"[('StreamStorageFS', 'instance of', 'StreamStorageFS')]"
+by calling either the include() or forward() method the servlet container activates whatever servlet is mapped to the url the requestdispatcher.,"[('RequestDispatcher', 'activates', 'Servlet'), ('RequestDispatcher', 'method', 'include()'), ('RequestDispatcher', 'method', 'forward()')]"
+"when the process() method of the subclass is called, the full process is executed, including the stepbefore() and stepafter() of the abstract superclass, and the action() method of the subclass.","[('subclass', 'calls method', 'subclass.process()'), ('abstract superclass', 'contains method', 'abstract superclass.stepBefore()'), ('abstract superclass', 'contains method', 'abstract superclass.stepAfter()'), ('subclass', 'contains method', 'subclass.action()')]"
+"the time field in the clock class has no access modifier, which means that it is implicitly assigned the default / package access modifier.","[('Clock', 'contains field', 'time')]"
+the java instanceof operator also works when comparing an object against an interface instead of a class.,
+the size() method of the filechannel object returns the file size of the file the channel is connected to.,"[('FileChannel.size()', 'returns', 'file size'), ('FileChannel', 'has method', 'FileChannel.size()')]"
+"the constructors are the two methods that have the same name as the class, and which have no return type specified.",
+"if the subclass tries to access the field, it will access the field in the subclass.",
+here is an example of reading a rion int64 field into a java long object using the rionreader readint64obj() method:,"[('RionReader', 'has method', 'RionReader.readInt64Obj()')]"
+"notice, that a bufferedreader is a reader subclass and can be used in any place where an reader can be used.","[('BufferedReader', 'is a subclass of', 'Reader')]"
+the tostring() method returns a string value of the name of the given enum instance.,"[('toString()', 'returns', 'string value')]"
+"for instance, if a file already exists at the destination path, and you have left out the standardcopyoption.replace_existing option, or if the file to move does not exist etc.","[('StandardCopyOption', 'has method', 'StandardCopyOption.REPLACE_EXISTING')]"
+the java collections api only has one implementation of the java sortedset interface - the java.util.treeset class.,"[('java.util.TreeSet', 'implements', 'Java SortedSet'), ('Java Collections API', 'contains', 'java.util.TreeSet')]"
+this method in turn calls the processurldata() in the urlprocessorimpl class.,"[('URLProcessorImpl', 'contains method', 'processURLData()')]"
+"the java navigableset interface, java.util.navigableset, is a subtype of the java sortedset interface.","[('java.util.NavigableSet', 'subtype of', 'SortedSet')]"

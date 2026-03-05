@@ -1,0 +1,385 @@
+text,triplet
+pd.DataFrame.set_index because the set of keys are unique for both rows and columns df.set_index(,"(pd.DataFrame, has method, set_index)"
+"Use isinstance(ele, dict) , which will return true for dict objects as well as subclasses of dict , such as OrderedDict and defaultdict :","(isinstance(), accepts as second argument, dict), (isinstance(), accepts as second argument, OrderedDict), (isinstance(), accepts as second argument, defaultdict), (dict, similar to, OrderedDict), (dict, similar to, defaultdict), (OrderedDict, similar to, defaultdict)"
+"Note that ""first"" may not be an appropriate term here because dict is not an ordered type in Python < 3.6",
+"There are a lot of formatting options for annotate() , see the matplotlib website:",
+"Parallel versions of the map function are provided by two libraries:multiprocessing, and also its little known, but equally fantastic step child:multiprocessing.dummy.","(map, has parallel version provided by, multiprocessing), (map, has parallel version provided by, multiprocessing.dummy)"
+"all in order to wrap it, making Boost.Python ideal for exposing",
+"If you're still using Python 2, note that the above method works with new-style classes only (in Python 3+ all classes are ""new-style"" classes). Your code might use some old-style classes",
+I discuss this in the Stack Overflow question Does Python have a package/module management system? .,
+"(i.e. a type) as a parent class, or the ""top-level type"" object if no",
+"For older Flask versions, or to return a different JSON-serializable object, import and use jsonify .","(Flask, uses, jsonify)"
+"If you want to check the first and only item of your Series (like .bool() , but it works even for non-Boolean contents): >>> x = pd.Series([100])",
+"In shipping with a package manager, Python joins Ruby , Node.js , Haskell , Perl , Go —almost every other contemporary language with a majority open-source community",
+pd.get_dummies + pd.DataFrame.dot I use this for cleverly performing cross tabulation.,"(pd.get_dummies, used in conjunction with, pd.DataFrame.dot)"
+"Starting with Python 3.7 , the built-in dictionary is guaranteed to maintain the insertion order as well, so you can also use that directly if you are on Python 3.7 or later (or CPython 3.6):",
+"Abstract Base Classes, for example, from the collections module, are not instantiated, yet __slots__ are declared for them.","(collections module, contains classes that declare, __slots__)"
+"If you're not planning to open the file immediately, you can use os.path.isfile if you need to be sure it's a file.","(os.path, includes, os.path.isfile)"
+"Anyway, it's not just something that will happen by throwing together a bunch of Django models :)",
+"However, it doesn't currently try to work out the appropriate quotes to place around that expression (that's not impossible, just sufficiently complicated that it hasn't been done).",
+"It still returns None , because that is the return value of the code object returned from compile .",
+"To do these type of calculations for the data, use a NumPy array:",
+"Another common way is os.system but you shouldn't use it because it is unsafe if any parts of the command come from outside your program or can contain spaces or other special characters, also subprocess.run is generally more flexible (you can get the stdout , stderr , the ""real"" status code , better error handling , etc.). Even the documentation for os.system recommends using subprocess instead.","(os.system, replaced by, subprocess.run)"
+"The .next() method of iterators immediately raises StopIteration if the iterator immediately finishes -- i.e., for your use case, if no item in the iterable satisfies the condition.  If you don't care (i.e., you know there must be at least one satisfactory item) then just use .next() (best on a genexp, line for the next built-in in Python 2.6 and better).","(.next() method, raises, StopIteration)"
+I also recommend once you have pip using the virtualenv package and pattern. :),
+"The way this works is slightly different than dreload . Some caveats apply, type %autoreload? to see what can go wrong.",
+asarray : The input will be returned uncopied iff it's a compatible ndarray ( copy=False ).,"(asarray, requires compatibility with, ndarray)"
+"If setuptools is not already installed, get-pip.py will install setuptools for you.",
+"array , which is defined on Index and Series objects only.","(Index, includes, Series)"
+The .py extension should be removed from moduleName . The function also defines a package argument for relative imports.,
+"There are also convenience functions, like asarray_chkfinite (same copying rules as asarray , but raises ValueError if there are any nan or inf values), and constructors for subclasses like matrix or for special cases like record arrays, and of course the actual ndarray constructor (which lets you create an array directly out of strides over a buffer).","(asarray_chkfinite, similar to, asarray)"
+"Copy the contents of the file named src to a file named dst . Both src and dst need to be the entire filename of the files, including path.",
+"Potentially worse still, do not catch exceptions such as WindowsError and OSError after changing directory as that may mean destructive changes are applied in the old location!",
+"It works by installing a bunch of files in a directory (eg: env/ ), and then modifying the PATH environment variable to prefix it with a custom bin directory (eg: env/bin/ ). An exact copy of the python or python3 binary is placed in this directory, but Python is programmed to look for libraries relative to its path first, in the environment directory",
+"Note: Callable on its own is equivalent to Callable[..., Any] .",
+Changing the current working directory in a subprocess does not change the current working directory in the parent process.  This is true of the Python interpreter as well.  You cannot use os.chdir() to change the CWD of the calling process.,"(os, includes, os.chdir)"
+"The internal difference is that without that import, / is mapped to the __div__() method, while with it, __truediv__() is used. (In any case, // calls __floordiv__() .)","(__div__(), differs from, __truediv__()), (__div__(), differs from, __floordiv__()), (__truediv__(), differs from, __floordiv__())"
+The groupby() function takes two arguments: (1) the data to group and (2) the function to group it with.,
+subprocess.run() is the way to go if you simply need a program to run and return control to Python,"(subprocess, has_method, subprocess.run())"
+"numpy.logical_and : >>> np.logical_and(x, y) or simply the & operator: >>> x & y","(numpy.logical_and, equivalent to, & operator)"
+There are also solutions for fixing JSON like for example How do I automatically fix an invalid JSON string? .,
+"applymap is good for elementwise transformations across multiple rows/columns, e.g., df[['A', 'B', 'C']].applymap(str.strip)",
+"If you want http errors (e.g. 401 Unauthorized) to raise exceptions, you can call Response.raise_for_status . That will raise an HTTPError , if the response was an http error.","(Response.raise_for_status, raises, HTTPError)"
+"( Historical note : In earlier versions of Python, you can sometimes use contextlib.nested() to nest context managers.  This won't work as expected for opening multiples files, though -- see the linked documentation for details.)","(contextlib, includes, contextlib.nested())"
+"multiprocessing.dummy is exactly the same as multiprocessing module, but uses threads instead ( an important distinction - use multiple processes for CPU-intensive tasks; threads for (and during) I/O ):","(multiprocessing.dummy, is exactly the same as, multiprocessing)"
+"If you have a DataFrame with only one row, then access the first (only) row as a Series using iloc , and then the value using the column name:","(DataFrame, includes, Series)"
+"With staticmethods , neither self (the object instance) nor cls (the class) is implicitly passed as the first argument","(self, differs from, cls)"
+"It's not uncommon to see one collection type use a .length() method while another type uses a .length property, while yet another uses .count() . Having a language-level keyword unifies the entry point for all these types",
+"That is to say, you can use either eval('my_func(42)') or exec('my_func(42)') , the difference being that eval returns the value returned by my_func , and exec discards it:","(eval, returns value from function while, exec); (eval, differs from, exec)"
+Use the indent= parameter of json.dump() or json.dumps() to specify how many spaces to indent by:,"(json.dump(), related to, json.dumps())"
+"For example, you may want to test your code against Python 2.7, 3.6, 3.7 and 3.8, so you'll need a way to switch between them",
+"Do not use os.linesep as a line terminator when writing files opened in text mode (the default); use a single '\n' instead, on all platforms.","(os, contains, os.linesep)"
+"Unlike the contextlib.nested , this guarantees that a and b will have their __exit__() 's called even if C() or it's __enter__() method raises an exception.","(contextlib.nested, guarantees calling, __exit__())"
+"Besides these four statements, there are several Python functions that hide some bool calls (like any , all , filter , ...). These are normally not problematic with pandas.Series , but for completeness I wanted to mention these.","(any, similar to, all)"
+"Using these magic methods ( __enter__ , __exit__ ) allows you to implement objects which can be used easily with the with statement.",
+It should work well with pip . Official docs | Pypi page | GitHub repo | scikit-build section of Python Package User Guide,
+DataFrame.iterrows is a generator which yields both the index and row (as a Series):,"(DataFrame, contains, iterrows), (DataFrame, contains, Series)"
+"This means that all data read from the file is returned as bytes objects, not str . You cannot then use a string in a containment test:","(bytes, different from, str)"
+"These metaclass-methods are like classmethods in that they can be called on the class without an instance, but they are also not like classmethods in that they cannot be called on an instance of the class. type.__subclasses__() is an example of a method on the type metaclass","(type, has_method, type.__subclasses__())"
+Use the nargs option or the 'append' setting of the action option (depending on how you want the user interface to behave).,
+"string.index(s, sub[, start[, end]]) Like find() but raise ValueError when the substring is not found.","(string.index(), differs from, find()), (string.index(), raises, ValueError), (find(), raises, ValueError)"
+"There is an additional wrinkle: the module's name depends on whether it was imported ""directly"" from the directory it is in or imported via a package.  This only makes a difference if you run Python in a directory, and try to import a file in that same directory (or a subdirectory of it).  For instance, if you start the Python interpreter in the directory package/subpackage1 and then do import moduleX , the name of moduleX will just be moduleX , and not package.subpackage1.moduleX .  This is because Python adds the current directory to its search path when the interpreter is entered interactively; if it finds the to-be-imported module in the current directory, it will not know that that directory is part of a package, and the package information will not become part of the module's name.","(package.subpackage1.moduleX, differs from, moduleX)"
+"all_equal2 (in the worst case) and all_equal_6502 create a copy of the list, meaning you need to use double the memory.","(all_equal2, differs from, all_equal_6502)"
+"because this will also catch Unicode strings. unicode is not a subclass of str ; both str and unicode are subclasses of basestring . In Python 3, basestring no longer exists since there's a strict separation of strings ( str ) and binary data ( bytes ).","(unicode, is not a subclass of, str)"
+"If you need to copy the elements of the list as well, use generic copy.deepcopy() :","(copy, utilized with, copy.deepcopy())"
+"Your setup.py file needs setuptools . Some Python packages used to use distutils for distribution, but most now use setuptools , a more complete package","(distutils, replaced by, setuptools)"
+"If you want to check the Django version, open a Python console and type",
+"Use pathlib.Path().rglob() from the pathlib module, which was introduced in Python 3.5.","(pathlib, contains, pathlib.Path()), (pathlib.Path(), contains, rglob())"
+"Sorting by an alternate key >>> sorted([1, 2, 3, 4, 5, 6, 7, 8, 9], key=lambda x: abs(5-x))","(sorted, has parameter, key); (sorted, uses in example, lambda)"
+"Keep on adding empty __init__.py to your directories because 99% of the time you just want to create regular packages . Also, Python tools out there such as mypy and pytest require empty __init__.py files to interpret the code structure accordingly",
+"If you are not using extended ASCII (i.e., not on a PC), you are stuck with the ASCII characters below 127, and '#' or '@' is probably your best bet for a block",
+"David Mertz's article, Iterators and Simple Generators , is a pretty good introduction.","(Iterators and Simple Generators, is article by, David Mertz)"
+You can use the two tools side by side (by installing pip with conda install pip ) but they do not interoperate either.,"(pip, used side by side with, conda)"
+"b = copy.deepcopy(a) : Deep copying, a and b 's structure and content become completely isolated.","(copy, realized by, copy.deepcopy())"
+"If we hit the person with a knife, we can just exit the function because we know there's only one knife and no reason the check rest of the prisoners . If we don't find the prisoner with a knife, we raise an alert",
+Jupyter Notebook is a web-based interactive computational environment for creating Jupyter notebook documents,
+"For globally setting title and label sizes, mpl.rcParams contains axes.titlesize and axes.labelsize . (From the page):","(axes.titlesize, similar to, axes.labelsize)"
+"If you are writing this to a file, you can use io.open() instead of open() to produce a file object that encodes Unicode values for you as you write, then use json.dump() instead to write to that file:","(io.open, alternative to, open); (io.open, works with, json.dump)"
+"B uilt-in (Python) — Names preassigned in the built-in names module: open , range , SyntaxError , etc","(builtins.open, is a type of, built-in name); (builtins.range, is a type of, built-in name); (builtins.SyntaxError, is a type of, built-in name)"
+"of the meaning of “processor time”, depends on that of the C function",
+Warning! I don't really know what is happening when current module is inside an egg file,
+"In this code, you should call stop() on the thread when you want it to exit, and wait for the thread to exit properly using join() . The thread should check the stop flag at regular intervals.","(stop(), used with, join())"
+"Besides merge , DataFrame.update and DataFrame.combine_first are also used in certain cases to update one DataFrame with another.","(DataFrame.update, used with, DataFrame.combine_first)"
+"The compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1) built-in can be used to speed up repeated invocations of the same code with exec or eval by compiling the source into a code object beforehand","(exec, similar to, eval)"
+"""new"" style classes: they have, directly or indirectly (e.g inherit from a built-in type ), object as a base class:",
+"In Python 3, they made the / operator do a floating-point division, and added the // operator to do integer division (i.e., quotient without remainder); whereas in Python 2, the / operator was simply integer division, unless one of the operands was already a floating point number.",
+string.ascii_uppercase + string.digits just concatenates the list of characters representing uppercase ASCII chars and digits:,"(string.ascii_uppercase, concatenates with, string.digits)"
+Use nargs='?' (or nargs='*' if you need more than one dir),
+"With our object DataFrame df , we get the following result:",
+You can use type=int (or whatever) to get a list of ints (or whatever),
+"A good place to start learning would be the iterators section of the tutorial and the iterator types section of the standard types page . After you understand the basics, try the iterators section of the Functional Programming HOWTO .","(iterators section, mentions, iterator types section)"
+"Update: if you use anaconda, you may simply use this as well (and hence don't need to add menpo channel):","(anaconda, eliminates need for, menpo channel)"
+"Note that file is one of Python's core modules, so I suggest you change the filename of file.py to something else.",
+So Conda is a packaging tool and installer that aims to do more than what pip does; handle library dependencies outside of the Python packages as well as the Python packages themselves,
+"Using the VIRTUAL_ENV environment variable is not reliable . It is set by the virtualenv activate shell script, but a virtualenv can be used without activation by directly running an executable from the virtualenv's bin/ (or Scripts ) directory, in which case $VIRTUAL_ENV will not be set",
+The functionality described above can be enabled starting from Python 3.7 using the following special import:,
+The docs describe the attributes available on the request object ( from flask import request ) during a request,"(flask, includes, request)"
+pd.DataFrame.set_index because the set of keys are unique for both rows and columns,"(pd.DataFrame, has_method, pd.DataFrame.set_index)"
+"Use dir() , vars() or the inspect module to get what you are interested in (I use __builtins__ as an example; you can use any object instead).","(dir(), used as alternative to, inspect)"
+"It's been discussed in this question and also this GitHub issue . Tensorflow uses an ad-hoc build system called bazel and building it is not that trivial, but is certainly doable",
+"Simply implement an iterator that defines a next() method, and implement an __iter__ method on a class to make it iterable. (the __iter__ of course, should return an iterator object, that is, an object that defines next() )",
+"Python 3 has only new-style classes that are declared as class A: , class A(object): or class A(B): .",
+"If you want to remove all whitespace and then leave a single space character between words, use str.split() followed by str.join() :","(str.split(), used in conjunction with, str.join())"
+You can use PyPNG . It's a pure Python (no dependencies) open source PNG encoder/decoder and it supports writing NumPy arrays as images.,
+"If the reason you're checking is so you can do something like if file_exists: open_it() , it's safer to use a try around the attempt to open it",
+"You can see that the Resource version of the code is much simpler, more compact, and has more capability (for example it does pagination for you and it exposes properties instead of a raw dictionary). The Client version of the code would actually be more complicated than shown above if you wanted to include pagination.",
+Pip installs Python packages whereas conda installs packages which may contain software written in any language,
+"Since writing this answer, Anaconda has published a new page on Understanding Conda and Pip , which echoes this as well:",
+"You can either use the response.raw file object , or iterate over the response.",
+"NumPy's arrays are more compact than Python lists -- a list of lists as you describe, in Python, would take at least 20 MB or so, while a NumPy 3D array with single-precision floats in the cells would fit in 4 MB. Access in reading and writing items is also faster with NumPy.",
+importlib was added to Python 3 to programmatically import a module.,
+"This solution applies to the system scope or to a virtual environment scope, and covers packages installed by setuptools , pip and ( god forbid ) easy_install .",
+"x and y are otherwise evaluated on their own ( False if 0 , True otherwise).",
+"This is different from virtualenv , where the directory is typically in the current working directory. pipenv is meant to be used when developing Python applications (as opposed to libraries). There are alternatives to pipenv , such as poetry , which I won't list here since this question is only about the packages that are similarly named.",
+"The python-dateutil package also has dateutil.parser.parse . Compared with isoparse , it is presumably less strict, but both of them are quite forgiving and will attempt to interpret the string that you pass in","(python-dateutil, includes, dateutil.parser.parse), (python-dateutil, includes, isoparse), (dateutil.parser.parse, similar to, isoparse), (dateutil.parser.parse, less strict than, isoparse)"
+You can pass this parameter to json.loads (if you don't need a Decoder instance for other purposes) like so:,"(json.loads, accepts parameter, json.JSONDecoder)"
+First of all you will need to download latest executable geckodriver from here to run latest Firefox using Selenium,
+You need to provide explicitly Firefox installed binary location to launch Firefox as below :-,
+"The difference is that the second one will also catch KeyboardInterrupt , SystemExit and stuff like that, which are derived directly from BaseException , not Exception .","(KeyboardInterrupt, derived from, BaseException); (SystemExit, derived from, BaseException); (Exception, derived from, BaseException)"
+"Whether running scripts inside a package is an antipattern or not is subjective, but personally I find it really useful in a package I have which contains some custom wxPython widgets, so I can run the script for any of the source files to display a wx.Frame containing only that widget for testing purposes.","(wxPython, contains, wx.Frame)"
+"Statements (see 1 , 2 ), on the other hand, are everything that can make up a line (or several lines) of Python code.  Note that expressions are statements as well.  Examples:",
+"The --host option to flask run , or the host parameter to app.run() , controls what address the development server listens to","(flask run, has option, --host)"
+"To use the response.raw file-like object will not, by default, decode compressed responses (with GZIP or deflate). You can force it to decompress for you anyway by setting the decode_content attribute to True ( requests sets it to False to control decoding itself). You can then use shutil.copyfileobj() to have Python stream the data to a file object:","(shutil.copyfileobj(), utilized with, requests)"
+"Should Third 's MRO be [First, Second] or [Second, First] ? There's no obvious expectation, and Python will raise an error:","(Third, has, MRO)"
+"This is the closest equivalent to Java's final . However, it does not actually prevent reassignment :",
+"In addition to rstrip() , there are also the methods strip() and lstrip() . Here is an example with the three of them:","(rstrip(), related to, strip())"
+"google_pubsub and google_storage are separate packages but they share the same namespace google/cloud . In order to share the same namespace, it is required to make each directory of the common path a namespace package, i.e. google/ and cloud/ . This should be the only use case for creating namespace packages, otherwise, there is no need for it.",
+Typically you would structure your files into packages (see other answers) instead of modifying the search path.,
+"Edit 1: This was tested on Windows (8, 8.1, 10), Mac and Linux",
+"Python normally interprets the len gth of containers (like list , tuple , ...) as truth-value if it has no explicit Boolean interpretation","(list, similar to, tuple)"
+"For example, before using pip, a Python interpreter must be installed via a system package manager or by downloading and running an installer",
+"yaml.load() also exists, but yaml.safe_load() should always be preferred to avoid introducing the possibility for arbitrary code execution","(yaml.load(), should be replaced by, yaml.safe_load())"
+"A.foo(1) would have raised a TypeError, but A.class_foo(1) works just fine:","(A.foo(1), differs from, A.class_foo(1))"
+"HP had a site built with Django 1.5: ePrint center . However, as for novemer/2015 the entire website was migrated and this link is just a redirect",
+A couple of alternative approaches are listed in the documentation of itertools.permutations . Here's one:,"(itertools, contains, itertools.permutations)"
+Because PyPy is a JIT compiler its main advantages come from long run times and simple types (such as numbers). PyPy's pre-JIT speeds can be bad compared to CPython.,
+"pd.DataFrame.pivot_table we pass values=['val0', 'val1'] but we could've left that off completely","(pd.DataFrame, contains, pd.DataFrame.pivot_table)"
+"Yes, in CPython 2.7 that it is handily referred to as being a forward-compatibility option (why confuse people over that there is a backward compatibility option at all),",
+"In brief, Unicode strings are an entirely separate type of Python string that does not contain any encoding","(Unicode strings, are separate type from, Python string)"
+"Named tuples are basically easy-to-create, lightweight object types.  Named tuple instances can be referenced using object-like variable dereferencing or the standard tuple syntax.  They can be used similarly to struct or other common record types, except that they are immutable.  They were added in Python 2.6 and Python 3.0, although there is a recipe for implementation in Python 2.4 .",
+"Distribute was merged back into Setuptools 0.7 , so you don't need to use Distribute any more","(Distribute, merged back into, Setuptools)"
+"On Python 3.4 and earlier, use subprocess.call instead of .run :","(subprocess.call, replaced by, subprocess.run)"
+"np.array(a, copy=False, subok=True) and np.array(m, copy=False, subok=True) will copy neither, because m is a matrix , which is a subclass of ndarray .","(matrix, subclass of, ndarray)"
+"It partially works with environments where other AST magics apply, including pytest, ipython, macropy, birdseye, reticulate with R, etc",
+"And yes, in Python 2.*, u'...' is of course always distinct from just '...' -- the former is a unicode string, the latter is a byte string","(unicode string, distinct from, byte string)"
+Some kinds of projects may have authentication requirements for which Django’s built-in User model is not always appropriate,
+"This syntax variant exists mostly because the syntax of regular expression patterns is heavy with backslashes (but never at the end, so the ""except"" clause above doesn't matter) and it looks a bit better when you avoid doubling up each of them -- that's all.  It also gained some popularity to express native Windows file paths (with backslashes instead of regular slashes like on other platforms), but that's very rarely needed (since normal slashes mostly work fine on Windows too) and imperfect (due to the ""except"" clause above).",
+"Others may disagree, but I personally would avoid ever using the for-else or while-else blocks in production code.",
+"And if the list contains non-string types (such as integers, floats, bools, None) then do:","(int, example of, non-string types)"
+"As you are in python3 , use dict.items() instead of dict.iteritems()","(dict.items(), replaces, dict.iteritems())"
+What about staticmethod ? It's pretty similar to classmethod but doesn't take any obligatory parameters (like a class method or instance method does).,"(staticmethod, similar to, classmethod)"
+"If that's not what you request back, Python will just give you bytes strings in the stdout and stderr strings","(stdout, similar to, stderr)"
+"When you tried to print the dates, you printed mylist . If you want to print a date, you must print the date objects, not their container (the list).","(list, contains, date objects)"
+"Then delete also the containing directory, e.g. /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/my_module-0.1.egg/ on macOS. It doesn't have any files, but Python will still import an empty module:",
+"The collections module provides some abstract base classes, which allow to ask classes or instances if they provide particular functionality, for example: from collections.abc import Iterable","(collections.abc.Iterable, is provided by, collections.abc)"
+"There is technically no difference between using Optional[] on a Union[] , or just adding None to the Union[] . So Optional[Union[str, int]] and Union[str, int, None] are exactly the same thing.","(Optional[Union[str, int]], equivalent to, Union[str, int, None])"
+You can pass stderr=subprocess.STDOUT to ensure that error messages are included in the returned output,"(stderr, can be set to, subprocess.STDOUT)"
+"Just pick a type: you can use a NumPy dtype (e.g. np.int16 ), some Python types (e.g. bool), or pandas-specific types (like the categorical dtype).","(np.int16, example of, NumPy dtype)"
+See what the Python tutorial has to say on the subject of classes and class objects .,"(classes, related_to, class objects)"
+"Every generator is an iterator, but not vice versa.  A generator is built by calling a function that has one or more yield expressions ( yield statements, in Python 2.5 and earlier), and is an object that meets the previous paragraph's definition of an iterator .","(generator, is a type of, iterator)"
+"Handling the end case is a C goto followed by a direct realloc (no making a copy into a smaller tuple ) down to the already known final size, since it's tracking how many elements it has successfully pulled (no complex ""create sentinel for use as fillvalue and do Python level if / else checks for each batch to see if it's empty, with the final batch requiring a search for where the fillvalue appeared last, to create the cut-down tuple "" required by zip_longest -based solutions).",
+You can fix that by installing a C++ compiler such as MinGW or Visual C++ . Microsoft actually ships one specifically for use with Python,"(MinGW, similar to, Visual C++)"
+"To perform an INNER JOIN, call merge on the left DataFrame, specifying the right DataFrame and the join key (at the very least) as arguments.","(merge, requires, DataFrame)"
+With this class you can use the Map object like another dictionary(including json serialization) or with the dot notation,"(Map, supports, json serialization)"
+This also applies to pip requirements files .  See the full details on version specifiers in PEP 440 .,
+It was removed from Python 3.8 as it had problems (not to mention the confusing name). Running python3 -m venv has exactly the same effect as pyvenv .,"(pyvenv, substituted by, venv)"
+"str(x) converts any object x to a string by calling x. __str__() , or repr(x) if x doesn't have a __str__() method.","(str(x), falls back to, repr(x))"
+"For Python 3.8+, use statistics.fmean for numerical stability with floats. (Fast.)","(statistics.fmean, is part of, statistics)"
+"'period[]' Not to be confused with a timedelta, these objects are actually anchored to specific time periods","(period[], different from, timedelta)"
+"So, again as you've found, {{products|count}} (or equivalently {{products|length}} ) in your template will give the ""number of products"" (""length of list"")",
+"They are thus suitable for deployment via TensorFlow Serving, TensorFlow Lite, TensorFlow.js, or programs in other programming languages (the C, C++, Java, Go, Rust, C# etc","(TensorFlow Serving, utilized in conjunction with, TensorFlow Lite), (TensorFlow Serving, utilized in conjunction with, TensorFlow.js), (TensorFlow Lite, utilized in conjunction with, TensorFlow.js)"
+"From the doc of sys_info : Assigning the traceback return value to a local variable in a function that is handling an exception will cause a circular reference . This will prevent anything referenced by a local variable in the same function or by the traceback from being garbage collected. [...] If you do need the traceback, make sure to delete it after use (best done with a try ... finally statement)","(sys_info, necessitates, traceback)"
+"For more information about what os.stat_result contains, refer to the documentation . For the modification time you want fname.stat().st_mtime :","(os.stat_result, contains, modification time)"
+"Is this a lambda returning (y, [1,2,3]) (thus map only gets one parameter, resulting in an error)? Or does it return y ? Or is it a syntax error, because the comma on the new line is misplaced? How would Python know what you want?","(lambda, requires, map)"
+"The difference is mostly due to ""indirectness"" -- a Python list is an array of pointers to Python objects, at least 4 bytes per pointer plus 16 bytes for even the smallest Python object (4 for type pointer, 4 for reference count, 4 for value -- and the memory allocators rounds up to 16). A NumPy array is an array of uniform values -- single-precision numbers takes 4 bytes each, double-precision ones, 8 bytes","(list, differs from, array)"
+"It's pretty cool because if we inherit our Date class, all children will have from_string defined also.",
+"pd.DataFrame.pivot_table we pass values=['val0', 'val1'] but we could've left that off completely df.pivot_table(","(pd.DataFrame, contains, pd.DataFrame.pivot_table), (pd.DataFrame, contains, df.pivot_table), (pd.DataFrame.pivot_table, similar to, df.pivot_table)"
+"In this case, candidates.extend(node._get_child_candidates(distance, min_dist, max_dist)) exhausts all the values of the generator, but while keeps creating new generator objects which will produce different values from the previous ones since it's not applied on the same node.",
+"PS. Can you help me to add features of the above editors to the list (like auto-complete, debugging, etc.)?",
+"But do note that typing is not enforced.  Python continues to remain a dynamically-typed language.  The annotation syntax has been developed to help during the development of the code prior to being released into production.  As PEP 484 states, ""no type checking happens at runtime.""",
+"Global site-packages ("" dist-packages "") directories are listed in sys.path when you run: python -m site For a more concise list run getsitepackages from the site module in Python code: python -c 'import site; print(site.getsitepackages())' Caution: In virtual environments getsitepackages is not available with older versions of virtualenv , sys.path from above will list the virtualenv's site-packages directory correctly, though",
+"If you need to copy the elements of the list as well, use generic copy.deepcopy() : import copy","(copy.deepcopy(), utilized with, copy)"
+"Python expects iterables so it will work with strings, lists, tuples, and generators! This is called duck typing and is one of the reasons why Python is so cool","(strings, are examples of, iterables)"
+"The above is consistent with numpy advice/error message, to use reshape(1,-1) for a single sample; i.e. single row","(numpy, recommends, numpy.reshape)"
+"distutils is still included in the standard library of Python, but is considered deprecated as of Python 3.10",
+"has had identical behaviour in possibly every widely released Python version ever; and works in Jython 2.5.2, PyPy 2.3.1 (Python 2.7.6) and IronPython 2.6.1 too (kudos to them following the undocumented behaviour of CPython closely).",
+"If you want to be able change the values, you need another type.  There is a handy recipe for mutable recordtypes which allow you to set new values to attributes.",
+"You can preserve the stacktrace (and error value) with sys.exc_info() , but this is way more error prone and has compatibility problems between Python 2 and 3 , prefer to use a bare raise to re-raise.","(sys, includes, sys.exc_info())"
+"Some examples are: opening files using with open(filename) as fp: , acquiring locks using with lock: (where lock is an instance of threading.Lock ). You can also construct your own context managers using the contextmanager decorator from contextlib . For instance, I often use this when I have to change the current directory temporarily and then return to where I was:","(open(), example similar to, threading.Lock)"
+"subprocess runs your shell commands with /bin/sh unless you specifically request otherwise (except of course on Windows, where it uses the value of the COMSPEC variable). This means that various Bash-only features like arrays, [[ etc are not available.","(/bin/sh, is used on Unix/Linux while, COMSPEC)"
+"Note that this is the 'nice' way to exit.  @ glyphtwistedmatrix below points out that if you want a 'hard exit', you can use os._exit(*errorcode*) , though it's likely os-specific to some extent (it might not take an errorcode under windows, for example), and it definitely is less friendly since it doesn't let the interpreter do any cleanup before the process dies.  On the other hand, it does kill the entire process, including all running threads, while sys.exit() (as it says in the docs) only exits if called from the main thread, with no other threads running.","(os._exit(), differs from, sys.exit())"
+"The printed output will be the same.  Under the hood, the generator object supports the iterator protocol and does something roughly similar to the class Counter.",
+"Python 3 returns an iterator from filter , so should be wrapped in a call to list()","(filter, requires wrapping by, list())"
+"The fix is to write lambda _: 1.0 . An unused variable is often hiding a bug/typo (e.g. set day but use dya in the next line). The pattern matching feature added in Python 3.10 elevated this usage from ""convention"" to ""language syntax"" where match statements are concerned: in match cases, _ is a wildcard pattern , and the runtime doesn't even bind a value to the symbol in that case",
+You can find some of these bitmaps that you can use on the Dwarf Fortress Wiki see ( user-made tilesets ).,
+"Regardless of whether GET / POST, you never have to encode parameters again, it simply takes a dictionary as an argument and is good to go:","(GET, similar to, POST)"
+"This will give you the absolute path to the file you're looking for.  Note that if you're using setuptools, you should probably use its package resources API instead.","(setuptools, provides, package resources API)"
+"Use .set_figwidth and .set_figheight on the matplotlib.figure.Figure object returned by plt.subplots() , or set both with f.set_size_inches(w, h) .","(matplotlib.pyplot.subplots, returns, matplotlib.figure.Figure); (matplotlib.figure.Figure.set_figwidth, sets attribute of, matplotlib.figure.Figure); (matplotlib.figure.Figure.set_figheight, sets attribute of, matplotlib.figure.Figure); (matplotlib.figure.Figure.set_size_inches, sets attribute of, matplotlib.figure.Figure); (matplotlib.figure.Figure.set_figwidth, similar to, matplotlib.figure.Figure.set_figheight); (matplotlib.figure.Figure.set_figwidth, alternative to, matplotlib.figure.Figure.set_size_inches); (matplotlib.figure.Figure.set_figheight, alternative to, matplotlib.figure.Figure.set_size_inches)"
+"Remember, the command you need to use with Conda is conda deactivate (for older versions, use source deactivate ). So it may be wise to start a new shell and activate the environment in that before you try","(conda deactivate, replaced by, source deactivate)"
+"To explain - the sys.exc_info() returns the type, value, and traceback.","(sys, contains, sys.exc_info())"
+"This is why the “eval” thing comes up: if you have enough information so eval(repr(c))==c , that means you know everything there is to know about c . If that’s easy enough, at least in a fuzzy way, do it","(eval, requires input from, repr)"
+From April 2008 post: When to use __new__ vs. __init__ ? on mail.python.org.,"(__new__(), different from, __init__())"
+"If one looks into eval and exec source code in CPython 3, this is very evident; they both call PyEval_EvalCode with same arguments, the only difference being that exec explicitly returns None .","(eval, similar to, exec)"
+"The filename ( ""file.foo"" ) must be included in both the source and destination arguments",
+"Once you know how it works, You may want to use an ORM to avoid writing SQL manually and manipulate your tables as they were Python objects","(ORM, avoid writing, SQL)"
+"The iteritems() method is also gone, since items() in Python 3 works like viewitems() in Python 2.7.","(iteritems(), replaced by, items()), (items(), similar to, viewitems())"
+You can use the zfill() method to pad a string with zeros:,
+"If you know from context which variables you want to slice out, you can just return a view of only those columns by passing a list into the __getitem__ syntax (the []'s).",
+"The difference is subtle, but in the above examples, the mixin classes weren't made to stand on their own.  In more traditional multiple inheritance, the AuthenticationMixin (for example) would probably be something more like Authenticator .  That is, the class would probably be designed to stand on its own.","(AuthenticationMixin, would be called, Authenticator)"
+"If just skipping the certificate check is not acceptable in your particular context, consider the following options, your best option is to set the verify parameter to a string that is the path of the .pem file of the certificate (which you should obtain by some sort of secure means).",
+"You can use many of the keywords available for other plot commands (e.g. color , linestyle , linewidth ...).  You can pass in keyword arguments ymin and ymax if you like in axes corrdinates (e.g. ymin=0.25 , ymax=0.75 will cover the middle half of the plot).  There are corresponding functions for horizontal lines ( axhline ) and rectangles ( axvspan ).","(axhline, corresponding function to, axvspan)"
+to_numeric() - provides functionality to safely convert non-numeric types (e.g. strings) to a suitable numeric type. (See also to_datetime() and to_timedelta() .),"(to_numeric(), similar to, to_datetime())"
+Typing module.foo in your code can be tedious and redundant (tedium can be minimized by using import module as mo then typing mo.foo ),
+"If you don't have a GPU and want to utilize CPU as much as possible, you should build tensorflow from the source optimized for your CPU with AVX, AVX2, and FMA enabled if your CPU supports them","(AVX, similar to, AVX2), (AVX, similar to, FMA), (AVX2, similar to, FMA)"
+subprocess.call() was introduced in Python 2.4 in the original subprocess module ( PEP-324 ). It is basically equivalent to subprocess.run(...).returncode,"(subprocess.call(), equivalent to, subprocess.run())"
+"This is the recommendation because it works across all versions of Python, and in all forms of virtualenv",
+"You need to add the path of your pip installation to your PATH system variable . By default, pip is installed to C:\Python34\Scripts\pip (pip now comes bundled with new versions of python), so the path ""C:\Python34\Scripts"" needs to be added to your PATH variable.",
+"However, if you're using Python 3.3 or later, pyenv-virtualenv will try to run python -m venv if it is available, instead of virtualenv . You can use virtualenv and pyenv together without pyenv-virtualenv , if you don't want the convenience features.","(pyenv-virtualenv, used with, virtualenv), (pyenv-virtualenv, used with, pyenv), (virtualenv, used with, pyenv)"
+"if you imported moduleX (note: imported , not directly executed), its name would be package.subpackage1.moduleX .  If you imported moduleA , its name would be package.moduleA .  However, if you directly run moduleX from the command line, its name will instead be __main__ , and if you directly run moduleA from the command line, its name will be __main__ .  When a module is run as the top-level script, it loses its normal name and its name is instead __main__ .","(package.subpackage1.moduleX, has name, __main__)"
+"pd.DataFrame.groupby + pd.DataFrame.unstack Good general approach for doing just about any type of pivot You specify all columns that will constitute the pivoted row levels and column levels in one group by.  You follow that by selecting the remaining columns you want to aggregate and the function(s) you want to perform the aggregation.  Finally, you unstack the levels that you want to be in the column index.","(pd.DataFrame.groupby, utilized with, pd.DataFrame.unstack)"
+Use packaging.version.Version which supports PEP 440 style ordering of version strings.,"(packaging.version.Version, supports, PEP 440)"
+"In Python 3.x, iteritems() was replaced with simply items() , which returns a set-like view backed by the dict, like iteritems() but even better.","(iteritems(), replaced by, items()), (items(), similar to, iteritems())"
+This information is available in the sys.version string in the sys module:,"(sys, contains, sys.version)"
+pd.DataFrame.pivot_table fill_value is not set by default.  I tend to set it appropriately.  In this case I set it to 0 . df.pivot_table(,"(pd.DataFrame, has_method, pivot_table)"
+[f'S{i}' for i in range(len(dfs))] creates a list of strings to name each dataframe.,"(range(), requires, len())"
+A simple way to do this is to use StringIO.StringIO (python2) or io.StringIO (python3) and pass that to the pandas.read_csv function,"(StringIO.StringIO, used with, pandas.read_csv)"
+This is the best way that has worked for me which I hadn't found in any of the docs offered.,
+"When comparing ints (or immutable types in general), you pretty much always want the former.  There's an optimization that allows small integers to be compared with is , but don't rely on it.",
+"Usually, a Python dictionary throws a KeyError if you try to get an item with a key that is not currently in the dictionary.  The defaultdict in contrast will simply create any items that you try to access (provided of course they do not exist yet).  To create such a ""default"" item, it calls the function object that you pass to the constructor (more precisely, it's an arbitrary ""callable"" object, which includes function and type objects).  For the first example, default items are created using int() , which will return the integer object 0 .  For the second example, default items are created using list() , which returns a new empty list object.","(KeyError, differs from, defaultdict), (int(), differs from, list())"
+Use time.time() to measure the elapsed wall-clock time between two points:,"(time.time(), measures, elapsed wall-clock time)"
+"Now if both bases had nonempty slots, we couldn't do the below. (In fact, if we wanted, we could have given AbstractBase nonempty slots a and b, and left them out of the below declaration - leaving them in would be wrong):",
+"With Python3, you can do it in one line, using SimpleNamespace and object_hook :",
+"BTW, if you are not sure what sending data to a generator even means, you need to drop everything and read about coroutines first—they're very useful (contrast them with subroutines ), but unfortunately lesser-known in Python","(coroutine, contrast with, subroutine)"
+"While this is the most complicated option, calling to_dict(instance) gives us exactly the desired result:",
+"Or perhaps you don't actually want to run moduleX , you just want to run some other script, say myfile.py , that uses functions inside moduleX .  If that is the case, put myfile.py somewhere else – not inside the package directory – and run it.  If inside myfile.py you do things like from package.moduleA import spam , it will work fine.",
+Note that Numpy recommend to follow their own numpydoc based on Google format and usable by Sphinx.,
+"Do not use type . It is almost never the right answer in Python, since it blocks all the flexibility of polymorphism",
+"For cryptographically secure random choices (e.g., for generating a passphrase from a wordlist), use secrets.choice() :","(secrets, includes, secrets.choice())"
+"However, since sometime in Python 3, it has been reimplemented to simply use subprocess , and redirects to the subprocess.Popen() documentation for details.","(subprocess, implemented using, subprocess.Popen())"
+"Also, all axes objects (the objects that have plotting methods), have a parent figure object anyway, thus:","(figure, contains, axes)"
+"Python could have done something else to distinguish normal names from attributes -- special syntax like Ruby has, or requiring declarations like C++ and Java do, or perhaps something yet more different -- but it didn't",
+"Python includes a profiler called cProfile . It not only gives the total running time, but also times each function separately, and tells you how many times each function was called, making it easy to determine where you should make optimizations.",
+"If you decide you really need to enforce the license check securely, write it as a small C extension so that the license check code can be extra-hard (but not impossible!) to reverse engineer, and leave the bulk of your code in Python.",
+"Also, you could also use a drop in replacement for pyyaml, that keeps your yaml file ordered the same way you had it , called oyaml . View snyk of oyaml here","(oyaml, replacement for, pyyaml)"
+"If you need deep backwards compatibility, or if you need more sophisticated functionality than check_output or run provide, you'll have to work directly with Popen objects, which encapsulate the low-level API for subprocesses.","(check_output, provides similar functionality to, run)"
+os.listdir() returns everything inside a directory -- including both files and directories .,"(os.listdir(), returns, everything inside a directory)"
+"The grep is to skip editable (""-e"") package definitions, as suggested by @jawache . (Yes, you could replace grep + cut with sed or awk or perl or...).","(grep, can be replaced by, sed)"
+"Now here is the crucial thing for your error message: if a module's name has no dots, it is not considered to be part of a package .  It doesn't matter where the file actually is on disk.  All that matters is what its name is, and its name depends on how you loaded it.",
+loc and iloc work the same way with DataFrames as they do with Series,"(loc, work the same way as, iloc)"
+"For optimization, see jamylak's response using operator.itemgetter(1) , which is essentially a faster version of lambda x: x[1] .","(operator, contains, operator.itemgetter)"
+"If it doesn't, then the runtime will fall back to the built-in behavior (which is based on identity for == and != ).""","(==, different from, !=)"
+"When you do len(df['column name']) you are just getting one number, namely the number of rows in the DataFrame (i.e., the length of the column itself).  If you want to apply len to each element in the column, use df['column name'].map(len) .  So try",
+"Also, see Serdalis' comment -- unicode_string.encode(encoding) is also more Pythonic because its inverse is byte_string.decode(encoding) and symmetry is nice.","(str.encode, inverse operation to, bytes.decode)"
+The concept of (old-style) class is unrelated to the concept of type:,"(class, unrelated to, type)"
+"Return the day of the week as an integer, where Monday is 0 and Sunday is 6.",
+"You could say that basestring is an Abstract Base Class (""ABC"")—it offers no concrete functionality to subclasses, but rather exists as a ""marker"", mainly for use with isinstance . The concept is obviously a growing one in Python, since PEP 3119 , which introduces a generalization of it, was accepted and has been implemented starting with Python 2.6 and 3.0.","(basestring, utilized with, isinstance)"
+"Almost every machine-learning training involves a great deal of these operations, hence will be faster on a CPU that supports AVX and FMA (up to 300%). The warning states that your CPU does support AVX (hooray!).",
+See pandas: IO tools for all of the available .read_ methods.,"(pandas, includes, .read_)"
+"In particular, with Celery it is nice to not have to spread your application logic out into crontab files",
+"Starting with pip version 22.3, the --outdated and --format=freeze have become mutually exclusive . Use Python, to parse the JSON output:",
+"See relevant Pandas documentation , python docs examples on csv files , and plenty of related questions here on SO. A good background resource is What every developer should know about unicode and character sets .",
+"If you wish to store information related to User , you can use a one-to-one relationship to a model containing the fields for additional information",
+"If you don't want to output a Python script every time you save, or you don't want to restart the IPython kernel:",
+"So even objects you may not consider to be lists of elements could still be length-checked.  This includes strings, queues, trees, etc.",
+"Before that, it was simply a wrapper around DataFrame.values , so everything said above applies.","(DataFrame, has attribute, values)"
+I think os.environ.copy() is better if you don't intend to modify the os.environ for the current process:,"(os, contains, os.environ)"
+"The relevant parts of PEP 484, PEP 563, and PEP 649, to spare you the trip:","(PEP 484, related to, PEP 563)"
+You have circular dependent imports. physics.py is imported from entity before class Ent is defined and physics tries to import entity that is already initializing,"(physics.py, depends on, entity)"
+"Another option since Python 3.3 might be to use perf_counter or process_time , depending on your requirements","(perf_counter, replace, process_time)"
+"Author: Holger Krekel, Bruno Oliveira, Ronny Pfannschmidt, Floris Bruynooghe, Brianna Laugher, Florian Bruhin and others",
+"convert_dtypes() - convert DataFrame columns to the ""best possible""  dtype that supports pd.NA (pandas' object to indicate a missing value).","(pandas.DataFrame.convert_dtypes, supports, pandas.NA)"
+"On each pull of a new batch, it proactively allocates a tuple of precisely the correct size (for all but the last batch), instead of building the tuple up element by element with amortized growth causing multiple reallocations (the way a solution calling tuple on an islice does)","(tuple(), replaces, islice())"
+"Trying to downcast using pd.to_numeric(s, downcast='unsigned') instead could help prevent this error.",
+"asfortranarray : The input will be returned uncopied iff it's a compatible ndarray in contiguous Fortran order ( copy=False , order='F' ).","(asfortranarray, returns, ndarray)"
+"Think of np.datetime64 the same way you would about np.int8 , np.int16 , etc and apply the same methods to convert between Python objects such as int , datetime and corresponding numpy objects.","(np.datetime64, similar to, np.int8), (np.datetime64, similar to, np.int16), (np.int8, similar to, np.int16)"
+Which linux distribution are you using? Mysql is pre-packaged for most linux distributions,
+"calendar. monthrange (year, month) Returns weekday of first day of the month and number of days in month, for the specified year and month .","(calendar, contains, calendar.monthrange)"
+Note: before 0.11.1 save and load were the only way to do this (they are now deprecated in favor of to_pickle and read_pickle respectively).,"(save(), deprecated in favor of, to_pickle())"
+The extend() method is a list object method that expects an iterable and adds its values to the list.,"(extend(), requires, list)"
+"Using GHC 7.0.3 , gcc 4.4.6 , Linux 2.6.29 on an x86_64 Core2 Duo (2.5GHz) machine, compiling using ghc -O2 -fllvm -fforce-recomp for Haskell and gcc -O3 -lm for C.","(ghc, utilized in conjunction with, gcc)"
+It can be called either on the class (such as C.f() ) or on an instance (such as C().f() ). The instance is ignored except for its class.,"(C, contains, C.f()), (C, contains, C().f()), (C.f(), similar to, C().f())"
+"For those needing a sort key, you can use os_sort_keygen (or os_sort_key if you just need the defaults).","(os_sort_key, alternative to, os_sort_keygen)"
+"And when only reading from a container type, you may just as well accept any immutable abstract container type; lists and tuples are Sequence objects, while dict is a Mapping type:","(Sequence, is a type that includes, list)"
+"In the 'eval' mode (and thus with the eval function if a string is passed in), the compile raises an exception if the source code contains statements or anything else beyond a single expression:","(eval(), requires, compile())"
+"exec and eval both accept the program/expression to be run either as a str , unicode or bytes object containing source code, or as a code object which contains Python bytecode.","(exec, similar to, eval)"
+Method resolution order (MRO) : in what order the base classes of a class will be searched when trying to resolve which method to call.,
+"Other new features have been added to pip over the years that will never be in easy_install . For example, pip makes it easy to clone your site-packages by building a requirements file and then installing it with a single command on each side",
+"There are dictionary comprehensions in Python 2.7+ , but they don't work quite the way you're trying.  Like a list comprehension, they create a new dictionary; you can't use them to add keys to an existing dictionary.  Also, you have to specify the keys and values, although of course you can specify a dummy value if you like.","(dictionary, similar to, list), (dictionary, different from, list)"
+You can ignore SSL errors by setting pypi.org and files.pythonhosted.org as well as the older pypi.python.org as trusted hosts.,"(pypi.org, trusted host with, files.pythonhosted.org)"
+"However, you'll need to view your array as an array with fields (a structured array).","(array, has, fields)"
+pd.DataFrame.set_index + pd.DataFrame.unstack Convenient and intuitive for some (myself included).  Cannot handle duplicate grouped keys,"(pd.DataFrame, contains, pd.DataFrame.set_index), (pd.DataFrame, contains, pd.DataFrame.unstack), (pd.DataFrame.set_index, works with, pd.DataFrame.unstack)"
+"The array.array type, on the other hand, is just a thin wrapper on C arrays.  It can hold only homogeneous data (that is to say, all of the same type) and so it uses only sizeof(one object) * length bytes of memory.  Mostly, you should use it when you need to expose a C array to an extension or a system call (for example, ioctl or fctnl ).","(array.array, utilized with, fcntl.ioctl); (array.array, utilized with, fcntl.fcntl)"
+"When a function is compiled, the local variables are stored in a fixed-size array ( not a dict ) and variable names are assigned to indexes",
+"For older Python versions, use os.walk() to recursively walk a directory and fnmatch.filter() to match against a simple expression:","(os.walk(), used in conjunction with, fnmatch.filter())"
+"See Why should we NOT use sys.setdefaultencoding(""utf-8"") in a py script? for further details","(sys.setdefaultencoding(), part_of, sys)"
+"For more involved scenarios (background processes, perhaps with interactive I/O with the Python parent program) you still need to use subprocess.Popen() and take care of all the plumbing yourself","(subprocess, requires, subprocess.Popen())"
+"By the way: if Python cannot find a coherent method resolution order, it'll raise an exception, instead of falling back to behavior which might surprise the user.",
+In mac os image rendering back end of matplotlib (what-is-a-backend to render using the API of Cocoa by default). There are Qt4Agg and GTKAgg and as a back-end is not the default,"(matplotlib, differs from, Qt4Agg), (matplotlib, differs from, GTKAgg), (Qt4Agg, differs from, GTKAgg), (Qt4Agg, differs from, Cocoa), (GTKAgg, differs from, Cocoa)"
+"The string or node provided may only consist of the following Python literal structures: strings, bytes, numbers, tuples, lists, dicts, sets, booleans, None and Ellipsis .",
+"print(some_object, 'is not iterable') The iter built-in checks for the __iter__ method or in the case of strings the __getitem__ method.","(print(), utilizes, __iter__()), (print(), utilizes, __getitem__())"
+"PyPy sometimes isn't actually faster for ""scripts"", which a lot of people use Python for",
+"module.  A file is loaded as the top-level script if you execute it directly, for instance by typing python myfile.py on the command line.  It is loaded as a module when an import statement is encountered inside some other file.  There can only be one top-level script at a time; the top-level script is the Python file you ran to start things off.",
+"Furthermore, you can also replace ordinary immutable classes that have no functions , only fields with them.  You can even use your named tuple types as base classes:",
+"If you are after only two decimal places (to display a currency value, for example), then you have a couple of better choices:",
+"Python 3.10 introduces the | union operator into type hinting, see PEP  604 . Instead of Union[str, int] you can write str | int . In line with other type-hinted languages, the preferred (and more concise) way to denote an optional argument in Python 3.10 and up, is now Type | None , e.g. str | None or list | None .","(str, can be combined with using union operator, int)"
+Another popular choice is to use HDF5 ( pytables ) which offers very fast access times for large datasets:,
+Django Rest Framework 's ModelSerializer allows you to build a serializer automatically from a model.,
+"You need to pass your parameters into urllib.urlencode() as either a mapping (dict), or a sequence of 2-tuples, like:","(urllib.urlencode(), requires_parameters, dict or sequence of 2-tuples)"
+"Similar to the groupby paradigm, we specify all columns that will eventually be either row or column levels and set those to be the index.  We then unstack the levels we want in the columns.  If either the remaining index levels or column levels are not unique, this method will fail.","(groupby paradigm, similar to, unstack)"
+"I don't really see the need, as a module with functions (and not a class) would serve well as a singleton",
+"How are these organized e.g. by records? Does each one contains different fields, or do they have some records per file with all of the fields in each file?",
+"Alternatively, in plain text: (also available as a a screenshot )",
+"10 seconds after the call signal.alarm(10) , the handler is called","(signal, requires, signal.alarm())"
+"To get the actual type of an object, you use the built-in type() function","(builtins.type, returns type of, builtins.object)"
+"request.form : the key/value pairs in the body, from a HTML post form, or JavaScript request that isn't JSON encoded",
+"Static methods in Python are similar to those found in Java or C++. For a more advanced concept, see classmethod() .",
+( np.arange was used rather than Python's range function just in case min(x) and max(x) are floats instead of ints.),
+"Since pytables is optimized to operate on row-wise (which is what you query on), we will create a table for each group of fields","(pytables, includes, table)"
+"The hard choice is whether or not to use a /src tree.  Python doesn't have a distinction between /src , /lib , and /bin like Java or C has.",
+This works for Python stdlib venv and for virtualenv (since version 20):,"(venv, works with, virtualenv)"
+"For an example of number one, consider werkzeug's request and response system .  I can make a plain old request object by saying:","(werkzeug, has, request)"
+"JupyterLab is the next-generation user interface including notebooks . It has a modular structure, where you can open several notebooks or files (e.g","(JupyterLab, includes, notebooks)"
+other projects' code or resources.  It also makes it possible to have,
+You can use these along with named arguments too.  The explicit arguments get values first and then everything else is passed to *args and **kwargs .  The named arguments come first in the list.  For example:,
+This is because Base 's slot descriptor has a slot separate from Wrong 's,
+"Note that best practice in Python 2.7 is to use new-style classes (not needed with Python 3), i.e.",
+"What if you want to backport to 2.7 by changing input to raw_input , but accidentally change only the first input above? It's a SyntaxError just waiting to happen.","(input, replaced by, raw_input)"
+"and your function f is replaced with the function with_logging .  Unfortunately, this means that if you then say",
+"If the second parameter is not specified (i.e. my_dict.pop('key') ) and key does not exist, a KeyError is raised.","(pop(), requires existence of, KeyError)"
+"If all of this is new to you, and you don't know where to start, I would recommend learning setuptools , along with pip and virtualenv , which all work very well together.",
+"You'll notice that in the BS4 documentation page above, they point out that by default BS4 will use the Python built-in HTML parser.  Assuming you are in OSX, the Apple-bundled version of Python is 2.7.2 which is not lenient for character formatting.  I hit this same problem, so I upgraded my version of Python to work around it",
+"In practice, with check=True or subprocess.check_* , Python will throw a CalledProcessError exception if the subprocess returns a nonzero exit status.","(subprocess.check_*, requires, CalledProcessError)"
+Helpers can be used as fixtures at least in pytest . For example in my tests I have a mock redis helper which I inject into my tests this way.,"(pytest, utilized with, mock redis helper)"
+"asanyarray : The input will be returned uncopied iff it's a compatible ndarray or subclass like matrix ( copy=False , subok=True ).","(asanyarray, includes, ndarray), (asanyarray, includes, matrix), (ndarray, similar to, matrix)"
+"Now, the officially recommended way is conda remove -n ENV_NAME --all . You can update to the latest version with conda install -n base -c defaults conda (sometimes it helps to specify the new version with, for example, ... -c defaults conda=23.3.1 ).",
+"Note: hash_md5.hexdigest() will return the hex string representation for the digest, if you just need the packed bytes use return hash_md5.digest() , so you don't have to convert back.","(hash_md5.hexdigest(), differs from, hash_md5.digest())"
+"It supports several languages like Python (IPython), Julia, R etc. and is largely used for data analysis, data visualization and further interactive, exploratory computing.",
+"Update: When calling fileConfig() , you may want to specify disable_existing_loggers=False if you're using Python 2.6 or later (see the docs for more information). The default value is True for backward compatibility, which causes all existing loggers to be disabled by fileConfig() unless they or their ancestor are explicitly named in the configuration",
+"Basically, Python lists are very flexible and can hold completely heterogeneous, arbitrary data, and they can be appended to very efficiently, in amortized constant time .  If you need to shrink and grow your list time-efficiently and without hassle, they are the way to go.  But they use a lot more space than C arrays , in part because each item in the list requires the construction of an individual Python object, even for data that could be represented with simple C types (e.g. float or uint64_t ).","(Python list, uses more space than, C array)"
+"The fix, if day is truly not needed, is to write year, month, _ = date() . Same with lambda functions, lambda arg: 1.0 creates a function requiring one argument but not using it, which will be caught by lint","(date(), example similar to, lambda arg: 1.0)"
+"DNS failure, refused connection, etc), Requests will raise a ConnectionError exception.","(Requests, will raise, ConnectionError exception)"
+"In the face of ambiguity, remember, Python resists the temptation to guess",
+UnicodeDecodeError: 'ascii' codec can't decode byte generally happens when you try to convert a Python 2.x str that contains non-ASCII to a Unicode string without specifying the encoding of the original string.,
+"If you just want to bypass verification, you can create a new SSLContext . By default newly created contexts use CERT_NONE .","(SSLContext, uses, CERT_NONE)"
+"In python the with keyword is used when working with unmanaged resources (like file streams). It is similar to the using statement in VB.NET and C#. It allows you to ensure that a resource is ""cleaned up"" when the code that uses it finishes running, even if exceptions are thrown",
+The Python Decorator Library has a similar decorator called memoized that is slightly more robust than the Memoize class shown here.,
+You can disable any Python warnings via the PYTHONWARNINGS environment variable,
+To get elements which are in temp1 but not in temp2 ( assuming uniqueness of the elements in each list ):,
+"however you can also fix the issue by installing any of the matplolib GUI backends like Qt5Agg , GTKAgg , Qt4Agg , etc for example pip install pyqt5 will fix the issue also",
+"In Python 3.x, the correct way to check if s is a string is",
+The easiest way to download and save a file is to use the urllib.request.urlretrieve function:,"(urllib.request, contains, urllib.request.urlretrieve)"
+"all_equal and all_equal3 stop as soon as a difference is found (what is called "" short circuit ""), whereas all the alternatives require iterating over the entire list, even if you can tell that the answer is False just by looking at the first two elements.","(all_equal, differs from, all_equal3)"
+"If you need to bake non-ASCII into your source code, just create Unicode strings by prefixing the string with a u . E.g.",
+"This will return True if o is an instance of any subclass of any of (str, unicode) :","(str, similar to, unicode)"
+Version 0.21.0 of pandas introduced the method infer_objects() for converting columns of a DataFrame that have an object datatype to a more specific type (soft conversions).,"(pandas, introduced, infer_objects())"
+"Many good answer, for completeness I'll add my 2 cents: simple_save . Also a standalone code example using the tf.data.Dataset API.","(simple_save, mentioned with, tf.data.Dataset)"
+And if you're using threading and sys.exc_info you may even get the wrong traceback (especially if you're using exception handling for control flow - which I'd personally tend to avoid.),"(threading, used with, sys.exc_info)"
+"For example, here's a DataFrame with two columns of object type",
+"In 3.4, imp was deprecated in favor of importlib . When targeting 3 or later, either reference the appropriate module when calling reload or import it.",
+"On the other hand, by allowing you to access the traceback associated with an exception, Python 3 produce a less surprising result:",
+"It's because any iterable can be joined (e.g, list, tuple, dict, set), but its contents and the ""joiner"" must be strings.",
+"I don't know the exact argument Guido van Rossum gave for the decision, but I can imagine a few arguments:",
+"The problem with isinstance(x, basestring) is that there is no way for the caller to tell you, for instance, that even though the type is not a basestring, you should treat it as a string (and not another sequence.) And perhaps the caller would like to use the same type for different purposes, sometimes as a single item, and sometimes as a sequence of items",
+"Instead, import the io module and use io.StringIO or io.BytesIO for text and data","(io.StringIO, used for, text)"
+"Normally, when an input stream is buffered, instead of reading one character at a time, the stream will be read in larger chunks.  This reduces the number of system calls, which are typically relatively expensive.  However, since the FILE* based stdio and iostreams often have separate implementations and therefore separate buffers, this could lead to a problem if both were used together.  For example:","(stdio, have separate implementations from, iostreams)"
+"To apply print options locally , using NumPy 1.15.0 or later, you could use the numpy.printoptions context manager.","(NumPy, provides, numpy.printoptions)"
+"For your own stuff, you want to first install your package and then be able to frequently edit the code without having to re-install the package every time — and that is exactly what python setup.py develop does: it installs the package (typically just a source folder) in a way that allows you to conveniently edit your code after it’s installed to the (virtual) environment, and have the changes take effect immediately.",
+"The reason for these recommendations, given in PEP 394 , is that python can refer either to python2 or python3 on different systems.",
+"In contrast, a class instance with __slots__ declared to be () (no data) is only 16 bytes, and 56 total bytes with one item in slots, 64 with two.",
+"In the above example, we have to skip the frame inside wrapped to get to the right frame x = wrapped() so that we are able to locate x . The arguments frame and ignore of varname allow us to skip some of these intermediate frames",
+"In versions 1.0 - 2.7, exec was a statement, because CPython needed to produce a different kind of code object for functions that used exec for its side effects inside the function.","(exec, necessitates, code object)"
+"A source fragment containing 2 top-level statements is an error for the 'single' , except in Python 2 there is a bug that sometimes allows multiple toplevel statements in the code; only the first is compiled; the rest are ignored: In Python 2.7.8: >>> exec(compile('a = 5\na = 6', '<string>', 'single'))","(exec(), uses, compile())"
+You can also always start all your IPython kernels in inline mode by default by setting the following config options in your config files:,
+"Last but not least, the property object acts as a descriptor object , so it has .__get__() , .__set__() and .__delete__() methods to hook into instance attribute getting, setting and deleting:","(property, has method, __get__())"
+"The argument can either be a number or name given to a window when it was created using figure(number_or_name) or it can be a figure instance fig obtained, i.e., using fig = figure() . If no argument is given to close() , the currently active window will be closed","(close(), closes, figure())"
+Advanced Vector Extensions ( AVX ) are extensions to the x86 instruction,
+"Note that this is the same regardless of what kind of virtual environment you are using. virtualenv , venv , Anaconda environment, pyenv , pipenv are all based the same principle here.",
+You can use type=int (or whatever) to get a list of ints (or whatever),
+You misunderstand how boolean expressions work; they don't work like an English sentence and guess that you are talking about the same comparison for all names here,
+"Traceback (most recent call last): File ""<string>"", line 1, in <module> AttributeError: 'module' object has no attribute '__version__'","(Traceback, includes, AttributeError)"
+"temporary variable, and should be replaced by itertools.izip or itertools.izip_longest , which returns an iterator instead of a list.","(itertools.izip, replaced by, itertools.izip_longest)"
+"If you don't have the file ~/.ipython/profile_default/ipython_config.py , you need to call ipython profile create first",
+"In Python 3 , zip returns an iterator of tuples, like itertools.izip in Python2.  To get a list","(zip, similar to, itertools.izip)"
+"To check if something is None , use the is identity operator:",
+The related_name attribute specifies the name of the reverse relation from the User model back to your model.,
+null=True sets NULL (versus NOT NULL ) on the column in your DB. Blank values for Django field types such as DateTimeField or ForeignKey will be stored as NULL in the DB.,"(DateTimeField, similar to, ForeignKey)"

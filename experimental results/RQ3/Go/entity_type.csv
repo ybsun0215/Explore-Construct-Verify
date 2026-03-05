@@ -1,0 +1,6 @@
+type,"A named specification that defines the structure, behavior, and operations for values, including basic types, composite types, and custom type definitions.","['basic type', 'struct type', 'interface type']"
+const,"A named identifier that represents an immutable value determined at compile time, declared at package level or within a function scope.","['typed const', 'untyped const', 'iota Const']"
+var,"A named identifier that represents a mutable storage location for a value of a specific type, declared at package level or within a function scope.","['package var ', 'local var']"
+package,"A collection of related Go source files that are compiled together as a unit, providing a namespace for constants, variables, functions, and types.","['main package', 'package']"
+method,"A function associated with a specific type through a receiver, providing behavior that operates on instances of that type.","['value method', 'pointer method']"
+func,"A named block of code that performs a specific task, can accept parameters and return values, and may be declared at package level or as a method.","['package func', 'generic func', 'init func']"

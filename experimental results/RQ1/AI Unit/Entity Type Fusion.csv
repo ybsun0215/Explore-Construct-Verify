@@ -1,0 +1,15 @@
+Entity Type,SubType,Label1,Label2,Final Label
+class,exception class,T,T,T
+class,concrete class,T,T,T
+class,static nested class,T,T,T
+class,abstract class,F,T,T
+class,utility class,T,T,T
+method,interface method,T,T,T
+method,concrete class method,F,T,T
+method,abstract method,T,T,T
+method,concrete method,T,T,T
+method,instance method,T,T,T
+method,static method,F,T,T
+interface,functional interface,T,T,T
+interface,annotation interface,T,T,T
+package,package,F,F,F

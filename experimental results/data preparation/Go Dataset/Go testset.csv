@@ -1,0 +1,403 @@
+﻿"Given a struct type S and a type named T, promoted methods are included in the method set of the struct as follows:",""
+"We saw this with type aliases as well (and resisted almost all the proposed cut-outs, thankfully).",
+"This means that taking the address of a composite literal, e.g",
+"As an exception to the addressability requirement, x [in the expression of &x] may also be a (possibly parenthesized) composite literal.",
+"When we attempt to assign a value of MyType to a variable of type Stringer, we get the error in question:","(MyType, imposes restrictions when assigned to, Stringer)"
+In the background an array of [1]int64 will also be allocated and used as the backing array for the slice,
+"So if the struct literal contains a field of type int64, we can also take the address of that field!",
+"But if so, another requirement will become available to us: ""field selector of an addressable struct operand""",
+"But we can omit the ""outer"" parenthesis as the address operator & is applied to the result of the selector expression.",
+"But a slice value is a header, describing a contiguous section of a backing array, and a slice value only contains a pointer to the array where the elements are actually stored",
+"The principle is the same as with case #6, but we can also use an anonymous struct literal, so no helper/wrapper struct type definition needed:",
+"For details, see Is returning a slice of a local array in a Go function safe?",
+"This means the String() method is in the method set of the *MyType type, but not in that of MyType.","(String(), not in method set of, MyType); (*MyType, differs from, MyType)"
+"In these cases you can provide a helper function (or method) which will discard the error (or raise a runtime panic if it still occurs).
+This can be the case if you provide the input values for a function from code, and you know they work.
+Great examples of this are the template and regexp packages: if you provide a valid template or regexp at compile time, you can be sure they can always be parsed without errors at runtime","(template, similar behavior to, regexp)"
+"Attempting to convert instead of type assert, we get the compile-time error we're talking about:","(type, imposes restriction, compile-time error)"
+"To see what's in a slice header, check out the reflect.SliceHeader type:","(reflect.SliceHeader, is related to, slice)"
+"There is a very similar case, namely when you have an interface value which wraps a value of MyType, and you try to type assert another interface value from it, Stringer",
+"Note: Go 1.18 (Q1 2022) does rename interface{} to any (alias for interface{}).
+See issue 49884, CL 368254 and commit 2580d0e.
+See the last part of this answer.",""
+"When using structs and embedding, often it's not ""you"" that implement an interface (provide a method implementation), but a type you embed in your struct",
+We can use reflection (reflect package) to access the tag values of struct fields,
+"Since there is no implements keyword, all types implement at least zero methods, and satisfying an interface is done automatically, therefore all types satisfy the empty interface.
+That means that if you write a function that takes an interface{} value as a parameter, you can supply that function with any value.",
+"The _ used as a name of the variable tells the compiler to effectively discard the RHS value, but to type-check it and evaluate it if it has any side effects, but the anonymous variable per se doesn't take any process space.",
+It is a handy construct when developing and the method set of an interface and/or the methods implemented by a type are frequently changed,
+"Note: Helper functions to acquire a pointer to a non-zero value are available in my github.com/icza/gox library, in the gox package, so you don't have to add these to all your projects where you need it.",
+"Also, whatever we embed (either MyType or *MyType), if we use a pointer *MyType2, it will always work (try it on the Go Playground):",""
+That signal channel is used to push a value into when you want the goroutine to stop,
+"Your solution is not a worker goroutine pool in any sense: your code does not limit concurrent goroutines, and it does not ""reuse"" goroutines (it always starts a new one when a new job is received).",
+It provides a static (compile time) check that boolType satisfies the ValueConverter interface,
+"If 'any' is allowed in generics but not non-generic code, then it might encourage people to overuse generics simply because 'any' is nicer to write than 'interface{}', when the decision about generics or not should really be made by considering other factors.",""
+"5 of them) which would loop over the channel on which jobs are delivered, and each would execute / complete the received jobs.",
+"The producer goroutine could simply close the jobs channel when all jobs were generated and sent, properly signalling consumers that no more jobs will be coming",
+Also note that in the background the following will happen (this is also a valid syntax):,
+"The second word in the interface value points at the actual data, in this case a copy of b.
+The assignment var s Stringer = b makes a copy of b rather than point at b for the same reason that var c uint64 = b makes a copy: if b later changes, s and c are supposed to have the original value, not the new one.
+Values stored in interfaces might be arbitrarily large, but only one word is dedicated to holding the value in the interface structure, so the assignment allocates a chunk of memory on the heap and records the pointer in the one-word slot.","(Stringer, compared to, uint64)"
+"Again, compile-time error, because the method set of MyType2 does not contain the String() method of the embedded MyType, only the method set of *MyType2, so the following works (try it on the Go Playground):",
+"It's not a special design, but a logical consequence of Go's type declaration syntax.",
+Note that this model to have a designated producer goroutine is not mandatory,
+"You could have multiple goroutines to produce jobs too, but then you must synchronize them too to only close the jobs channel when all producer goroutines are done producing jobs - else attempting to send another job on the jobs channel when it has already been closed results in a runtime panic",
+It effectively prevents to go install a broken (intermediate) version with such omission.,
+"So, range uses a[i] as its second value for arrays/slices, which effectively means that the
+value is copied, making the original value untouchable.",
+"Usually producing jobs are cheap and can be produced at a much quicker rate than they can be executed, so this model to produce them in 1 goroutine while many are consuming / executing them is good in practice.",
+"If jobs have results, you may choose to have a designated result channel on which results could be delivered (""sent back""), or you may choose to handle the results in the consumer when the job is completed / finished",
+"The first word in the interface value points at what I call an interface table or itable (pronounced i-table; in the runtime sources, the C implementation name is Itab).
+The itable begins with some metadata about the types involved and then becomes a list of function pointers.
+Note that the itable corresponds to the interface type, not the dynamic type.
+In terms of our example, the itable for Stringer holding type Binary lists the methods used to satisfy Stringer, which is just String: Binary's other methods (Get) make no appearance in the itable.","(itable, contains, metadata); (Stringer, satisfied by, Binary); (Binary, has method, String); (Binary, has method, Get)"
+"The Go compiler performs escape analysis, and allocates local variables on the heap (instead of the stack) if they may escape the function",
+The important thing is whether results can be processed independently or they need to be merged (e.g,
+"Note that the Job struct also wraps the result, so when we send back the result, it also contains the original Job as the context - often very useful",
+"Instead of sending simple string values as jobs and results, I would create a wrapper type which can hold any additional info and so it is much more flexible:",
+"The operand must be addressable, that is, either a variable, pointer indirection, or slice indexing operation; or a field selector of an addressable struct operand; or an array indexing operation of an addressable array","(slice, compared to, array)"
+"This latter may even be implemented by having a ""callback"" function that handles the results",
+Note that all jobs sent before closing the channel will still be delivered.,
+"The consumer's responsibility is to receive jobs as long as jobs can be received, and execute them:",
+"An accidental receive in the producer would be a compile time error (detected early, at compile time).",
+Note that consume() sees the jobs channel as receive only; consumer only needs to receive from it,"(jobs, receive from, consume)"
+"Note that produce() sees the jobs channel as send only, because that's what the producer needs to do only with that: send jobs on it (besides closing it, but that is also permitted on a send only channel)","(jobs, send only channel, produce); (jobs, close, produce)"
+"As posted at Bruteforce MD5 Password cracker, you can make use of the producer-consumer pattern",
+"Until then, you can use github.com/icza/gog, the gog.Ptr() function (disclosure: I'm the author).","(gog.Ptr(), part of, github.com/icza/gog)"
+"Also note that the results channel cannot be closed here as there are multiple consumer goroutines, and only the first attempting to close it would succeed and further ones would result in runtime panic! results channel can (must) be closed after all consumer goroutines ended, because then we can be sure no further values (results) will be sent on the results channel.",
+"Please note the use of channel types: whenever it is sufficient, use only a unidirectional channel type to detect and prevent errors early, at compile time",
+"As you can see, results are coming and getting analyzed before all the jobs would be enqueued:",
+Only use bidirectional channel type if you do need both directions.,
+You can simply use the builtin new() function to allocate a new zero-valued int64 and get its address:,"(new(), allocates, int64)"
+In this case we don't need 2 sync.WaitGroup values (the 2nd was only needed to wait for the analyzer to complete).,"(sync.WaitGroup, usedIn, analyzer)"
+"But if it does not, you can't force it or kill it.",
+Edit: The problem is that you used Short variable declaration := and you just stored the created *DB value in a local variable and not in the global one.,
+"If you can't do anything about the 3rd party lib you're using, the most that you could do is run it in a different process (in a different application started by your go app) which you can kill, but that is just ugly and too cumbersome.",
+You have to assign the created *DB to the global variable,
+"It's a pointer type, you have to initialize it before you use it",
+"Output is ""like"" that of with results channel (but of course execution/completion order is random).",
+"Note that it doesn't matter that you have multiple files as long as they are part of the same package, they can access identifiers defined in one another.",
+"To verify that the data source name is valid, call DB.Ping().",
+Note that sql.Open() may just validate its arguments without creating a connection to the database,
+"If we do so, we will have the struct value allocated and a pointer obtained to it",
+"This way no matter what the keys or values are, you will have all pairs in a map which you can print or loop over.",
+"Also note that although your example contained only string values, but if the value type is varying (e.g",
+"Please note that when you pass a slice to a function, if the function modifies the ""existing"" elements of the slice, the caller will see / observe the changes",
+"As you can see, this also receives results as long as they may come (until results channel is closed)",
+Also note that I created a library to easily work with such dynamic objects which may be a great help in these cases: github.com/icza/dyno.,
+A good solution would be to do it in the package init() function which is called automatically.,
+You don't have to export it (that's what starting it with a capital letter does),
+"So when you pass a slice to a function, a copy will be made from this header, including the pointer, which will point to the same backing array",
+"Modifying the elements of the slice implies modifying the elements of the backing array, and so all slices which share the same backing array will ""observe"" the change.",
+"Also regarding slices and maps, see Map initialization in Go and why slice values can sometimes go stale but never map values?","(slice, goes stale, map)"
+"The reason for this is that range copies the values from the slice you're iterating over.
+The specification about range says:",
+"The code prints you completely different memory locations for the value from range and the actual
+value  in the slice:","(range, different memory location, slice)"
+"If the function adds new elements to the slice, that requires changing the slice header (the length at a minimum, but may also involve allocating a new backing array), which the caller will not see (not without returning the new slice header).","(slice, contains, slice header); (slice, contains, backing array); (slice header, contains, backing array)"
+"So the only thing you can do is to either use pointers or the index, as already proposed by jnml and peterSO.","(pointer, substitute for, index)"
+"See related / possible duplicate question:
+Performance of function slice parameter vs global variable?",
+"Following the advice that the receiver type should be consistent, if you have a pointer receiver, then your (p *type) String() string method should also use a pointer receiver.",
+"Not with maps, because maps are pointers under the hood, and if you pass a map to a function and the function adds a new entry to the map, the map pointer will not change so the caller will see the changed map (the new entry) without returning the map after change.","(map, is a pointer under the hood, pointer)"
+"The statement is suggesting that if you have a method that reslices or reallocates the slice, then you should use a pointer receiver.",
+"It also has the advantage that it can be ""throttled"" with the proper selection of the channel capacity (buffered channel) and the number of consumer goroutines.","(channel, limits, goroutines)"
+"Interface values are fundamentally pointers, while your value receiver methods require values; ergo every call requires Go to create a new copy of the value, call your method with it, and then throw the value away.
+There is no way to avoid this as long as you use value receiver methods and call them through interface values; it's a fundamental requirement of Go.",
+"But this does not implement the Stringer interface, unless the caller of your API also uses pointer to your type, which might be a usability problem of your API.",
+Note: irbull points out in the comments a warning about interface methods:,
+The construct serves as a guard against forgetting to match the method sets of a type and of an interface where the intent is to have them compatible,""
+"This would result in a clean design, would result in fixed (but arbitrary) number of goroutines, and it would always utilize 100% CPU (if # of goroutines is greater than # of CPU cores)",""
+"range construct on a channel handles the ""close"" event and terminates properly","(range, handles, channel)"
+"You could have a designated producer goroutine that would generate the jobs (things to do / calculate), and send them on a jobs channel","(jobs, contained in, channel)"
+"If you go with a results channel, you also need a goroutine that receives values from it, preventing consumers to get blocked (would occur if buffer of results would get filled).",
+"string, numbers etc.), you may use interface{} for the value type, in which case your map would be of type map[string]interface{}.","(map[string], part of, interface{})"
+This is very similar to a question I just answered: https://stackoverflow.com/a/12990540/727643,
+"When done (no more jobs), the jobs channel is closed which signals consumers that no more jobs will arrive.",""
+The goroutine has to support some kind of termination signalling (most often a channel),
+"Also note that it is profitable to just send pointers (*Job) on the channels instead of Job values so no need to make ""countless"" copies of Jobs, and also the size of the Job struct value becomes irrelevant.","(*Job, is sent on, channels)"
+This is because the types they are slices of have different memory layouts,
+A Model is an interface value which means that in memory it is two words in size,
+"For example, this function retrieves the CPU model name using piped commands:",
+"Concept of unaddressable values, which are the opposite of addressable values",
+Code simplifies significantly if we don't use a results channel but the consumer goroutines handle the result right away (print it in our case),
+"One word for the type information, the other for the data",
+Calling value receiver methods through interfaces always creates extra copies of your values.,
+"values for receivers is that value methods can
+be invoked on pointers and values, but pointer methods can only be invoked
+on pointers","(pointer, constraints on invocation, value); (value, invocation difference, pointer)"
+"Since this conversion is an O(n) operation and would result in a new slice being created, Go refuses to do it implicitly",
+"If some of the methods of the type must have pointer receivers, the rest should too, so the method set is consistent regardless of how the type is used","(pointer receivers, impose consistency boundaries on, method set)"
+Can someone tell me a case where a value receiver clearly makes more sense then a pointer receiver?,
+"github.com), so other packages (inside other modules) can simply refer to it by importing it like:",
+The easiest and working out-of-the-box solution is to put your database package / module into a VCS (e.g,
+"In this example, the Insert and Delete methods are modifying the slice by appending and removing elements.
+As a result, a pointer receiver is used to ensure the modifications are visible outside the method.","(Insert(), modifies slice with, Delete())"
+"you're just experimenting or you haven't decided what to use yet), then you can still do it",
+"And you created another module, let's call it main, and you want to use this database package.",
+Both value receiver and pointer receiver methods can be invoked on a correctly-typed pointer or non-pointer.,"(value receiver, similar functionality, pointer receiver)"
+Use the replace directive to make this database package point to a folder on your local disk; you may use absolute and relative paths:,
+"You must tell the go tool where this package is located, because the full package name we used is just a temporary / fantasy name",
+"In the case of implementing deletion and insertion methods for a slice type, you will likely be modifying the slice (changing its length, appending or removing elements)",
+Let's create a folder osinf (it may be whatever) next to the pretty folder,
+Your proposed solution is not safe in a way you want it to be,
+"Running go run osinf.go in the osinf folder, the output is:",
+"So you created a database folder outside of GOPATH, and you created a module in it",
+"osinf.go (note we intend to use our pretty package / module, we import it by ""example.com/me/pretty""):",
+One can use untyped integer constants to create new values of unary having a different int value than 1 or -1,
+"If you want to fulfill the ""safe"" part, you may use unexported structs, but then they cannot be used in constant declarations.",
+"In other words, if you modify the slice within the method, such as appending elements or changing the length/capacity of the slice, it's recommended to use a pointer receiver.","(slice, hasMethod, append); (slice, modifies, length); (slice, modifies, capacity)"
+"Because if you want to declare constants in your package, you can only use expressions that have ""untyped"" versions閳ユ悩hich may be used by other packages too in assignments (just as in our example).",
+"Creates 2 local variables: db and err, and this local db has nothing to do with your global db variable",""
+"Note that since we're now using a struct, we can further simplify our code by adding the string representation of our values to the struct:",
+"So there are no other values that could be ""exploited"" to create other values of our constant type.",
+"And then of course you have to create exported functions to expose those values, for example:",
+"Regardless of what the method is called on, within the method body the identifier of the receiver refers to a by-copy value when a value receiver is used, and a pointer when a pointer receiver is used: example.","(pointer, included in, receiver); (value, included in, receiver)"
+"If you want to protect yourself from such misuse, you also have to make such global variables unexported",
+"Care must be taken if you plan to use an interface type for your ""constants""",
+"The exported Unary type can be embedded, and an existing value can be used in order to implement the interface (along with the unexported method), and we can add our own implementations of the exported methods, doing / returning whatever we want to.",
+"you can mix and match methods with value receivers and methods with pointer receivers, and use them with variables containing values and pointers, without worrying about which is which.
+Both will work, and the syntax is the same.","(value, similar behavior to, pointer)"
+"However, if methods with pointer receivers are needed to satisfy an interface, then only a pointer will be assignable to the interface 閳?a value won't be valid.","(pointer, restricts assignability to, interface)"
+"The careful technical version is in the Go specification in Address operators, but the hand waving summary version is that most anonymous values are not addressable (one big exception is composite literals)","(Address, imposes restrictions on, composite literals)"
+"It's true that other packages cannot create and assign new values, but they can do so with existing values, e.g.:",
+Using the embed.FS type for the variable you can even include multiple files into a variable that will provide a simple file-system interface:,"(embed.FS, provides, file-system interface)"
+"You can also see it in use in the Errors example as part of ""A Tour of Go.""",
+"Note on ""If the receiver is a slice and the method doesn't reslice or reallocate the slice, don't use a pointer to it.""","(slice, usage restriction, pointer)"
+"You have to import the embed package, and use the //go:embed directive to mark what files you want to embed and into which variable you want to store them.",
+Starting with Go 1.16 the go tool has support for embedding static files directly in the executable binary.,
+"You'll need to install the shared library with make install, then run make test",""
+"As Volker mentioned in his comment, in your special case you could just use",
+The following of the answer lists your old options (prior to Go 1.16).,
+"I'm not sure if the idea of a class in C++ is really expressible in Go, as it doesn't have inheritance.",""
+images) most compact (regarding the resulting native binary) and most efficient would be to have the content of the file as a byte in your source code,
+Just use the back quotes to declare the string literal like this:,
+If you wrap you C++ code with a C interface you should be able to call your library with cgo (see the example of gmp in $GOROOT/misc/cgo/gmp),
+"If we're talking about text files, they can easily be embedded in the source code itself",
+"Performance is not affected, as these concatenations will be executed by the compiler.",
+Example output if the file would contain bytes from 0 to 16 (try it on the Go Playground):,
+Only thing you have to be careful about is that raw string literals cannot contain the back quote character (`),
+"Raw string literals cannot contain sequences (unlike the interpreted string literals), so if the text you want to embed does contain back quotes, you have to break the raw string literal and concatenate back quotes as interpreted string literals, like in this example:",
+(I use a void* instead of a C struct so the compiler knows the size of Foo),""
+"In order to convert from a Person to a Model, you will need to loop over the array and do a type conversion for each element.",""
+You can convert the content of the file to a Base64 string and store that in your source code,
+We can obtain the quoted form of any string using the strconv.Quote() function:,
+A slice of structs is not equal to a slice of an interface the struct implements.,""
+Go has nice support for Base64 encoding in the encoding/base64 package.,"(encoding/base64, provides, base64.StdEncoding)"
+"More efficient than storing as base64, but may be longer in source code is storing the quoted string literal of the binary data",
+Update: I've succeeded in linking a small test C++ class with Go,
+Converting a (binary) file to base64 string is as simple as:,
+"You can directly use this quoted string in your source code, for example:",
+For binary data containing values from 0 up to 64 this is how the output would look like (try it on the Go Playground):,
+A Person is a struct whose size depends on the fields it contains,""
+"Seemingly you see the ""same iteration order"" on the Go Playground because the outputs of the applications/codes on the Go Playground are cached",
+This example uses a separate sorted slice of keys to print a map[int]string in key order:,
+"So basically it's not the same iteration order what you see, it's the exactly same output without executing any of the code again.",
+"There is a significant time delay to read a file, parse its content and build the template","(read(), relies on, parse()); (read(), relies on, build()); (parse(), relies on, build())"
+"Once a new, yet-unique code is executed, its output is saved as new",
+Relative paths are always interpreted / resolved to a base path: the current or working directory - therefore it will always have its limitations.,
+"This may have a default value hard-coded in your application (which may be the working directory as well), and you should provide several ways to override its value.",
+"What I would suggest is to not rely on the working directory, but an explicitly specified base path",
+"Once you have the base path, you can get the full path by joining the base path and the relative path",
+"Imagine you need to calculate area of 4 different shapes: Circle, Square, Rectangle and Triangle","(Circle, different from, Square); (Circle, different from, Rectangle); (Circle, different from, Triangle); (Square, different from, Rectangle); (Square, different from, Triangle); (Rectangle, different from, Triangle)"
+"For more details, see In Golang, why are iterations over maps random?",
+"It may be that your program will work correctly, it may be it will work incorrectly",
+"Recommended ways to override the base path to which your ""relative"" paths are resolved against:",
+Stop thinking that some data races are (or may be) benign or unharmful,
+You can also get / enumerate all methods without knowing their names using Value.NumMethod() and Value.Method() (also see Type.NumMethod() and Type.Method() if you need the name of the method or its parameter types).,"(Value.NumMethod(), interacts with, Value.Method()); (Value.NumMethod(), compared to, Type.NumMethod()); (Value.NumMethod(), compared to, Type.Method()); (Value.Method(), compared to, Type.NumMethod()); (Value.Method(), compared to, Type.Method()); (Type.NumMethod(), compared to, Type.Method())"
+"Or it may even cause the Earth to explode (probability of that is extremely small, maybe even less than 1e-40, but still...).",
+This list is just a tiny subset of all the possible outcomes.,
+They can be the source of the worst things if left unattended.,
+Basically you can use go build as a check that the packages can be built (along with their dependencies) while go install also (permanently) installs the results in the proper folders of your $GOPATH,
+"This undefined in your case means that yes, i may be nil, partially assigned, invalid, undefined, ..",
+"As related questions, read How safe are Golang maps for concurrent Read/Write operations? and Incorrect synchronization in go lang.",
+Strongly recommended to read the blog post by Dmitry Vyukov: Benign data races: what could possibly go wrong?,
+"Within a constant declaration, the predeclared identifier iota represents successive untyped integer constants",
+"In both cases, the f variable in DoFoo is just an interface, not a pointer to an interface",
+It can be used to construct a set of related constants:,
+This last example exploits the implicit repetition of the last non-empty expression list.,
+"Within an ExpressionList, the value of each iota is the same because it is only incremented after each ConstSpec:",
+"Unsynchronized, concurrent access to any variable from multiple goroutines where at least one of them is a write is undefined behavior by The Go Memory Model.",
+"If you use it many times and you don't want to use the blank identifier, create a helper function which discards the 2nd return value:",""
+"Since Go 1 the runtime randomizes map iteration order, as programmers relied on the stable iteration order of the previous implementation","(map, relies on, runtime)"
+Field access has been disabled for Go 1.18 (still disabled in Go 1.19),
+"And if you need to be able to look up the elements by a predefined key, you may additionally build a map from the slice to allow fast look up of the elements by a key.","(slice, build into, map)"
+Instead the example you quote from the proposal is about accessing a common field in a type set,
+Use pointer types if you declared the methods with pointer receiver.,
+"you should be able to access the field a of such a type parameter, but again this wasn't implemented, as mentioned at the beginning of the answer",
+It used to work if all terms in the union had the same underlying type (example adapted from issue #48522).,
+"Either you build the map first and then a slice in proper order, or the slice first and then build a map from it is entirely up to you.","(map, transformed to, slice); (slice, transformed to, map)"
+"It makes it easier to read code written by other people (you are always sure that all declared variables will be used), and avoid some possible dead code.",
+It may result in losing memory and type safety provided by the Go runtime (see example below),""
+"As said by kostix in the comments below, you can find the official position of the Go team in the FAQ: ",
+"But, if you really want to skip this error, you can use the blank identifier (_) :",
+"If you are ok with using this interface only as a constraint, you may add type elements to restrict which structs can implement it:",
+"Defining a constraint that ""represent[s] all structs with a particular field of a particular type"" was never supported all along",
+You need to export the User.name field so that the json package can see it,"(User.name, needs to be exported for, json)"
+"If you can live with always taking care of the proper working directory, you may keep using relative paths.","(Proper, ensures the functionality of, working directory); (working directory, ensures the functionality of, relative paths)"
+"If you declare methods on a generic type, you must repeat the type parameter declaration on the receiver, even if the type parameters are not used in the method scope 閳?in which case you may use the blank identifier _ to make it obvious:","(method, imposes restrictions on, func)"
+"Note that you may even modify the contents of the byte slice you use to create the ""new"" body",
+"The first one accesses (returns) an arbitrary element specified by an arbitrary path (list of string map keys and/or int slice indices), the second changes (sets) the value specified by an arbitrary path (implementations of these helper functions are at the end of the answer).","(Returns(), highlights distinctions, Sets())"
+"However if your input is not of a predefined structure, I suggest you the following 2 helper functions: get() and set()","(get(), interacts with, set())"
+"Typed constant expressions cannot overflow; if the result cannot be represented by its type, it's a compile-time error (this can be detected at compile-time).","(const, imposes boundary, type)"
+"If subsequent handlers check those, you would also need to modify those too!",
+"From Go 1.10 there is a strings.Builder type, please take a look at this answer for more detail.",
+"Here's a simple ResponseWriter wrapper, which just caches the data, so it'll be available after the subsequent handler returns:",
+Why is there no overflow for constant expressions and overflow for non-constant expressions?,
+"This wrapper may cache the data sent out, which you can inspect either after, on on-the-fly (as the subsequent handlers write to it).",
+"Care must be taken again though, as the subsequent handlers may also send HTTP response headers related to the response data 閳ユ悞uch as length or checksums閳?which may also become invalid if you alter the response data.",
+"To read more about constants and their philosophy, read the blog post: The Go Blog: Constants",
+All the solutions and the benchmarking code can be found on the Go Playground,
+"The code on the Playground is a test file, not an executable",
+Benchmarking each iteration can be found at the end of the answer.,
+"We'll arrive at our final, fastest code in an iterative manner",
+You have to save it into a file named XX_test.go and run it with,
+The fastest solution is not a go-to solution if you just need a random string,
+"Having said that, even if you don't need the fastest solution, reading through this answer might be adventurous and educational.",
+You may use the following solution which yields the max and min values of uint and int types:,"(uint, yields max and min values compared to, int)"
+In your first example ONE is a typed constant with type int,
+"If the characters to choose from and assemble the random string contains only the uppercase and lowercase letters of the English alphabet, we can work with bytes only because the English alphabet letters map to bytes 1-to-1 in the UTF-8 encoding (which is how Go stores strings).",
+"As a reminder, the original, general solution we're improving is this:",
+But c2 Char = '娑? results in a compile-time error because the rune '娑? has numeric value 19990 which doesn't fit into a byte,"(Char, doesn't fit into, byte)"
+"strings can be indexed which indexes its bytes, perfect, exactly what we want.",
+This is much slower compared to rand.Int63() which produces a random number with 63 random bits.,
+So we could simply call rand.Int63() and use the remainder after dividing by len(letterBytes):,"(rand.Int63, is used to generate, len(letterBytes))"
+"Although the distortion is extremely small as the number of letters 52 is much-much smaller than 1<<63 - 1, so in practice this is perfectly fine.",
+"This works and is significantly faster, the disadvantage is that the probability of all the letters will not be exactly the same (assuming rand.Int63() produces all 63-bit numbers with equal probability)",
+"Using 5 random bits, numbers in range 0..1 would occur with 6/32 probability and numbers in range 2..5 with 5/32 probability which is now closer to the desired",
+"As an extra gain, the expression len(letters) will also be a const! (The expression len(s) is constant if s is a string constant.)","(len, called with, letters)"
+To make this understand easier: let's say you want a random number in the range of 0..5,
+"So for example if we have 52 letters, it requires 6 bits to represent it: 52 = 110100b",
+"Using 3 random bits, this would produce the numbers 0..1 with double probability than from the range 2..5",
+"Increasing the number of bits makes this less significant, when reaching 63 bits, it is negligible.",
+"Building on the previous solution, we can maintain the equal distribution of letters by using only as many of the lowest bits of the random number as many is required to represent the number of letters",
+So we will only use the lowest 6 bits of the number returned by rand.Int63(),
+"And to maintain equal distribution of letters, we only ""accept"" the number if it falls in the range 0..len(letterBytes)-1",
+"If the lowest bits are greater, we discard it and query a new random number.",
+Constants in Go are more than values of typed variables: they represent exact values of arbitrary precision,
+"From that point, no matter what you do with the receiver, you can only modify the copy, and not the original.","(receiver, imposes restriction on modification, copy)"
+This wouldn't help in terms of performance as crypto/rand implements a cryptographically secure pseudorandom number generator so it's much slower.,"(crypto/rand, implements, generator)"
+"After n repetition, the chance that we still don't have a good index is much less than pow(0.5, n), and this is just an upper estimation",
+This is a waste as getting the random bits is the slowest part of our algorithm.,
+"What happens here? c1 Char = 'a' works because 'a' is a rune constant, and rune is alias for int32, and 'a' has numeric value 97 which fits into byte's valid range (which is 0..255).","(rune, alias for, int32); (rune, fits into, byte); (int32, fits into, byte)"
+"If we have 52 letters, that means 6 bits code a letter index",
+"The Masking Improved is pretty good, not much we can improve on it",
+"In order to allow a user of your package to supply a custom callback function, we use the exact same approach as above, but we supply the user's custom handler (which is just a regular Go function) as a parameter that is passed onto the C side as void*",
+Now we need to write the C and Go plumbing to allow us to use this handler,""
+So 63 random bits can designate 63/6 = 10 different letter indices,
+"If you don't want to pass the dependency as a parameter, you could also make get_page() a member of a type, and make download() a method of that type, which can then use get_page:","(download, method of, type); (download, use, get_page)"
+One more thing to note here: package doc of math/rand states:,
+Luckily the C function I wish to call from the library allows us to pass in a userdata struct of type void*,
+The default Source is safe for concurrent use by multiple goroutines.,
+"So the default source is slower than a Source that may be obtained by rand.NewSource(), because the default source has to provide safety under concurrent access / use, while rand.NewSource() does not offer this (and thus the Source returned by it is more likely to be faster).","(rand.NewSource(), returns, Source)"
+"So when GetName() is called from SetName(), a copy will be made again, and GetName() will return the address of the name field of the copy, and SetName() will only modify the copy created for calling GetName().","(SetName(), calls, GetName()); (SetName(), modifies copy created by calling, GetName())"
+But what's cool in it is that it does this without performing the copy we just talked about above,
+In case of 52 letters the chance that the 6 lowest bits are not good is only (64-52)/64 = 0.19; which means for example that chances to not have a good number after 10 repetition is 1e-8.,
+"It's inefficient compared to direct access (the compiler knows the offset of the X field in a Vertex structure, it can compile v.X to a single machine instruction, whereas a dynamic lookup will need some sort of hash table implementation or similar)",""
+"One option is to read the whole body using ioutil.ReadAll(), which gives you the body as a byte slice.","(ioutil.ReadAll(), produces, byte)"
+You may use bytes.NewBuffer() to obtain an io.Reader from a byte slice.,"(bytes.NewBuffer(), transform into, io.Reader)"
+"The last missing piece is to make the io.Reader an io.ReadCloser, because bytes.Buffer does not have a Close() method","(io.Reader, transformed into, io.ReadCloser); (bytes.Buffer, lacks, Close())"
+"So our next idea is to not build the random string in a slice, but with the help of a strings.Builder, so once we're done, we can obtain and return the result without having to make a copy of it","(strings.Builder, helps build, string)"
+You may also choose to inspect it on-the-fly (in the Write() method) and write the data immediately to the wrapped / embedded ResponseWriter,"(Write, writes data to, ResponseWriter)"
+"We should be tempted to use these to read as many bytes as we need in one step, in order to achieve better performance.",
+"We would think this is an upper estimation, as a letter index uses less than 8 bits (1 byte)",
+"You can concat strings simply by +'ing them, or by using the Join function of the strings package.","(Join(), part of, strings)"
+"It is this wrapper that actually supplies our Go callback to the C library, along with a userdata object.",""
+The previous solution only uses the lowest 6 bits of the 63 random bits returned by rand.Int63(),
+"So basically doing it via a strings.Builder has some overhead, the only thing we switched to strings.Builder for is to avoid the final copying of the slice.",
+"Care must be taken though, as there might be other HTTP fields like content-length and checksums which may become invalid if you modify only the data",""
+Now this is already a big improvement: we could achieve it to be a const (there are string constants but there are no slice constants),
+"But at this point we are already doing worse (as getting the random bits is the ""hard part""), and we're getting more than needed.",
+"This may help in terms of speed, and it will definitely help in terms of memory usage and allocations.",
+"And now we're even losing the ""single call to rand package"" advantage...",
+"We can calculate the probability of a random index not being usable (see above), so we could request more that will ""more likely"" be enough (if it turns out it's not, we repeat the process)",
+"We could ""somewhat"" optimize the usage of the random data we acquire from math.Rand()",
+rand.Source is an interface which specifies a Int63() int64 method: exactly and the only thing we needed and used in our latest solution.,"(rand.Source, specifies method, Int63() int64)"
+But when we make use of all (or most) of the 63 random bits (10 indices from one rand.Int63() call): that speeds up big time: 3 times.,
+Although the first 2 steps (Bytes and Remainder) might be an acceptable compromise: they do improve performance by like 50% (see exact numbers in the II,
+"Exactly what the RandStringBytesMaskImprSrc() solution does, without the intermediate buffer, and without the added complexity","(RandStringBytesMaskImprSrc, does, solution)"
+"We can process the byte slice as a ""bit stream"" for example, for which we have a nice 3rd party lib: github.com/icza/bitio (disclosure: I'm the author).",
+"Note that the chance of the lowest bits to be greater than or equal to len(letterBytes) is less than 0.5 in general (0.25 on average), which means that even if this would be the case, repeating this ""rare"" case decreases the chance of not finding a good number",
+"There is a crypto/rand package which provides a Read(b byte) function, so we could use that to get as many bytes with a single call as many we need","(crypto/rand, provides functionality to, Read(b byte))"
+"There is one small ""problem"" with this: how many bytes do we need? We could say: as many as the number of output letters",
+The rand.Rand uses a rand.Source as the source of random bits,
+Masking (and repeating in case of big indices) slows down a little (due to repetition calls): -22%...,
+"For this you may use ioutil.NopCloser() which wraps an io.Reader, and returns an io.ReadCloser, whose added Close() method will be a no-op (does nothing).","(ioutil.NopCloser(), transforms, io.ReadCloser); (ioutil.NopCloser(), wraps, io.Reader); (io.ReadCloser, contains, Close())"
+Previous solutions get a random number to designate a random letter by calling rand.Intn() which delegates to Rand.Intn() which delegates to Rand.Int31n().,
+"If we utilize strings.Builder, we gain a tiny 3.5% in speed, but we also achieved 50% reduction in memory usage and allocations! That's nice!",
+"All previous solutions return a string whose content is first built in a slice (rune in Genesis, and byte in subsequent solutions), and then converted to string",
+"This final conversion has to make a copy of the slice's content, because string values are immutable, and if the conversion would not make a copy, it could not be guaranteed that the string's content is not modified via its original slice","(string, imposes immutability, slice)"
+So let's examine how a nil channel or operations on it behave.,
+"As pointed out by @jimt, the [...]T syntax is sugar for [123]T",
+"It creates a fixed size array, but lets the compiler figure out how many elements are in it.",
+"For details, see How to convert utf8 string to byte? and golang: byte(string) vs byte(*string).","(utf8, converted to, byte); (byte, distinction of conversion methods, string)"
+strings.Builder is a new type we can use to build contents of a string similar to bytes.Buffer,"(strings.Builder, similar to, bytes.Buffer)"
+"Reasoning: ""closed"" is a state, but a nil channel cannot have a state (there is only one nil channel, and not one for ""closed"" and one for ""not closed"" channel)",
+You can read further reasoning and more details about this in Dave Cheney: Channel Axioms.,
+You have to allocate memory whose address you can put into the map,
+"So we don't really need a rand.Rand (either explicit or the global, shared one of the rand package), a rand.Source is perfectly enough for us:","(rand.Rand, replaced by, rand.Source); (rand.Rand, part of, rand package)"
+The result of an operation like 3 + 4 does not have an address because there is no specific memory allocated for it,
+The easiest and most straightforward is to create a local variable for it.,
+"Note: If the code above is in a function, the address of the local variable (d) that we just put into the map will continue to live even if we return from the function (that is if the map is returned or created outside - e.g",
+"Also note that to maintain equal distribution of all letter indices, there might be some ""garbage"" random data that we won't be able to use, so we would end up skipping some data, and thus end up short when we go through all the byte slice","(byte, included within, slice)"
+"For example this also works without creating a local variable, but it's obviously not intuitive at all:",
+"Note #2: There are other ways to create a pointer to a value (as detailed in this answer: How do I do a literal *int64 in Go?), but they are just ""tricks"" and are not nicer or more efficient",
+An array isn't immutable by nature; you can't make it constant.,
+"Internally it uses a byte to build the content, and when we're done, we can obtain the final string value using its Builder.String() method","(byte, transformed into, Builder.String())"
+For details see FAQ: How do I know whether a variable is allocated on the heap or the stack?,
+"Since you did not create a PrintArea() for the Rectangle type, the method of the embedded Shape type will be called.",
+But the reasoning still applies; and which is proven if we use Rand.Read() instead of rand.Read() (the former is also unsynchronzed).,"(rand.Read(), replaced by, Rand.Read())"
+"Do note that after creating a new strings.Buidler, we called its Builder.Grow() method, making sure it allocates a big-enough internal slice (to avoid reallocations as we add the random letters).","(strings.Builder, calls, Builder.Grow())"
+The Go Language Specification: Selectors describe the exact rules which are followed when evaluating an x.f expression (where f may be a method) to choose which method will be called in the end,
+"In this method c.Area() is called where c is a *Circle, so the method with *Circle receiver will be called which also exists.","(Area(), has receiver, *Circle)"
+"strings.Builder builds the string in an internal byte, the same as we did ourselves","(strings.Builder, includes, byte)"
+"Just by switching from runes to bytes, we immediately have 24% performance gain, and memory requirement drops to one third.","(runes, replaced by, bytes)"
+"So the idea here is to switch back to building the random string in a byte, but when we're done, don't convert it to string to return, but do an unsafe conversion: obtain a string which points to our byte slice as the string data.","(byte, converted to, string)"
+"When the input is broken into tokens, a semicolon is automatically inserted into the token stream immediately after a line's final token if that token is",
+"Shape does not know about which struct it is and if it is embedded in, so it can't ""dispatch"" the method call to a virtual, run-time method.",
+Go programs may omit most of these semicolons using the following two rules:,
+"If we settle with a (non-default, new) rand.Source instead of rand.Rand, we again gain 21%.","(rand.Source, replaces, rand.Rand)"
+"The formal grammar of Go uses semicolons "";"" as terminators in many productions, but Go programs may omit most of them (and they should to have a clearer, easily readable source; gofmt also removes unnecessary semicolons).",
+"Finally if we dare to use package unsafe instead of strings.Builder, we again gain a nice 14%.",
+"To allow complex statements to occupy a single line, a semicolon may be omitted before a closing "")"" or ""}"".",
+"This is what happened in your case, and so the next line starting with .Scan(&ReadUser.ID,..",
+"So as you can see if you insert a newline character after the parenthesis ), a semicolon ; will be inserted automatically and so the next line will not be treated as the continuation of the previous line",
+Also note that this last solution doesn't require you to initialize (seed) the global Rand of the math/rand package as that is not used (and our rand.Source is properly initialized / seeded).,"(math/rand, not used, rand.Source); (rand.Source, properly initialized / seeded, math/rand)"
+So you may break your line at any point which does not conflict with the rules listed under point 1,
+will give you a compile-time error as this standing by itself (without the previous line) is a compile-time error: syntax error: unexpected .,
+"1 letter requires letterIdxBits bits, and we need n letters, so we need n * letterIdxBits / 8.0 bytes rounding up",""
+"Typically you can break your lines after comma ,, after opening parenthesis e.g",
+which may be referencing a field or method of some value,
+"You can also break your line after binary operators (those that require 2 operands), e.g.:",
+"The formal grammar uses semicolons "";"" as terminators in a number of productions",
+"This is to conform with the semicolon rules, and also so that you can rearrange and add new lines without having to take care of adding / removing the final comma; e.g",
+"It dares to do so because the byte slice used to build the string's content is not exposed, so it is guaranteed that no one can modify it unintentionally or maliciously to alter the produced ""immutable"" string.","(slice, restricted from modifying, string)"
+you can simply swap the 2 lines without having to remove and to add a new comma:,
+The answer to the last question is because rand.Read() uses a loop and keeps calling Source.Int63() until it fills the passed slice,"(rand.Read(), relies on, Source.Int63())"
+The definition of Shape.PrintArea() is to call Shape.Area() and this is what happens,"(Shape.PrintArea(), relies on, Shape.Area())"
+"But if you call PrintArea(si) (passing the Rectangle), it calls si.Area() which will be Rectangle.Area() because such method exists.","(PrintArea(), uses, Area())"
+" Upon exiting from Test, the slice variable goes out of scope and so does the (new) underlying array that slice references.",
+"What you expect is called virtual methods: you expect that the PrintArea() method will call the ""overridden"" Area() method, but in Go there is no inheritance and virtual methods.","(PrintArea(), relies on, Area())"
+"(Jeff Lee is correct about that it's not what really happens, so the updated version follows; as he correctly states, this answer is correct, if maybe a bit too terse.)",
+The encoding/json package uses reflection (reflect package) to access fields of structs,"(encoding/json, uses, reflect)"
+"If doParse panics, the recovery block will set the return value to nil閳ユ攧eferred functions can modify named return values.",
+"What you are doing is a fan out pattern, that is to say, multiple endpoints are listening to a single input source",
+"If you want to make Test behave like append, you have to return the new slice from it 閳?just like append does 閳?and require the callers of Test to use it in the same way they would use append:",
+In case of Rectangle si.PrintArea() will actually call the method Shape.PrintArea() because you did not define a PrintArea() method for the Rectangle type (there is no method with receiver *Rectangle),"(PrintArea(), relies on, Shape.PrintArea()); (PrintArea(), receiver constraint, *Rectangle); (Shape.PrintArea(), no receiver constraint, *Rectangle)"
+"When you have a struct implementing an interface, a pointer to that struct implements automatically that interface too","(struct, implements, interface)"
+The net package requires cgo by default because the host operating system must in general mediate network call setup,"(net, requires, cgo)"
+" Upon exiting from Test, the slice variable goes out of scope and so does the (new) underlying array that slice references",""
+"If you want to write reusable libraries, they can't import myapp/conf; they need to accept all the info they need in constructors, etc",
+"Remember to close your dispatcher routine as well, but I will leave it to you :)","(dispatcher, relies on the operation of, routine)"
+That gives you a nice design--everything's in an object and callers can create multiple Servers in a process and such--but it also offers a lazy way to configure in the simple single-server case,
+"Please read this article thoroughly as it basically shows you how to implement append by hand, after explaining how slices are working internally","(append, relies on, slices)"
+"If you're depending on a package for just a type name, maybe you can avoid that",""
+"One app I work on in another language has a ""utils"" module mixing general tasks (e.g., formatting datetimes or working with HTML) with app-specific stuff (that depends on the user schema, etc.)",
+Maybe some code handling a Page can get instead use a string of filenames or a int of IDs or some more general interface (sql.Rows) instead,""
+"Since a slice variable holds a ""slice descriptor"" which merely references an underlying array, in your Test function you modify the slice descriptor held in the slice variable several times in a row, but this does not affect the caller and its a variable.","(slice, references, array); (slice, modified by, Test); (slice, descriptor held in, variable); (array, indirectly referenced by, variable); (func, Limitation, var): (Test, does not affect, variable)"
+"If you have multiple local modules, you can point them at each other via replace directives or via the Go 1.18+ workspace feature, though those are more complex workflows than placing everything for a given project in a single module.","(replace, more complex workflows, workspace)"
+And the waitgroup you used in your example is a sufficient synchronization,
+"It's important for long-term evolution of code storage options that a repo can contain multiple modules, but it's almost certainly not something you want to do by default.",""
+"And each goroutine only modifies a single, different, designated slice element",
+"If the module path in the first line of that go.mod reads module example.com/foo, then pkg1 would import its peer package as import ""example.com/foo/pkg2"".","(example.com/foo, includes, example.com/foo/pkg2)"
+"For example, if a module declared its identity in its go.mod as module github.com/my/repo, and you had this organization:",""

@@ -1,0 +1,4 @@
+class,"A class is a blueprint for creating objects and can include fields, methods, and constructors. It can be concrete, abstract, utility-based, exception-handling, or nested statically."
+method,"A method is a function associated with a class or interface, which can be static, instance-based, concrete, abstract, or specific to interfaces and concrete classes."
+interface,"An interface is a reference type in Java, used to specify methods that must be implemented by a class, and can be functional or annotation-based."
+package,A package is a namespace for organizing classes and interfaces in a logical manner.

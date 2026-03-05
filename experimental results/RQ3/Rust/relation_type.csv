@@ -1,0 +1,10 @@
+Implementation,One entity is realized or executed by another entity.,"['implemented by', 'implement', 'executed by', 'implemented in', 'implementation alternative', 'implements']"
+Similarity,One entity is considered equal or similar to another entity.,"['is a simplified version of', 'is similar to', 'is identical to', 'equivalent to', 'similar to', 'conceptually similar to', 'different from', 'alternative to', 'is different from']"
+Collaboration,One entity communicates or works with another entity.,"['works with', 'runs with', 'interacts with']"
+Conversion,One entity is transformed into another entity or format.,"['conversion with', 'performs conversion like', 'convert', 'converts to']"
+Ownership,One entity possesses or holds another entity.,"['part of', 'wraps', 'has target', 'different in memory allocation', 'is owned version of', 'added to', 'share restriction', 'different in ownership and mutability']"
+Construction,One entity is built or assembled using another entity.,"['constructed with', 'creates', 'used as building block for']"
+Dependency,One entity communicates or exchanges data with another entity.,"['used by', 'performs', 'calls', 'uses', 'takes as left-hand side', 'takes as right-hand side', 'defined in', 'returns', 'has method', 'defines']"
+Modification,One entity alters or changes another entity.,['modified in']
+Replacement,One entity is substituted or exchanged for another entity.,['replaces']
+Association,One entity is connected or related to another entity.,"['can be linked by', 'is fine with', 'comes along with', 'requires', 'associated with', 'related to']"

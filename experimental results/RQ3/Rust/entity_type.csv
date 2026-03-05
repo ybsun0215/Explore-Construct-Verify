@@ -1,0 +1,7 @@
+struct,A struct is a composite data type that groups together variables under a single name for creating complex data structures.,['struct type']
+enum,"An enum is a type that allows you to define a set of named variants, where a value can only be one of the defined variants at a time.",['enum type']
+trait,A trait is a collection of methods that can be implemented by types to provide shared behavior in a modular way.,['trait type']
+module,A module is a self-contained unit of code that encapsulates functionality and can be reused across different parts of a program.,
+function ,"A function is a reusable block of code that performs a specific task, defined with a name and can accept parameters and return values."
+method,A method is a function associated with a struct or enum that operates on instances of that type.
+macro,"A macro is a metaprogramming construct that generates code at compile time, invoked with an exclamation mark."

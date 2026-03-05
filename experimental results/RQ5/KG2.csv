@@ -1,0 +1,246 @@
+﻿Language, Num,URL,Question,Body,Answer,Triple,Result
+Java, 1,https://stackoverflow.com/questions/1792134/java-util-vector-alternatives,java.util.Vector - alternatives,"Previously I would always have thought a Vector was good to use for non-descript objects when length was unknown. As far as I was aware I thought it was thread-safe too
+
+What would change that Vector shouldn't be used anymore, and what is the alternative?",ArrayList,"(class, replacement, class): (arrayList, instead of, vector)",T
+Java, 3,https://stackoverflow.com/questions/5683728/convert-java-util-date-to-string,Convert java.util.Date to String,"I want to convert a java.util.Date object to a String in Java.
+
+The format is 2010-05-30 22:15:52",SimpleDateFormat.format,"(method, modification, class): (simpledataformat.format, modifies, string)",T
+Java, 4,https://stackoverflow.com/questions/23079003/how-to-convert-a-java-8-stream-to-an-array,How to convert a Java 8 Stream to an Array?,What is the easiest/shortest way to convert a Java 8 Stream into an array?,toArray(),"(class, collaboration, class): (toArray, works with, stream)",T
+Java, 5,https://stackoverflow.com/questions/14035953/alternative-to-grantedauthorityimpl-class,alternative to GrantedAuthorityImpl() class,"I want an alternative to GrantedAuthorityImpl() class. I want this in spring security implementation. GrantedAuthorityImpl() class is deprecated. Hence I want an alternative solution to it. My code :
+
+public Collection<GrantedAuthority> getAuthorities(Integer access) {
+    List<GrantedAuthority> authList = new ArrayList<GrantedAuthority>(2);
+    
+    if (access.compareTo(1) == 0) {
+        authList.add(new GrantedAuthorityImpl(""ROLE_ADMIN""));
+    }
+    else{
+        authList.add(new GrantedAuthorityImpl(""ROLE_USER""));
+    }
+    return authList;
+}",,,
+Java, 7,https://stackoverflow.com/questions/11083868/is-there-an-interface-similar-to-callable-but-with-arguments,Is there an interface similar to Callable but with arguments?,"Is there an interface in Java similar to the Callable interface, that can accept an argument to its call method?
+
+Like so:
+
+public interface MyCallable<V> {
+  V call(String s) throws Exception;
+}
+I would rather avoid creating a new type if there already exists something that I can use. Or is there a better strategy to having multiple clients implement and plug in a callable routine?
+
+Copied from here http://www.programmingforums.org/thread27905.html",,,
+Java, 8,https://stackoverflow.com/questions/949352/is-there-something-like-instanceofclass-c-in-java,Is there something like instanceOf(Class<?> c) in Java?,"I want to check if an object o is an instance of the class C or of a subclass of C.
+
+For instance, if x is of class Point I want x.instanceOf(Point.class) to be true and also x.instanceOf(Object.class) to be true.
+
+I want it to work also for boxed primitive types. For instance, if x is an Integer then x.instanceOf(Integer.class) should be true.
+
+Is there such a thing? If not, how can I implement such a method?",Class.isInstance,"(method, equivalence, class): (class.isinstance, similar to, instanceof)",T
+Java, 9,https://stackoverflow.com/questions/5113688/sortable-hashmap-like-data-structure-in-java?rq=3,Sortable HashMap-like data structure in Java?,Is there some sort of data structure in Java that resembles a HashMap that can be sorted by key or value? In PHP you can have associative arrays that are sortable. Is there such a thing in Java?,TreeMap,"(class, difference, class): (hashmap, does not guarantee order, treemap)",T
+Java, 10,https://stackoverflow.com/questions/61269054/what-can-i-use-instead-of-set-in-java,What can I use instead of Set in Java?,"The following code is in JavaScript to check if a pair of numbers in a set are equal to a specific sum.
+
+function hasPairWithSum2(arr, sum){
+    const mySet = new Set();
+    const len = arr.length;
+
+    for (let i = 0; i < len; i++){
+        if (mySet.has(arr[i]))
+            return true;
+
+        mySet.add(sum - arr[i]);
+    }
+
+    return false;
+}
+How can I do the same in Java? What is the alternative to Set()?",HashSet,"(class, implementation, interface): (hashset, implements, set)",T
+Java, 11,https://stackoverflow.com/questions/46898/how-do-i-efficiently-iterate-over-each-entry-in-a-java-map,How do I efficiently iterate over each entry in a Java Map?,"If I have an object implementing the Map interface in Java and I wish to iterate over every pair contained within it, what is the most efficient way of going through the map?
+
+Will the ordering of elements depend on the specific map implementation that I have for the interface?",map.entrySet(),"(class, modification, method): (map.entrySet(), iterate entry in, map)",T
+Java, 12,https://stackoverflow.com/questions/3395286/remove-last-character-of-a-stringbuilder,Remove last character of a StringBuilder?,"When you have to loop through a collection and make a string of each data separated by a delimiter, you always end up with an extra delimiter at the end, e.g.
+
+for (String serverId : serverIds) {
+  sb.append(serverId);
+   sb.append("","");
+}
+Gives something like : serverId_1, serverId_2, serverId_3,
+
+I would like to delete the last character in the StringBuilder (without converting it because I still need it after this loop).",deleteCharAt,"(method, modification, class): (deletecharat, delete character in, stringbuilder)",T
+Java, 13,https://stackoverflow.com/search?q=How+to+get+the+last+value+of+an+ArrayList,How to get the last value of an ArrayList,How can I get the last value of an ArrayList?,arraylist.get,"(class, implementation, method): (arraylist, implements, listget)",T
+Java, 14,https://stackoverflow.com/questions/2891361/how-to-set-time-zone-of-a-java-util-date,How to set time zone of a java.util.Date?,"I have parsed a java.util.Date from a String but it is setting the local time zone as the time zone of the date object.
+
+The time zone is not specified in the String from which Date is parsed. I want to set a specific time zone of the date object.
+
+How can I do that?",simpledateformat,"(class, modification, class): (simpledateformat, parse, java.util.date)",F
+Kotlin, 15,https://stackoverflow.com/questions/65876607/alternative-for-thread-sleep-in-a-for-loop-in-kotlin,"Alternative for Thread.Sleep() in a ""For Loop"" in Kotlin?","I have a for loop that consists of looping towards infinity and inside that for loop, there is a Thread.sleep(T)function, the sleeping time varies from 50ms to 1s. I know there are performance and user experience costs for using a sleep function inside a loop.
+
+So what are the Kotlin alternatives ? (I found answers but all of them are in Java, I wanna know the best alternatives in Kotlin)",,,
+Kotlin, 16,https://stackoverflow.com/questions/47204146/how-to-iterate-over-hashmap-in-kotlin?rq=3,How to iterate over hashmap in Kotlin?,"How to iterate over HashMap in Kotlin?
+
+typealias HashMap<K, V> = HashMap<K, V> (source)
+kotlinkotlin-extension",map.forEach,"(class, Implementation, function): (HashMap, Implements, forEach)",T
+Kotlin, 17,https://stackoverflow.com/questions/54543309/how-to-put-values-from-a-hashmap-into-an-array?rq=3,How to put values from a HashMap into an array,"How can I add all values from a HashMap into a String array? For example, I have:
+
+var tablica = arrayListOf<String>()
+
+var haszmapa = hashMapOf<String, Int>()
+haszmapa.put(""Tadek"", 1)
+haszmapa.put(""Maniek"", 1)
+haszmapa.put(""Juras"", 1)",,,
+Kotlin, 18,https://stackoverflow.com/questions/56522915/how-to-get-key-for-value-from-hashmap-in-kotlin?rq=3,How to get key for value from Hashmap in Kotlin?,"I have HashMap in Kotlin
+
+val map = HashMap<String, String>()
+I want to know how to get key for a particular value from this HashMap without iterating through complete HashMap?",filterValues,"(class, Implementation, function): (HashMap. Implements, filterValues)",T
+Kotlin, 19,https://stackoverflow.com/questions/52851161/how-do-i-sum-all-the-items-of-a-list-of-integers-in-kotlin?rq=3,How do I sum all the items of a list of integers in Kotlin?,"I have a list of integers, like:
+
+val myList = listOf(3,4,2)
+Is there any quick way in Kotlin to sum all the values of the list? or do I have to use a loop?
+
+Thanks.",sum,"(function, Collaboration, function): (listof, works with, sum)",T
+Kotlin, 20,https://stackoverflow.com/questions/61183570/how-to-remove-item-from-array-list-in-kotlin?rq=3,how to remove item from array list in kotlin,"fun main(args: Array<String>) {
+var listOfRideDate = mutableListOf<RideDate>();
+val date1 = RideDate()
+date1.startdate = ""2018-11-05 00:00:00 +0000""
+date1.enddate = ""2018-11-06 23:59:59 +0000""
+listOfRideDate.add(date1)
+
+val date2 = RideDate()
+date2.startdate = ""2020-01-20 00:00:00 +0000""
+date2.enddate = ""2020-02-20 00:00:00 +0000""
+listOfRideDate.add(date2)
+
+val date3 = RideDate()
+date3.startdate = ""2020-03-20 00:00:00 +0000""
+date3.enddate = ""2020-03-20 00:00:00 +0000""
+listOfRideDate.add(date3)
+
+val date4 = RideDate()
+date4.startdate = ""2020-04-20 00:00:00 +0000""
+date4.enddate = ""2020-04-20 00:00:00 +0000""
+listOfRideDate.add(date4)
+
+val date5 = RideDate()
+date5.startdate = ""2020-11-20 00:00:00 +0000""
+date5.enddate = ""2020-11-20 00:00:00 +0000""
+listOfRideDate.add(date5)
+
+
+for (i in 0..listOfRideDate.size -1) {
+    // we have to remove 2018-11-05 00:00:00 +0000 and 2018-11-06 23:59:59 +0000  from list 
+    println(listOfRideDate.get(i).startdate + "" and "" + listOfRideDate.get(i).enddate)
+}
+}
+
+This is my data class and the main method I have added item RideDate of startDate and endDate manually I want delete item dynamically if data contains date1.startdate = ""2018-11-05 00:00:00 +0000"" date1.enddate = ""2018-11-06 23:59:59 +0000""
+
+so that I can ignore it please help me how to delete the item from array list in kotlin",removeAll,"(function, Collaboration, function): (removeAll, remove elements from, list)
+['(function, Modification, function): (ArrayList, filter by, filter)']",T
+Kotlin, 21,https://stackoverflow.com/questions/61023968/what-do-i-use-now-that-handler-is-deprecated?utm_source=chatgpt.com,What do I use now that Handler() is deprecated?,"How do I fix the deprecation warning in this code? Alternatively, are there any other options for doing this?
+
+Handler().postDelayed({
+    context?.let {
+        //code
+    }
+}, 3000)",,,
+Kotlin, 23,https://stackoverflow.com/questions/41782779/how-do-we-remove-elements-from-a-mutablelist-in-kotlin?rq=3,How do we remove elements from a MutableList in Kotlin,"I have the following code where I need to display the elements of a list in view and then remove those items from the list. I have been looking into filter vs map in kotlin but no luck finding a solution.
+
+var mutableList: MutableList<Object> = myImmutableList.toMutableList()
+for (x in mutableList.indices)
+{
+    val tile = row!!.getChildAt(x % 4)
+    val label = tile.findViewById(android.R.id.text1) as TextView
+    label.text = mutableList[x].name
+    val icon = tile.findViewById(android.R.id.icon) as ImageView
+    picasso.load(mutableList[x].icon).into(icon)
+}",mutableList.clear(),"(class, Containment, method): (MutableList, contains, clear)",T
+Go, 24,https://stackoverflow.com/questions/18207772/how-to-wait-for-all-goroutines-to-finish-without-using-time-sleep,How to wait for all goroutines to finish without using time.Sleep?,"This code selects all xml files in the same folder, as the invoked executable and asynchronously applies processing to each result in the callback method (in the example below, just the name of the file is printed out).
+
+How do I avoid using the sleep method to keep the main method from exiting? I have problems wrapping my head around channels (I assume that's what it takes, to synchronize the results) so any help is appreciated!
+
+package main
+
+import (
+    ""fmt""
+    ""io/ioutil""
+    ""path""
+    ""path/filepath""
+    ""os""
+    ""runtime""
+    ""time""
+)
+
+func eachFile(extension string, callback func(file string)) {
+    exeDir := filepath.Dir(os.Args[0])
+    files, _ := ioutil.ReadDir(exeDir)
+    for _, f := range files {
+            fileName := f.Name()
+            if extension == path.Ext(fileName) {
+                go callback(fileName)
+            }
+    }
+}
+
+
+func main() {
+    maxProcs := runtime.NumCPU()
+    runtime.GOMAXPROCS(maxProcs)
+
+    eachFile("".xml"", func(fileName string) {
+                // Custom logic goes in here
+                fmt.Println(fileName)
+            })
+
+    // This is what i want to get rid of
+    time.Sleep(100 * time.Millisecond)
+}",,,
+Go, 25,https://stackoverflow.com/questions/71620717/in-go-1-18-strings-title-is-deprecated-what-to-use-now-and-how,In Go 1.18 strings.Title() is deprecated. What to use now? And how?,"As suggested here names of people should be capitalized like John William Smith.
+
+I'm writing a small software in Golang which gets last and first name from user's form inputs.
+
+Until Go 1.18 I was using:
+
+lastname = strings.Title(strings.ToLower(strings.TrimSpace(lastname)))
+firstname = strings.Title(strings.ToLower(strings.TrimSpace(firstname)))
+It works but now Go 1.18 has deprecated strings.Title().
+
+They suggest to use golang.org/x/text/cases instead.
+
+So I think I should change my code in something like this:
+
+caser := cases.Title(language.Und)
+
+lastname = caser.Title(strings.ToLower(strings.TrimSpace(lastname)))
+firstname = caser.Title(strings.ToLower(strings.TrimSpace(firstname)))
+It works the same as before.
+
+The difference is for Dutch word like ijsland that should be titled as IJsland and not Ijsland.
+
+The question
+In the line caser := cases.Title(language.Und) I'm using Und because I don't know what language Tag to use.
+
+Should I use language.English or language.AmericanEnglish or other?
+
+So far it was like strings.Title() was using Und or English?",cases.Title,"(func, replacement, func): (cases.Title, instead of, strings.Title)",T
+Go, 26,https://stackoverflow.com/questions/25677235/create-a-io-reader-from-a-local-file?rq=3,Create a io.Reader from a local file,"I would like to open a local file, and return a io.Reader. The reason is that I need to feed a io.Reader to a library I am using, like:
+
+func read(r io.Reader) (results []string) {
+
+}",os.Open,"(func, Dependency, type): (os.Open, returns, io.Reader)",T
+Go, 27,https://stackoverflow.com/questions/19287730/go-interface-with-string-method?rq=3,Go interface with String() method,"Is there a Go interface in the standard library with:
+
+String() string
+?
+
+(Similar to how Java has toString() on java.lang.Object)
+
+Perhaps I just didn't search enough but I didn't see one. Wanted to use one that already exists rather than than making my own (though I guess it really makes no difference with Go's type system).",fmt.Stringer,"(type, Containment, func): (fmt.Stringer, contains the definition of, string)",T
+Go, 28,https://stackoverflow.com/questions/32387427/what-is-the-best-way-to-call-template-parsefiles-dynamically-in-go-instead-of?rq=3,What is the best way to call template.ParseFiles() dynamically in Go instead of passing in x number of strings?,"I want to load a folder of HTML templates in Go and right now I can only pass in each file path as a string in an argument.
+
+Example:
+
+templates = template.Must(template.ParseFiles(""../web/html_templates/edit.html"", ""../web/html_templates/view.html""))
+Works fine.
+
+This and similar solutions won't work:
+
+templates = template.Must(template.ParseFiles(""../web/html_templates/*""))
+I'd like to specify my templates in a config file but I currently can't. What is the best way to go about this?",ParseGlob,"(func, Equivalence, func): (template.ParseFiles, similar to, template.ParseGlob)",T

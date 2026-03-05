@@ -1,0 +1,6 @@
+class,"A class defines the structure and behavior of objects, including fields, methods, and constructors, serving as a template for object instantiation.","concrete class, exception class"
+method,"A method is a block of code that performs a specific task, defined within a class or interface, and can be invoked on objects or directly via the class (if static).","constructor method, instance method, constructor, static method"
+function,"A function is a reusable block of code that performs a specific task, which can be built-in or user-defined.",built-in function
+library,A library is a collection of modules or packages that provide reusable functionality for software development.,module
+property,"A property is a member of a class or struct that provides a mechanism for reading, writing, or computing the value of a private field.",constant
+interface,"An interface defines a contract of methods that a class must implement, specifying behavior without providing implementation.",interface type

@@ -1,0 +1,12 @@
+Type Triple
+"('class', 'efficiency_comparison', 'class')"
+"('class', 'function_collaboration', 'class')"
+"('class', 'type_conversion', 'class')"
+"('method', 'behavior_difference', 'method')"
+"('method', 'function_replace', 'method')"
+"('method', 'function_opposite', 'method')"
+"('method', 'logic_constraint', 'method')"
+"('method', 'function_similarity', 'method')"
+"('method', 'implementation_constraint', 'method')"
+"('packge', 'contain', 'class')"
+"('class', 'has method', 'method')"

@@ -1,0 +1,247 @@
+﻿Language,Num,Question,Body,Ground_Truth,LLM_RAG_Recommendation,Is_Correct,Top_K,Retrieved_Doc_1,Retrieved_Doc_1_Score,Retrieved_Doc_2,Retrieved_Doc_2_Score,Retrieved_Doc_3,Retrieved_Doc_3_Score,Retrieved_Doc_4,Retrieved_Doc_4_Score,Retrieved_Doc_5,Retrieved_Doc_5_Score
+Java,1,java.util.Vector - alternatives,"Previously I would always have thought a Vector was good to use for non-descript objects when length was unknown. As far as I was aware I thought it was thread-safe too
+
+What would change that Vector shouldn't be used anymore, and what is the alternative?",ArrayList,ArrayList,True,5,"Additionally, the Vector class uses several older (no longer recommended) parts of Java, like the Enumeration which is superseded by the Iterator interface.",0.66495925,"Please note, that the Java Stack class is a subclass of Vector, an older Java class which is synchronized.",0.4797079,"Thus, the Java ThreadLocal class provides a simple way to make code thread safe that would not otherwise be so.",0.46952668,You should use ArrayList instead of Vector.,0.46813974,The Java ThreadLocal class enables you to create variables that can only be read and written by the same thread.,0.43826616
+Java,2,Convert java.util.Date to String,"I want to convert a java.util.Date object to a String in Java.
+
+The format is 2010-05-30 22:15:52",SimpleDateFormat.format,SimpleDateFormat.format,True,5,You can parse a String into a java.util.Date instance using the parse() method of the SimpleDateFormat instance,0.75370455,You can parse a String into a java.util.Date instance using the parse() method of the SimpleDateFormat instance.,0.7531102,The java.time.format package contains classes used to parse and format dates from and to strings.,0.73029953,"It is possible to both parse dates from strings, and format dates to strings, using Java's java.text.SimpleDateFormat class.",0.70742875,"You can also create a java.util.Date from a time in milliseconds, like this:",0.69190603
+Java,3,How to convert a Java 8 Stream to an Array?,What is the easiest/shortest way to convert a Java 8 Stream into an array?,toArray(),Stream.toArray,True,5,"The Java Stream toArray() method is a terminal operation that starts the internal iteration of the elements in the stream, and returns an array of Object containing all the elements.",0.6975428,You can convert a Java List to a Java Array using the List toArray() method,0.6810681,You can convert a Java List to a Java Array using the List toArray() method.,0.68016887,The Java Stream interface contains a static method called of() which can be used to create a Stream from one or more objects.,0.65268695,Obtaining a Stream from a List in Java is done by calling the List stream() method.,0.65066314
+Java,4,alternative to GrantedAuthorityImpl() class,"I want an alternative to GrantedAuthorityImpl() class. I want this in spring security implementation. GrantedAuthorityImpl() class is deprecated. Hence I want an alternative solution to it. My code :
+
+public Collection<GrantedAuthority> getAuthorities(Integer access) {
+    List<GrantedAuthority> authList = new ArrayList<GrantedAuthority>(2);
+    
+    if (access.compareTo(1) == 0) {
+        authList.add(new GrantedAuthorityImpl(""ROLE_ADMIN""));
+    }
+    else{
+        authList.add(new GrantedAuthorityImpl(""ROLE_USER""));
+    }
+    return authList;
+}",SimpleGrantedAuthority,SimpleGrantedAuthority,True,5,The Java access modifiers private and protected cannot be assigned to a class.,0.4851929,"The protected access modifier provides the same access as the default access modifier, with the addition that subclasses can access protected methods and member variables (fields) of the superclass.",0.47107017,"It is important to keep in mind that the Java access modifier assigned to a Java class takes precedence over any access modifiers assigned to fields, constructors and methods of that class.",0.44601122,"A Java access modifier specifies which classes can access a given class and its fields, constructors and methods.",0.4403868,The Provider (java.security.Provider) class is a central class in the Java cryptography API.,0.43241265
+Java,5,Is there an interface similar to Callable but with arguments?,"Is there an interface in Java similar to the Callable interface, that can accept an argument to its call method?
+
+Like so:
+
+public interface MyCallable<V> {
+  V call(String s) throws Exception;
+}
+I would rather avoid creating a new type if there already exists something that I can use. Or is there a better strategy to having multiple clients implement and plug in a callable routine?
+
+Copied from here http://www.programmingforums.org/thread27905.html",java.util.function,java.util.function.Function,True,5,Java allows this because the class MyInterfaceImpl implements the MyInterface interface.,0.6033645,"However, it is possible to provide default implememntations of a method in a Java interface, to make the implementation of the interface easier for classes implementing the interface.",0.5696223,"Java reflection has a special Proxy class that can implement a Java Interface dynamically at runtime, rather than at compile time.",0.55904186,Therefore it is only possible to call methods that exists in java.lang.Object on input parameters.,0.5586524,Here are the two Java interfaces implemented by the class above:,0.5555191
+Java,6,Is there something like instanceOf(Class<?> c) in Java?,"I want to check if an object o is an instance of the class C or of a subclass of C.
+
+For instance, if x is of class Point I want x.instanceOf(Point.class) to be true and also x.instanceOf(Object.class) to be true.
+
+I want it to work also for boxed primitive types. For instance, if x is an Integer then x.instanceOf(Integer.class) should be true.
+
+Is there such a thing? If not, how can I implement such a method?",Class.isInstance,instanceof,True,5,"The Java instanceof operator can determine if a given Java object is an instance of a given class, superclass or interface.",0.7336582,"As long as the type compared to is a superclass somewhere up the inheritance hierarchy, instanceof will evaluate to true.",0.7311041,"As also mentioned earlier, the Java instanceof operator also evaluates to true when comparing an object against a superclass of the type of that object.",0.71986353,"As mentioned earlier, the Java instanceof operator will evaluate to true if you compare an object to the exact class of that object.",0.71484697,"The Java instanceof operator also evaluates to true when comparing an object against a superinterface which the class of the object, or a superclass of the object implements.",0.67874455
+Java,7,Sortable HashMap-like data structure in Java?,Is there some sort of data structure in Java that resembles a HashMap that can be sorted by key or value? In PHP you can have associative arrays that are sortable. Is there such a thing in Java?,TreeMap,TreeMap,True,5,Java comes with a built-in implementation of the Java SortedMap interface called TreeMap (java.util.TreeMap).,0.748909,java.util.TreeMap Comparator will then be used to sort the keys of the key value pairs stored in the SortedMap,0.6944875,"The Java SortedMap interface, java.util.SortedMap, is a subtype of the java.util.Map interface, with the addition that the elements stored in a Java SortedMap map are sorted internally. This means you can iterate the elements stored in a SortedMap in the sort order.",0.68977076,"The Java SortedMap interface, java.util.SortedMap, is a subtype of the java.util.Map interface, with the addition that the elements stored in a Java SortedMap map are sorted internally.",0.6763455,"The order of the sorting in a Java SortedMap is either the natural sorting order of the elements (if they implement java.lang.Comparable), or the order determined by a Comparator that you can give to the SortedSet.",0.6706192
+Java,8,What can I use instead of Set in Java?,"The following code is in JavaScript to check if a pair of numbers in a set are equal to a specific sum.
+
+function hasPairWithSum2(arr, sum){
+    const mySet = new Set();
+    const len = arr.length;
+
+    for (let i = 0; i < len; i++){
+        if (mySet.has(arr[i]))
+            return true;
+
+        mySet.add(sum - arr[i]);
+    }
+
+    return false;
+}
+How can I do the same in Java? What is the alternative to Set()?",HashSet,HashSet,True,5,The Java Collections addAll() method can add a variable number of elements to a Collection (typically either a List or a Set,0.59721684,The Java Collections addAll() method can add a variable number of elements to a Collection (typically either a List or a Set .,0.5946812,Here is an example of how creating a Set containing elements using the Set.of() method looks:,0.5796325,To add elements to a Set you call its add() method.,0.5773101,You can check if a Java Set contains a given element (object) by calling the contains() method.,0.5723061
+Java,9,How do I efficiently iterate over each entry in a Java Map?,"If I have an object implementing the Map interface in Java and I wish to iterate over every pair contained within it, what is the most efficient way of going through the map?
+
+Will the ordering of elements depend on the specific map implementation that I have for the interface?",map.entrySet(),entrySet(),True,5,"The Java SortedMap interface, java.util.SortedMap, is a subtype of the java.util.Map interface, with the addition that the elements stored in a Java SortedMap map are sorted internally. This means you can iterate the elements stored in a SortedMap in the sort order.",0.7360292,You can iterate all the keys of a Java Map via its keySet() method.,0.7133191,The Java Map interface has a method called putAll() which can copy all key + value pairs (entries) from another Map instance into itself.,0.68653387,You can read the number of entries in a Java Map using the size() method.,0.6623643,As you can see the key Iterator returns every key stored in a Java Map one by one (one for each call to next()),0.6438748
+Java,10,Remove last character of a StringBuilder?,"When you have to loop through a collection and make a string of each data separated by a delimiter, you always end up with an extra delimiter at the end, e.g.
+
+for (String serverId : serverIds) {
+  sb.append(serverId);
+   sb.append("","");
+}
+Gives something like : serverId_1, serverId_2, serverId_3,
+
+I would like to delete the last character in the StringBuilder (without converting it because I still need it after this loop).",deleteCharAt,StringBuilder.deleteCharAt,True,5,By calling appendTail() you can append these last characters to the StringBuffer too.,0.5088933,Here is a Java String split() example using the limit parameter:,0.47855744,"You could use the String.replace() method, but for large amounts of data, and high number of replacements, this performs badly.",0.47422716,The Java String class contains a method called trim() which can trim a string object.,0.47004557,"Instead of using the String.replace() method I will here present a different, more scalable solution called a TokenReplacingReader.",0.46647662
+Java,11,How to get the last value of an ArrayList,How can I get the last value of an ArrayList?,ArrayList.get,ArrayList.get,True,5,Each element is obtained from the ArrayList instance using the get() method.,0.67166466,The lastIndexOf() method finds the index of the last occurrence in the List of a given element.,0.6274409,The third way to iterate an ArrayList is to use an java.util.Iterator obtained from the ArrayList.,0.6061622,"Third, the result of the myUnit.getTheStringArray() method call is compared to the expected array.",0.54972315,The Java String class also has a lastIndexOf() method which finds the last occurrence of a substring.,0.54846036
+Java,12,How to set time zone of a java.util.Date?,"I have parsed a java.util.Date from a String but it is setting the local time zone as the time zone of the date object.
+
+The time zone is not specified in the String from which Date is parsed. I want to set a specific time zone of the date object.
+
+How can I do that?",setTimeZone,Calendar.setTimeZone,True,5,"As you saw in the example, you get the time zone from the java.util.TimeZone class.",0.8092726,Note: In the Java 8 date time API the time zones are represented by the java.time.ZoneId class.,0.7994478,"I have described the java.util.TimeZone class in more detail in my Java Date Time tutorial, in the TimeZone class.",0.78989255,The setTimeZone() method takes an Java TimeZone instance (java.util.TimeZone) as parameter.,0.7658305,If you use a Calendar (from the Java 7 and earlier date time API) you can still use the java.util.TimeZone class.,0.7463717
+Kotlin,13,"Alternative for Thread.Sleep() in a ""For Loop"" in Kotlin?","I have a for loop that consists of looping towards infinity and inside that for loop, there is a Thread.sleep(T)function, the sleeping time varies from 50ms to 1s. I know there are performance and user experience costs for using a sleep function inside a loop.
+
+So what are the Kotlin alternatives ? (I found answers but all of them are in Java, I wanna know the best alternatives in Kotlin)",delay(millis:Long),delay,True,5,Use Kotlin Coroutines there is delay(millis:Long) function that is cheaper than Thread.sleep(),0.77905464,Kotlin has no need to stop any threads in order to suspend a coroutine,0.59114563,"However, since Kotlin uses the standard Java collection classes, you can use the Java 8 stream API to perform parallel operations on Kotlin collections as well.",0.5694875,In your Kotlin file define the following async function that corresponds to Java style of writing async APIs:,0.56272626,Here is also implementation of Async Task using Kotlin coroutines and extension function on CoroutineScope.,0.53878963
+Kotlin,14,How to iterate over hashmap in Kotlin?,"How to iterate over HashMap in Kotlin?
+
+typealias HashMap<K, V> = HashMap<K, V> (source)
+kotlinkotlin-extension",map.forEach,forEach,True,5,"In Kotlin, a java.util.HashMap, at compile time, does not implement java.util.Map, but implements kotlin.collections.MutableMap which extends the read-only kotlin.collections.Map.",0.7189985,The HashMap class implements the forEach() method to iterate over all key-value pairs in the map.,0.65024215,The HashMap class implements the forEach() method to get key for value from the map,0.6022271,You could try to use another forEach with the single entry parameter that comes from the Kotlin standard library:,0.59851325,"The extension described below is now part of the Kotlin standard library, simply use it like this:",0.5982356
+Kotlin,15,How to put values from a HashMap into an array,"How can I add all values from a HashMap into a String array? For example, I have:
+
+var tablica = arrayListOf<String>()
+
+var haszmapa = hashMapOf<String, Int>()
+haszmapa.put(""Tadek"", 1)
+haszmapa.put(""Maniek"", 1)
+haszmapa.put(""Juras"", 1)",toTypedArray,values().toArray(),False,5,The HashMap class implements the forEach() method to iterate over all key-value pairs in the map.,0.5174137,The HashMap class implements the forEach() method to get key for value from the map,0.5013993,"The only option that you have is to get the menu array as a list of HashMap<String, Any>",0.46362394,"If you need a more flexible structure than Map<String, Any>, you can use JsonNode",0.42640996,Let's try to map each object from the array to an object of type Experience,0.4229998
+Kotlin,16,How to get key for value from Hashmap in Kotlin?,"I have HashMap in Kotlin
+
+val map = HashMap<String, String>()
+I want to know how to get key for a particular value from this HashMap without iterating through complete HashMap?",filterValues,forEach,False,5,The HashMap class implements the forEach() method to get key for value from the map,0.7356194,The HashMap class implements the forEach() method to iterate over all key-value pairs in the map.,0.7254945,"In Kotlin, a java.util.HashMap, at compile time, does not implement java.util.Map, but implements kotlin.collections.MutableMap which extends the read-only kotlin.collections.Map.",0.69697917,"And from a Java Class<T>, use the kotlin extension property to get the Kotlin KClass<T> from which you can proceed:",0.5770328,"Returns a List<String>? that would need to be null checked (or use one of the other Kotlin operators for nullable values, see this Kotlin idiomatic way to deal with nullable values and also Idiomatic way of handling nullable or empty list in Kotlin)",0.5549048
+Kotlin,17,How do I sum all the items of a list of integers in Kotlin?,"I have a list of integers, like:
+
+val myList = listOf(3,4,2)
+Is there any quick way in Kotlin to sum all the values of the list? or do I have to use a loop?
+
+Thanks.",sum,sum,True,5,You can use listOf() to create a list and then call sum() to calculate the total of its elements.,0.6353103, Kotlin has helper functions such as emptyList() or emptySet() to create these empty values.,0.59868217,You can write extension functions for Kotlin that do an in place mutable iteration for any MutableList implementation,0.5876442,"There are functions in the Kotlin stdlib for average, count, distinct, filtering, finding, grouping, joining, mapping, min, max, partitioning, slicing, sorting, summing, to/from arrays, to/from lists, to/from maps, union, co-iteration, all the functional paradigms, and more",0.5847739,"forEach as you can see at https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/for-each.html is special-cased for arrays, but has a single implementations for all Iterables, so it needs to create an iterator.",0.5842277
+Kotlin,18,how to remove item from array list in kotlin,"fun main(args: Array<String>) {
+var listOfRideDate = mutableListOf<RideDate>();
+val date1 = RideDate()
+date1.startdate = ""2018-11-05 00:00:00 +0000""
+date1.enddate = ""2018-11-06 23:59:59 +0000""
+listOfRideDate.add(date1)
+
+val date2 = RideDate()
+date2.startdate = ""2020-01-20 00:00:00 +0000""
+date2.enddate = ""2020-02-20 00:00:00 +0000""
+listOfRideDate.add(date2)
+
+val date3 = RideDate()
+date3.startdate = ""2020-03-20 00:00:00 +0000""
+date3.enddate = ""2020-03-20 00:00:00 +0000""
+listOfRideDate.add(date3)
+
+val date4 = RideDate()
+date4.startdate = ""2020-04-20 00:00:00 +0000""
+date4.enddate = ""2020-04-20 00:00:00 +0000""
+listOfRideDate.add(date4)
+
+val date5 = RideDate()
+date5.startdate = ""2020-11-20 00:00:00 +0000""
+date5.enddate = ""2020-11-20 00:00:00 +0000""
+listOfRideDate.add(date5)
+
+
+for (i in 0..listOfRideDate.size -1) {
+    // we have to remove 2018-11-05 00:00:00 +0000 and 2018-11-06 23:59:59 +0000  from list
+    println(listOfRideDate.get(i).startdate + "" and "" + listOfRideDate.get(i).enddate)
+}
+}
+
+This is my data class and the main method I have added item RideDate of startDate and endDate manually I want delete item dynamically if data contains date1.startdate = ""2018-11-05 00:00:00 +0000"" date1.enddate = ""2018-11-06 23:59:59 +0000""
+
+so that I can ignore it please help me how to delete the item from array list in kotlin",removeAll,remove(),False,5,"In Kotlin, remove() is a method that allows you to modify the List by removing a specific element.",0.53909516,You could try to use another forEach with the single entry parameter that comes from the Kotlin standard library:,0.4539457, Kotlin has helper functions such as emptyList() or emptySet() to create these empty values.,0.44037032,"In Kotlin, clear() is a method of MutableList that is used to remove all elements from the list.",0.43717754,"forEach as you can see at https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/for-each.html is special-cased for arrays, but has a single implementations for all Iterables, so it needs to create an iterator.",0.42206058
+Kotlin,19,What do I use now that Handler() is deprecated?,"How do I fix the deprecation warning in this code? Alternatively, are there any other options for doing this?
+
+Handler().postDelayed({
+    context?.let {
+        //code
+    }
+}, 3000)",postDelayed,HandlerCompat.postDelayed,True,5,Problem: The syntax to override handleMessage() method of the Handler class is incorrect,0.49204332,"Since this Handler is declared as an inner class, it may prevent the
+  outer class from being garbage collected",0.48069787,If you have a method that accepts a handler then you can even omit type arguments:,0.42222434,"Adding --stacktrace to that, you will also be able to pinpoint where the warning comes from, if it's triggered by outdated code in one of the plugins and not your build script.",0.42007706,You need to overload the handler function to take a function instead of EventHandler:,0.41427284
+Kotlin,20,How do we remove elements from a MutableList in Kotlin,"I have the following code where I need to display the elements of a list in view and then remove those items from the list. I have been looking into filter vs map in kotlin but no luck finding a solution.
+
+var mutableList: MutableList<Object> = myImmutableList.toMutableList()
+for (x in mutableList.indices)
+{
+    val tile = row!!.getChildAt(x % 4)
+    val label = tile.findViewById(android.R.id.text1) as TextView
+    label.text = mutableList[x].name
+    val icon = tile.findViewById(android.R.id.icon) as ImageView
+    picasso.load(mutableList[x].icon).into(icon)
+}",mutableList.clear(),remove(),False,5,"In Kotlin, remove() is a method that allows you to modify the List by removing a specific element.",0.63699603,"In Kotlin, clear() is a method of MutableList that is used to remove all elements from the list.",0.58295476,"When you write val a = mutableListOf(), you're saying ""I want a mutable list, and I don't particularly care about the implementation""",0.56793374,You can write extension functions for Kotlin that do an in place mutable iteration for any MutableList implementation,0.553206,"In Kotlin, List<T> is a read-only list interface, it has no functions for changing the content, unlike MutableList<T>",0.54498124
+Go,21,How to wait for all goroutines to finish without using time.Sleep?,"This code selects all xml files in the same folder, as the invoked executable and asynchronously applies processing to each result in the callback method (in the example below, just the name of the file is printed out).
+
+How do I avoid using the sleep method to keep the main method from exiting? I have problems wrapping my head around channels (I assume that's what it takes, to synchronize the results) so any help is appreciated!
+
+package main
+
+import (
+    ""fmt""
+    ""io/ioutil""
+    ""path""
+    ""path/filepath""
+    ""os""
+    ""runtime""
+    ""time""
+)
+
+func eachFile(extension string, callback func(file string)) {
+    exeDir := filepath.Dir(os.Args[0])
+    files, _ := ioutil.ReadDir(exeDir)
+    for _, f := range files {
+            fileName := f.Name()
+            if extension == path.Ext(fileName) {
+                go callback(fileName)
+            }
+    }
+}
+
+
+func main() {
+    maxProcs := runtime.NumCPU()
+    runtime.GOMAXPROCS(maxProcs)
+
+    eachFile("".xml"", func(fileName string) {
+                // Custom logic goes in here
+                fmt.Println(fileName)
+            })
+
+    // This is what i want to get rid of
+    time.Sleep(100 * time.Millisecond)
+}",sync.WaitGroup,WaitGroup,True,5,And each goroutine that is done sending the values can signal this by calling WaitGroup.Done(),0.6139097,"You need to use various standard library packages, or channels themselves to synchronize the execution of concurrently running goroutines",0.60714114,"As mentioned at the top of this answer, there's no way to interrupt the execution of a goroutine without using some synchronisation techniques.",0.6033053,"If you don't want to block the main goroutine but you just don't want it to end, you may use a time.Sleep() with a sufficiently large duration",0.60201836,"When you say go you mean ""do it asynchronously"" or even simpler: ""Go on! Don't wait for the function execution be finished""",0.5802927
+Go,22,In Go 1.18 strings.Title() is deprecated. What to use now? And how?,"As suggested here names of people should be capitalized like John William Smith.
+
+I'm writing a small software in Golang which gets last and first name from user's form inputs.
+
+Until Go 1.18 I was using:
+
+lastname = strings.Title(strings.ToLower(strings.TrimSpace(lastname)))
+firstname = strings.Title(strings.ToLower(strings.TrimSpace(firstname)))
+It works but now Go 1.18 has deprecated strings.Title().
+
+They suggest to use golang.org/x/text/cases instead.
+
+So I think I should change my code in something like this:
+
+caser := cases.Title(language.Und)
+
+lastname = caser.Title(strings.ToLower(strings.TrimSpace(lastname)))
+firstname = caser.Title(strings.ToLower(strings.TrimSpace(firstname)))
+It works the same as before.
+
+The difference is for Dutch word like ijsland that should be titled as IJsland and not Ijsland.
+
+The question
+In the line caser := cases.Title(language.Und) I'm using Und because I don't know what language Tag to use.
+
+Should I use language.English or language.AmericanEnglish or other?
+
+So far it was like strings.Title() was using Und or English?",cases.Title,cases.Title,True,5,As mentioned in documentation strings.Title is deprecated and you should use cases.Title instead.,0.6063692,"To get those cases you'd better dig into golang source, which is open.",0.56691444,Strings in Go are just headers containing a pointer and a length,0.5263325,The way this works in Go may vary a bit from some other languages,0.5089677,"Even easier is just to create a new variable, using a declaration
+  style that may seem odd but works fine in Go.",0.5075097
+Go,23,Create a io.Reader from a local file,"I would like to open a local file, and return a io.Reader. The reason is that I need to feed a io.Reader to a library I am using, like:
+
+func read(r io.Reader) (results []string) {
+
+}",os.Open,os.Open,True,5,"To get a type that implements io.Reader from a []byte slice, you can use bytes.NewReader in the bytes package:",0.66832614,You may use bytes.NewBuffer() to obtain an io.Reader from a byte slice.,0.6442938,os.Open returns an io.Reader,0.6424556,"So for example if you have the content as a []byte, you may obtain an io.ReadSeeker like this:",0.63337445,This will return a value of type bytes.Reader which implements the io.Reader (and io.ReadSeeker) interface.,0.6303474
+Go,24,Go interface with String() method,"Is there a Go interface in the standard library with:
+
+String() string
+?
+
+(Similar to how Java has toString() on java.lang.Object)
+
+Perhaps I just didn't search enough but I didn't see one. Wanted to use one that already exists rather than than making my own (though I guess it really makes no difference with Go's type system).",fmt.Stringer,fmt.Stringer,True,5,"From Go 1.10 there is a strings.Builder type, please take a look at this answer for more detail.",0.7705505,"These are described in the ""String literals"" section of the Go spec.",0.7181484,"In the example below for brevity and to have a working demonstration on the Go Playground, we'll read from a string value",0.7018977,"The cool part about go is that you can even implement this interface on primitive types, as long as the type is defined in the same package",0.6934585,"Read the blog post Strings, bytes, runes and characters in Go for how string is implemented and works in Go.",0.68968046
+Go,25,What is the best way to call template.ParseFiles() dynamically in Go instead of passing in x number of strings?,"I want to load a folder of HTML templates in Go and right now I can only pass in each file path as a string in an argument.
+
+Example:
+
+templates = template.Must(template.ParseFiles(""../web/html_templates/edit.html"", ""../web/html_templates/view.html""))
+Works fine.
+
+This and similar solutions won't work:
+
+templates = template.Must(template.ParseFiles(""../web/html_templates/*""))
+I'd like to specify my templates in a config file but I currently can't. What is the best way to go about this?",ParseGlob,template.ParseGlob,True,5,"When you parse multiple templates at once, using Template.ParseFiles() or Template.ParseGlob(), then the templates will be named by the file names, and they will be associated automatically (the above mentioned functions return a single template.Template value, which holds all the parsed templates, associated)",0.64330137,"When template.ParseFiles() is used, the call to template.New() call must specify the basename of the file that is being executed.",0.6053705,"The template packages can also parse templates using text/template.ParseFS(), html/template.ParseFS() functions and text/template.Template.ParseFS(), html/template.Template.ParseFS() methods:",0.6042726,"You can first create a new, undefined template with template.New(), and besides the template.ParseFiles() function, the template.Template type (returned by New()) also has a Template.ParseFiles() method, you can call that.",0.5976512,Since Go 1.11 it is now possible to change values of template variables,0.5953338
