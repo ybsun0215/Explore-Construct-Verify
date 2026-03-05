@@ -131,8 +131,8 @@ API_key_list:
   - "sk-YOUR_KEY_1"
   - "sk-YOUR_KEY_2"
 
-# 2. Choose your LLM (default: GPT-4o; DeepSeek also supported)
-llm_name: "gpt-4o-2024-11-20"
+# 2. Choose your LLM (default: GPT-4o)
+llm_name: "gpt-4o"
 # llm_name: "deepseek-chat"
 
 # 3. Set file paths (defaults work with the provided data)
