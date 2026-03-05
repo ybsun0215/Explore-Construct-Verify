@@ -2,10 +2,6 @@ import openai
 import os
 
 openai.base_url = "https://api.rcouyi.com/v1/"
-openai.default_headers = {"x-foo": "true"}
-
-os.environ["HTTP_PROXY"] = "http://127.0.0.1:7890"
-os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7890"
 
 def load_message(prompt_content: str, system_prompt: str = "hello, what can i help you?"):
 
