@@ -76,6 +76,7 @@ Entity types are automatically discovered per domain and language. For the Java 
 | `package` | A Java package grouping related classes | `java.util` |
 
 > **Note:** Entity types vary across different languages and are discovered during the exploration stage based on their respective corpora. The full list of discovered entity types and their LLM-generated definitions for each dataset is saved to `output/kg_exploration/entity_type.csv` after Stage 1.
+These definitions of entity types can be regarded as attributes of each node (i.e., entity instance).
 
 ### Relation Types
 
@@ -89,6 +90,7 @@ Relation types are also discovered automatically. Common relation types found ac
 | `Dependency` | One entity requires or uses another | `(Iterator, used_by, Collection)` |
 
 > The full set of discovered relation types and definitions is saved to `output/kg_exploration/relation_type.csv`. These are dataset-specific and may vary across languages and documentation corpora.
+These definitions of relation types can be regarded as attributes of each edge (i.e., relation instance).
 
 ### Interpreting a Triple
 
