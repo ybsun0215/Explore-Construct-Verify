@@ -242,7 +242,6 @@ The datasets used in the paper (Java, Kotlin, Go) and evaluation ground truth ar
 - **Seed data:** `seed_data/seed.csv`
 - **Full corpus:** `all_data/parsed.csv`
 - **API recommendation ground truth:** `support4apirecom/Ground_truth.csv`
-- **Archived datasets (Zenodo):** [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX) **
 
 ---
 
