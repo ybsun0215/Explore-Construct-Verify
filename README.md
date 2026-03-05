@@ -2,7 +2,6 @@
 
 > **Paper:** *Balancing Richness and Reliability: An Explore-Construct-Verify Framework for API Knowledge Graph Construction*  
 > **Authors:** Yanbang Sun, Qing Huang, Zhenchang Xing, Xiaoxue Ren, Xiaohong Li, Junjie Wang, Huan Jin, Zhiping Liu
-
 ---
 
 ## Overview
