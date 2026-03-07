@@ -1,9 +1,9 @@
 import openai
 import os
 
-openai.base_url = "https://api.rcouyi.com/v1/"
+openai.base_url = "https://api.openai.com"
 
-def load_message(prompt_content: str, system_prompt: str = "hello, what can i help you?"):
+def load_message(prompt_content: str, system_prompt):
 
     messages = [
         {"role": "system", "content": system_prompt},
